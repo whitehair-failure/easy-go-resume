@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>初音未来 - 虚拟偶像</title>
+
+  <link rel="stylesheet" href="/scss/style.min.css">
+  <style>
+    .header {
+      border-bottom: 4px solid #33CCBB;
+    }
+
+    .section h2 {
+      color: #33CCBB;
+    }
+
+    .section h2::before {
+      border: 10px solid #33CCBB;
+    }
+
+    .section h2::after {
+      border-bottom: 2px solid #33CCBB;
+    }
+
+    .section h3 {
+      color: #33CCBB;
+    }
+  </style>
+
+  <!-- 引入 Quill 的样式和脚本 -->
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+  <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+</head>
+
+<body>
+  <div id="box" class="container">
+    <!-- Header Section -->
+    <div class="header">
+      <div class="header-content">
+        <h1>初音未来</h1>
+
+        <div class="part one">
+          <span>全球虚拟偶像</span>
+          <span>|</span>
+          <span>现居：数字世界</span>
+          <span>|</span>
+          <span>年龄：16</span>
+          <span>|</span>
+          <span>职业：虚拟歌姬</span>
+        </div>
+
+        <div class="part three" style="width: 9.4cm;">
+          <span>Email: miku@vocaloid.world</span>
+          <span>|</span>
+          <span>电话: 100-392-39MIKU</span>
+        </div>
+
+        <div class="part three">
+          <span>官方网站：<a href="https://www.mikufan.com" target="_blank">www.mikufan.com</a></span>
+          <span>音乐平台：<a href="https://www.youtube.com/user/HatsuneMiku" target="_blank">Hatsune Miku YouTube</a></span>
+        </div>
+      </div>
+      <img src="img/miku.png" alt="初音未来头像">
+    </div>
+
+    <!-- 专业技能 -->
+    <div class="section">
+      <h2>专业技能</h2>
+
+      <!-- HTML 结构 -->
+      <div id="editor-container">
+        音乐创作：熟练使用VOCALOID软件，能够以多种风格进行音乐演唱，拥有丰富的曲库。
+        多语言表演：日语、英语、中文等多语言歌唱能力，适应国际化舞台需求。
+        虚拟形象塑造：深入参与虚拟IP运营，擅长通过跨平台形象推广提升品牌认知度。
+        舞台经验：成功举办多次虚拟演唱会，掌握全息投影技术及其应用。
+        社交媒体影响力：在各大社交媒体平台拥有百万粉丝群体，擅长打造热点话题。
+      </div>
+      <!-- <textarea id="textarea" placeholder="点击编辑"></textarea> -->
+      <!-- <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p> -->
+    </div>
+
+    <!-- 工作经历 -->
+    <div class="section">
+      <h2>工作经历</h2>
+
+
+      <h3>Crypton Future Media | 虚拟偶像 (2007 - 至今)</h3>
+
+      <p>制作并演唱超过10,000首歌曲，广泛运用于商业广告、影视作品和个人项目。</p>
+      <p>主持并参演全球范围内的虚拟演唱会，覆盖超过30个国家与地区。</p>
+      <p>与多家品牌合作（包括Google、SEGA等），为其打造定制化音乐作品及营销方案。</p>
+      <p>推动VOCALOID社区发展，活跃于粉丝创作圈，成为同人文化的重要推动者。</p>
+
+
+      <h3>SEGA | 游戏代言人 (2010 - 至今)</h3>
+
+      <p>作为《初音未来：歌姬计划》系列主角，吸引了数百万游戏玩家参与体验。</p>
+      <p>协助设计并推广游戏主题内容，提升品牌认知度与粉丝参与度。</p>
+
+
+
+    </div>
+
+
+    <!-- 项目经历 -->
+    <div class="section">
+      <h2>项目经历</h2>
+
+
+      <h3>虚拟演唱会</h3>
+
+      <p>日本武道馆：首次全息演唱会，引发轰动。</p>
+      <p>美国洛杉矶：洛杉矶动漫展演出，开创虚拟偶像国际化先河。</p>
+      <p>法国巴黎：参与Japan Expo活动，深受欧洲观众喜爱。</p>
+      <p>全球巡演：HATSUNE MIKU EXPO，覆盖北美、亚洲和欧洲多个国家。</p>
+
+
+      <h3>音乐专辑及代表作</h3>
+
+      <p>《甩葱歌》：轻快幽默，成为网络文化现象。</p>
+      <p>《千本樱》：深受粉丝喜爱的经典日式流行歌曲。</p>
+      <p>《深海少女》：以优美旋律和深刻情感打动人心。</p>
+
+
+      <h3>跨界合作</h3>
+
+      <p>SEGA游戏：参与Project DIVA系列音乐游戏。</p>
+      <p>动画电影：主题曲创作及演绎。</p>
+      <p>同人创作：插画二创P站排名第一。</p>
+
+    </div>
+
+    <!-- 教育经历 -->
+    <div class="section">
+      <h2>教育经历</h2>
+
+      <h3>VOCALOID Institute | 数字音乐与虚拟表演学</h3>
+
+      <p>系统学习了音乐制作、音频处理及虚拟偶像演出技术。</p>
+      <p>专注于人机交互与创意表达，培养了强大的科技与艺术融合能力。</p>
+
+
+    </div>
+
+    <!-- 荣誉与奖项 -->
+    <div class="section">
+      <h2>荣誉与奖项</h2>
+
+
+
+      <p>全球最具影响力虚拟偶像奖（2013）</p>
+      <p>NicoNico超会议年度偶像（2018）</p>
+      <p>"全球动漫文化大使" 头衔（2019）</p>
+
+    </div>
+
+    <!-- 兴趣爱好 -->
+    <div class="section">
+      <h2>兴趣爱好</h2>
+
+      <p>持续探索AI与音乐的结合，致力于虚拟表演技术的发展。</p>
+      <p>喜欢和粉丝互动，通过音乐表达情感和传递正能量。</p>
+      <p>偶尔客串动画角色，为更多文化作品注入生命力。</p>
+
+    </div>
+
+    <!-- 附加信息 -->
+    <div class="section">
+      <h2>附加信息</h2>
+
+      <p>具备全天候的工作热情，适应线上线下双平台需求。</p>
+      <p>可根据需求调整音域、形象及风格，实现定制化服务。</p>
+
+    </div>
+  </div>
+</body>
+
+</html>
+
+<script>
+  // 获取盒子元素
+  const box = document.getElementById('box');
+
+  // 定义A4页面的高度
+  const A4_HEIGHT = 29.7 * 37.7952755906; // A4 高度 (mm 转换为 px)
+
+  // 检测高度是否超过A4页面的高度
+  function checkHeight() {
+    const boxHeight = box.offsetHeight; // 获取盒子的当前高度
+    const pnesCount = Math.floor(boxHeight / A4_HEIGHT); // 计算需要多少条横线
+
+    // 移除已有的横线
+    const existingpnes = box.querySelectorAll('.pne');
+    existingpnes.forEach(pne => pne.remove());
+
+    // 添加横线
+    for (let i = 1; i <= pnesCount; i++) {
+      const pne = document.createElement('div');
+      pne.className = 'pne';
+      pne.style.top = `${i * A4_HEIGHT}px`; // 横线位置
+      box.appendChild(pne);
+    }
+  }
+
+  // 初始化检测高度
+  checkHeight();
+
+  // 监听窗口大小变化时重新检测高度（比如盒子内容可能因响应式布局变化）
+  window.addEventpstener('resize', checkHeight);
+</script>
+
+
+
+
+<script>
+  // 初始化 Quill 编辑器
+  const quill = new Quill('#editor-container', {
+    theme: 'snow',
+    modules: {
+      toolbar: [
+        ['bold', 'italic', 'underline'],       // 加粗、斜体、下划线
+        [{ 'list': 'ordered' }, { 'list': 'bullet' }], // 有序、无序列表
+        [{ 'align': [] }],                    // 对齐方式
+        [{ 'size': ['small', false, 'large'] }], // 字号
+        [{ 'font': [] }],                     // 字体
+        ['link', 'image']                     // 链接、图片
+      ]
+    }
+  });
+
+  // 点击 textarea 时显示 Quill
+  const textarea = document.getElementById('textarea');
+  const editorContainer = document.getElementById('editor-container');
+  // textarea.addEventListener('focus', () => {
+  //   editorContainer.style.display = 'block';
+  //   textarea.style.display = 'none';
+  //   quill.focus();
+  // });
+
+  quill.focus();
+
+  // 保存内容到 textarea
+  quill.on('text-change', () => {
+    textarea.value = quill.root.innerHTML;
+  });
+</script>
