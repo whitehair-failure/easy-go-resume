@@ -6,8 +6,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>初音未来 - 虚拟偶像</title>
 
-  <link rel="stylesheet" href="/scss/style.min.css">
+  <link rel="stylesheet" href="scss/style.min.css">
   <style>
+    .ql-snow .ql-picker.ql-lineheight .ql-picker-label::before,
+    .ql-snow .ql-picker.ql-lineheight .ql-picker-item::before {
+      content: "行高";
+    }
+
+    .ql-snow .ql-picker.ql-lineheight .ql-picker-label[data-value="1"]::before,
+    .ql-snow .ql-picker.ql-lineheight .ql-picker-item[data-value="1"]::before {
+      content: "1";
+    }
+
+    .ql-snow .ql-picker.ql-lineheight .ql-picker-label[data-value="1-5"]::before,
+    .ql-snow .ql-picker.ql-lineheight .ql-picker-item[data-value="1-5"]::before {
+      content: "1.5";
+    }
+
+    .ql-snow .ql-picker.ql-lineheight .ql-picker-label[data-value="1-75"]::before,
+    .ql-snow .ql-picker.ql-lineheight .ql-picker-item[data-value="1-75"]::before {
+      content: "1.75";
+    }
+
+    .ql-snow .ql-picker.ql-lineheight .ql-picker-label[data-value="2"]::before,
+    .ql-snow .ql-picker.ql-lineheight .ql-picker-item[data-value="2"]::before {
+      content: "2";
+    }
+
+    .ql-snow .ql-picker.ql-lineheight .ql-picker-label[data-value="3"]::before,
+    .ql-snow .ql-picker.ql-lineheight .ql-picker-item[data-value="3"]::before {
+      content: "3";
+    }
+
+    .ql-snow .ql-picker.ql-lineheight .ql-picker-label[data-value="4"]::before,
+    .ql-snow .ql-picker.ql-lineheight .ql-picker-item[data-value="4"]::before {
+      content: "4";
+    }
+
+    .ql-snow .ql-picker.ql-lineheight .ql-picker-label[data-value="5"]::before,
+    .ql-snow .ql-picker.ql-lineheight .ql-picker-item[data-value="5"]::before {
+      content: "5";
+    }
+
+    .ql-snow .ql-picker.ql-lineheight {
+      width: 70px;
+    }
+
+    .ql-snow .ql-editor .ql-lineheight-1 {
+      line-height: 10px;
+    }
+
+    .ql-snow .ql-editor .ql-lineheight-1-5 {
+      line-height: 24px;
+    }
+
+    .ql-snow .ql-editor .ql-lineheight-1-75 {
+      line-height: 30px;
+    }
+
+    .ql-snow .ql-editor .ql-lineheight-2 {
+      line-height: 40px;
+    }
+
+    .ql-snow .ql-editor .ql-lineheight-3 {
+      line-height: 50px;
+    }
+
+    .ql-snow .ql-editor .ql-lineheight-4 {
+      line-height: 60px;
+    }
+
+    .ql-snow .ql-editor .ql-lineheight-5 {
+      line-height: 70px;
+    }
+
+
+
     .header {
       border-bottom: 4px solid #33CCBB;
     }
@@ -24,8 +98,44 @@
       border-bottom: 2px solid #33CCBB;
     }
 
-    .section h3 {
+    .ql-toolbar.ql-snow {
+      display: none;
+    }
+
+    .quill-editor-item {
+      /* margin-bottom: 16px !important; */
+      border: none !important;
+    }
+
+    .quill-editor-item h3 {
+      margin-top: 10px !important;
+      line-height: 36px;
+      font-weight: 500;
       color: #33CCBB;
+    }
+
+    .quill-editor-item h3:first-of-type {
+      margin-top: -12px !important;
+    }
+
+    .ql-editor {
+      padding: 0 !important;
+      font-size: 14px;
+
+      ul,
+      ol {
+        margin: 0 !important;
+        padding: 0 !important;
+
+      }
+
+      ul>li:not(.ql-direction-rtl) {
+        padding-left: 10px !important;
+      }
+
+      ul[data-checked=true]>li {
+        padding-left: 1.5em !important;
+      }
     }
   </style>
 
@@ -35,34 +145,50 @@
 </head>
 
 <body>
+  <!-- 操作面板 -->
+  <div id="operation-panel">
+    <input type="text" id="section-title" placeholder="输入模板标题" />
+    <button class="confirm" onclick="addSection()">确认</button>
+    <button class="cancel" onclick="clearInput()">取消</button>
+  </div>
+
   <div id="box" class="container">
     <!-- Header Section -->
     <div class="header">
-      <div class="header-content">
-        <h1>初音未来</h1>
+      <div>
 
-        <div class="part one">
-          <span>全球虚拟偶像</span>
-          <span>|</span>
-          <span>现居：数字世界</span>
-          <span>|</span>
-          <span>年龄：16</span>
-          <span>|</span>
-          <span>职业：虚拟歌姬</span>
-        </div>
+        <div id="editor-container0" class="quill-editor-item header-content">
+          <h1>初音未来</h1>
 
-        <div class="part three" style="width: 9.4cm;">
-          <span>Email: miku@vocaloid.world</span>
-          <span>|</span>
-          <span>电话: 100-392-39MIKU</span>
-        </div>
+          <p>
+            <span>全球虚拟偶像</span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>现居：数字世界</span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>年龄：16</span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>职业：虚拟歌姬</span>
+          </p>
 
-        <div class="part three">
-          <span>官方网站：<a href="https://www.mikufan.com" target="_blank">www.mikufan.com</a></span>
-          <span>音乐平台：<a href="https://www.youtube.com/user/HatsuneMiku" target="_blank">Hatsune Miku YouTube</a></span>
+          <p>
+            <span>Email: miku@vocaloid.world</span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>电话: 100-392-39MIKU</span>
+          </p>
+
+          <p>
+            <span>官方网站：<a href="https://www.mikufan.com" target="_blank">www.mikufan.com</a></span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>音乐平台：<a href="https://www.youtube.com/user/HatsuneMiku" target="_blank">Hatsune Miku
+                YouTube</a></span>
+          </p>
         </div>
       </div>
-      <img src="img/miku.png" alt="初音未来头像">
+
+      <div id="avatar">
+        <img src="img/miku.png" alt="初音未来头像">
+      </div>
+      <input type="file" id="fileInput" style="display:none;" accept="image/*" />
     </div>
 
     <!-- 专业技能 -->
@@ -70,183 +196,312 @@
       <h2>专业技能</h2>
 
       <!-- HTML 结构 -->
-      <div id="editor-container">
-        音乐创作：熟练使用VOCALOID软件，能够以多种风格进行音乐演唱，拥有丰富的曲库。
-        多语言表演：日语、英语、中文等多语言歌唱能力，适应国际化舞台需求。
-        虚拟形象塑造：深入参与虚拟IP运营，擅长通过跨平台形象推广提升品牌认知度。
-        舞台经验：成功举办多次虚拟演唱会，掌握全息投影技术及其应用。
-        社交媒体影响力：在各大社交媒体平台拥有百万粉丝群体，擅长打造热点话题。
+      <div id="editor-container1" class="quill-editor-item">
+        <p><strong>音乐创作：</strong>熟练使用VOCALOID软件，能够以多种风格进行音乐演唱，拥有丰富的曲库。</p>
+        <p><strong>多语言表演：</strong>日语、英语、中文等多语言歌唱能力，适应国际化舞台需求。</p>
+        <p><strong>虚拟形象塑造：</strong>深入参与虚拟IP运营，擅长通过跨平台形象推广提升品牌认知度。</p>
+        <p><strong>舞台经验：</strong>成功举办多次虚拟演唱会，掌握全息投影技术及其应用。</p>
+        <p><strong>社交媒体影响力：</strong>在各大社交媒体平台拥有百万粉丝群体，擅长打造热点话题。</p>
       </div>
-      <!-- <textarea id="textarea" placeholder="点击编辑"></textarea> -->
-      <!-- <p></p>
-      <p></p>
-      <p></p>
-      <p></p>
-      <p></p> -->
+
+      <div class="delete-btn" onclick="removeSection(this)">删除</div>
     </div>
 
     <!-- 工作经历 -->
     <div class="section">
       <h2>工作经历</h2>
 
+      <div id="editor-container2" class="quill-editor-item">
+        <h3>Crypton Future Media | 虚拟偶像 (2007 - 至今)</h3>
+        <p>制作并演唱超过10,000首歌曲，广泛运用于商业广告、影视作品和个人项目。</p>
+        <p>主持并参演全球范围内的虚拟演唱会，覆盖超过30个国家与地区。。</p>
+        <p>与多家品牌合作（包括Google、SEGA等），为其打造定制化音乐作品及营销方案。。</p>
+        <p>推动VOCALOID社区发展，活跃于粉丝创作圈，成为同人文化的重要推动者。。</p>
 
-      <h3>Crypton Future Media | 虚拟偶像 (2007 - 至今)</h3>
+        <h3><s>SEGA</s> | <em><u>游戏代言人</u></em> (2010 - 至今)</h3>
+        <p>作为《初音未来：歌姬计划》系列主角，吸引了数百万游戏玩家参与体验。</p>
+        <p>协助设计并推广游戏主题内容，提升品牌认知度与粉丝参与度。</p>
+      </div>
 
-      <p>制作并演唱超过10,000首歌曲，广泛运用于商业广告、影视作品和个人项目。</p>
-      <p>主持并参演全球范围内的虚拟演唱会，覆盖超过30个国家与地区。</p>
-      <p>与多家品牌合作（包括Google、SEGA等），为其打造定制化音乐作品及营销方案。</p>
-      <p>推动VOCALOID社区发展，活跃于粉丝创作圈，成为同人文化的重要推动者。</p>
-
-
-      <h3>SEGA | 游戏代言人 (2010 - 至今)</h3>
-
-      <p>作为《初音未来：歌姬计划》系列主角，吸引了数百万游戏玩家参与体验。</p>
-      <p>协助设计并推广游戏主题内容，提升品牌认知度与粉丝参与度。</p>
-
-
-
+      <div class="delete-btn" onclick="removeSection(this)">删除</div>
     </div>
 
 
-    <!-- 项目经历 -->
+    <!-- 个人优势 -->
     <div class="section">
-      <h2>项目经历</h2>
+      <h2>个人优势</h2>
 
 
-      <h3>虚拟演唱会</h3>
+      <div id="editor-container3" class="quill-editor-item">
+        <h3>虚拟演唱会</h3>
 
-      <p>日本武道馆：首次全息演唱会，引发轰动。</p>
-      <p>美国洛杉矶：洛杉矶动漫展演出，开创虚拟偶像国际化先河。</p>
-      <p>法国巴黎：参与Japan Expo活动，深受欧洲观众喜爱。</p>
-      <p>全球巡演：HATSUNE MIKU EXPO，覆盖北美、亚洲和欧洲多个国家。</p>
+        <p><strong>日本武道馆：</strong>首次全息演唱会，引发轰动。</p>
+        <p><strong>美国洛杉矶：</strong>洛杉矶动漫展演出，开创虚拟偶像国际化先河。</p>
+        <p><strong>法国巴黎：</strong>参与Japan Expo活动，深受欧洲观众喜爱。</p>
+        <p><strong>全球巡演：</strong>HATSUNE MIKU EXPO，覆盖北美、亚洲和欧洲多个国家。</p>
 
+        <h3>音乐专辑及代表作</h3>
 
-      <h3>音乐专辑及代表作</h3>
+        <p><strong>《甩葱歌》：</strong>轻快幽默，成为网络文化现象。</p>
+        <p><strong>《千本樱》：</strong>深受粉丝喜爱的经典日式流行歌曲。</p>
+        <p><strong>《深海少女》：</strong>以优美旋律和深刻情感打动人心。</p>
 
-      <p>《甩葱歌》：轻快幽默，成为网络文化现象。</p>
-      <p>《千本樱》：深受粉丝喜爱的经典日式流行歌曲。</p>
-      <p>《深海少女》：以优美旋律和深刻情感打动人心。</p>
+        <h3>跨界合作</h3>
 
+        <p><strong>SEGA游戏：</strong>参与Project DIVA系列音乐游戏。</p>
+        <p><strong>动画电影：</strong>主题曲创作及演绎。</p>
+        <p><strong>同人创作：</strong>插画二创P站排名第一。</p>
+      </div>
 
-      <h3>跨界合作</h3>
-
-      <p>SEGA游戏：参与Project DIVA系列音乐游戏。</p>
-      <p>动画电影：主题曲创作及演绎。</p>
-      <p>同人创作：插画二创P站排名第一。</p>
-
+      <div class="delete-btn" onclick="removeSection(this)">删除</div>
     </div>
 
     <!-- 教育经历 -->
     <div class="section">
       <h2>教育经历</h2>
 
-      <h3>VOCALOID Institute | 数字音乐与虚拟表演学</h3>
+      <div id="editor-container4" class="quill-editor-item">
+        <h3>VOCALOID Institute | 数字音乐与虚拟表演学</h3>
 
-      <p>系统学习了音乐制作、音频处理及虚拟偶像演出技术。</p>
-      <p>专注于人机交互与创意表达，培养了强大的科技与艺术融合能力。</p>
+        <p>系统学习了音乐制作、音频处理及虚拟偶像演出技术。</p>
+        <p>专注于人机交互与创意表达，培养了强大的科技与艺术融合能力。</p>
+      </div>
 
-
+      <div class="delete-btn" onclick="removeSection(this)">删除</div>
     </div>
 
     <!-- 荣誉与奖项 -->
     <div class="section">
       <h2>荣誉与奖项</h2>
 
+      <div id="editor-container5" class="quill-editor-item">
+        <ul data-checked="true">
+          <li>全球最具影响力虚拟偶像奖（2013）</li>
+          <li>NicoNico超会议年度偶像（2018）</li>
+          <li>"全球动漫文化大使" 头衔（2019）</li>
+        </ul>
+      </div>
 
-
-      <p>全球最具影响力虚拟偶像奖（2013）</p>
-      <p>NicoNico超会议年度偶像（2018）</p>
-      <p>"全球动漫文化大使" 头衔（2019）</p>
-
+      <div class="delete-btn" onclick="removeSection(this)">删除</div>
     </div>
 
     <!-- 兴趣爱好 -->
     <div class="section">
       <h2>兴趣爱好</h2>
 
-      <p>持续探索AI与音乐的结合，致力于虚拟表演技术的发展。</p>
-      <p>喜欢和粉丝互动，通过音乐表达情感和传递正能量。</p>
-      <p>偶尔客串动画角色，为更多文化作品注入生命力。</p>
+      <div id="editor-container6" class="quill-editor-item">
+        <ul>
+          <li>持续探索AI与音乐的结合，致力于虚拟表演技术的发展。</li>
+          <li>喜欢和粉丝互动，通过音乐表达情感和传递正能量。</li>
+          <li>偶尔客串动画角色，为更多文化作品注入生命力。</li>
+        </ul>
+      </div>
 
+      <div class="delete-btn" onclick="removeSection(this)">删除</div>
     </div>
 
     <!-- 附加信息 -->
     <div class="section">
+
       <h2>附加信息</h2>
 
-      <p>具备全天候的工作热情，适应线上线下双平台需求。</p>
-      <p>可根据需求调整音域、形象及风格，实现定制化服务。</p>
+      <div id="editor-container7" class="quill-editor-item">
+        <blockquote><span
+            style="background-color: rgb(255, 255, 0); color: rgb(230, 0, 0);">具备全天候的工作热情，适应线上线下双平台需求。</span>
+        </blockquote>
+        <blockquote><span style="color: rgb(153, 51, 255);">可根据需求调整音域、形象及风格，实现定制化服务。</span></blockquote>
+      </div>
 
+      <div class="delete-btn" onclick="removeSection(this)">删除</div>
     </div>
   </div>
 </body>
 
 </html>
 
+
 <script>
-  // 获取盒子元素
-  const box = document.getElementById('box');
 
-  // 定义A4页面的高度
-  const A4_HEIGHT = 29.7 * 37.7952755906; // A4 高度 (mm 转换为 px)
+  const toolbarOptions = [
+    ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+    [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
 
-  // 检测高度是否超过A4页面的高度
-  function checkHeight() {
-    const boxHeight = box.offsetHeight; // 获取盒子的当前高度
-    const pnesCount = Math.floor(boxHeight / A4_HEIGHT); // 计算需要多少条横线
+    [{ 'list': 'ordered' }, { 'list': 'bullet' }, { 'list': 'check' }],
 
-    // 移除已有的横线
-    const existingpnes = box.querySelectorAll('.pne');
-    existingpnes.forEach(pne => pne.remove());
+    [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+    [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
+    
+    ['link', 'image'],
 
-    // 添加横线
-    for (let i = 1; i <= pnesCount; i++) {
-      const pne = document.createElement('div');
-      pne.className = 'pne';
-      pne.style.top = `${i * A4_HEIGHT}px`; // 横线位置
-      box.appendChild(pne);
+    ['blockquote', 'code-block'],
+
+    [{ 'indent': '-1' }, { 'indent': '+1' }],          // outdent/indent
+    [{ 'direction': 'rtl' }],                         // text direction
+
+    [{ 'font': [] }],
+    [{ 'align': [] }],
+
+    //.... 其他工具栏配置项                             
+    [{ 'lineheight': ["1", "1-5", "1-75", "2", "3", "4", "5"] }],//行高
+
+    // [{ 'line-height': ['1', false, '2'] }], // 这一步是自定义行高选择器
+
+    ['clean']                                         // remove formatting button
+  ];
+
+  //在这个位置添加下面代码
+  const Parchment = Quill.import("parchment");
+  class lineHeightAttributor extends Parchment.Attributor.Class { }
+  const lineHeightStyle = new lineHeightAttributor(
+    "lineheight",
+    "ql-lineheight",
+    {
+      scope: Parchment.Scope.INLINE,
+      whitelist: ["", "1", "1-5", "1-75", "2", "3", "4", "5"],
     }
+  );
+  Quill.register({ "formats/lineHeight": lineHeightStyle }, true);
+
+
+
+  let quillEditorItems = document.querySelectorAll('.quill-editor-item');
+
+  quillEditorItems.forEach((item, index) => {
+
+    // 初始化 Quill 编辑器
+    let a = new Quill(`#editor-container${index}`, {
+      theme: 'snow',
+      modules: {
+        toolbar: toolbarOptions
+      },
+      placeholder: 'Compose an epic...',
+    });
+
+  })
+
+  let qlToolbar = document.querySelectorAll('.ql-toolbar');
+
+
+  for (var i = 0; i < quillEditorItems.length; i++) {
+
+    let quillEditorItem = quillEditorItems[i];
+    let qlToolbarItem = qlToolbar[i];
+
+    console.log('qlToolbar[' + i + ']', qlToolbar[i]);
+
+
+    qlToolbarItem.addEventListener('mouseover', function (delta, oldDelta, source) {
+      quillEditorItem.style = "border: 1px solid #33CCBB !important;";
+      qlToolbarItem.style.display = 'block';
+    });
+
+    qlToolbarItem.addEventListener('mouseout', function (delta, oldDelta, source) {
+      quillEditorItem.style = "border: none !important;";
+      qlToolbarItem.style.display = 'none';
+    });
+
+    quillEditorItem.addEventListener('mouseover', function (delta, oldDelta, source) {
+      quillEditorItem.style = "border: 1px solid #33CCBB !important;";
+      qlToolbarItem.style.display = 'block';
+    });
+
+    quillEditorItem.addEventListener('mouseout', function (delta, oldDelta, source) {
+      quillEditorItem.style = "border: none !important;";
+      qlToolbarItem.style.display = 'none';
+    });
   }
 
-  // 初始化检测高度
-  checkHeight();
 
-  // 监听窗口大小变化时重新检测高度（比如盒子内容可能因响应式布局变化）
-  window.addEventpstener('resize', checkHeight);
+
 </script>
 
-
-
+<script src="js/index.js"></script>
 
 <script>
-  // 初始化 Quill 编辑器
-  const quill = new Quill('#editor-container', {
-    theme: 'snow',
-    modules: {
-      toolbar: [
-        ['bold', 'italic', 'underline'],       // 加粗、斜体、下划线
-        [{ 'list': 'ordered' }, { 'list': 'bullet' }], // 有序、无序列表
-        [{ 'align': [] }],                    // 对齐方式
-        [{ 'size': ['small', false, 'large'] }], // 字号
-        [{ 'font': [] }],                     // 字体
-        ['link', 'image']                     // 链接、图片
-      ]
+  // 清空输入框内容
+  function clearInput() {
+    document.getElementById('section-title').value = '';
+  }
+
+  // 添加 section 模板
+  function addSection() {
+    const title = document.getElementById('section-title').value;
+    if (!title) {
+      alert("请输入模板标题！");
+      return;
     }
-  });
 
-  // 点击 textarea 时显示 Quill
-  const textarea = document.getElementById('textarea');
-  const editorContainer = document.getElementById('editor-container');
-  // textarea.addEventListener('focus', () => {
-  //   editorContainer.style.display = 'block';
-  //   textarea.style.display = 'none';
-  //   quill.focus();
-  // });
+    let oldQlToolbarItems = document.querySelectorAll('.ql-toolbar');
 
-  quill.focus();
+    const sectionHTML = `
+      <div class="section">
+        <h2>${title}</h2>
+        <div id="editor-container${oldQlToolbarItems.length}" class="quill-editor-item">
+          <ul>
+            <li>持续探索AI与音乐的结合，致力于虚拟表演技术的发展。</li>
+            <li>喜欢和粉丝互动，通过音乐表达情感和传递正能量。</li>
+            <li>偶尔客串动画角色，为更多文化作品注入生命力。</li>
+          </ul>
+        </div>
+        <div class="delete-btn" onclick="removeSection(this)">删除</div>
+      </div>
+    `;
 
-  // 保存内容到 textarea
-  quill.on('text-change', () => {
-    textarea.value = quill.root.innerHTML;
-  });
+    // 将新 section 添加到 box 内部
+    document.getElementById('box').insertAdjacentHTML('beforeend', sectionHTML);
+    clearInput(); // 清空输入框
+
+    let newEditorContainer = document.getElementById(`editor-container${oldQlToolbarItems.length}`)
+
+    // 初始化 Quill 编辑器
+    new Quill(`#editor-container${oldQlToolbarItems.length}`, {
+      theme: 'snow',
+      modules: {
+        toolbar: toolbarOptions
+      },
+      placeholder: 'Compose an epic...',
+    });
+
+    let qlToolbarItems = document.querySelectorAll('.ql-toolbar');
+
+    console.log('qlToolbarItems', qlToolbarItems);
+
+    for (var i = 0; i < qlToolbarItems.length; i++) {
+
+      // let quillEditorItem = quillEditorItems[i];
+      let qlToolbarItem = qlToolbarItems[i];
+
+      qlToolbarItem.addEventListener('mouseover', function (delta, oldDelta, source) {
+        // quillEditorItem.style = "border: 1px solid #33CCBB !important;";
+        qlToolbarItem.style.display = 'block';
+      });
+
+      qlToolbarItem.addEventListener('mouseout', function (delta, oldDelta, source) {
+        // quillEditorItem.style = "border: none !important;";
+        qlToolbarItem.style.display = 'none';
+      });
+
+      if (i === qlToolbarItems.length - 1) {
+        newEditorContainer.addEventListener('mouseover', function (delta, oldDelta, source) {
+          newEditorContainer.style = "border: 1px solid #33CCBB !important;";
+          qlToolbarItem.style.display = 'block';
+        });
+
+        newEditorContainer.addEventListener('mouseout', function (delta, oldDelta, source) {
+          newEditorContainer.style = "border: none !important;";
+          qlToolbarItem.style.display = 'none';
+        });
+      }
+    }
+
+
+  }
+
+  // 删除 section 模板
+  function removeSection(deleteBtn) {
+    console.log('deleteBtn', deleteBtn);
+    
+    const section = deleteBtn.closest('.section');
+    section.remove();
+  }
 </script>
