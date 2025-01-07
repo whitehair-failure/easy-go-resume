@@ -1,12 +1,14 @@
+import { toolbarOptions, forEachquillEditorItems } from "./init.js";
+import { momoka } from "./kyara.js";
+
+// console.log('momoka',momoka);
+
 /* 图片上传 */
 // 获取DOM元素
 
 function uploadImg(fileInput, uploadAvatarBtn, img) {
   // 监听点击事件，触发文件上传
   uploadAvatarBtn.addEventListener("click", function () {
-    fileInput.click(); // 模拟点击文件输入框
-  });
-  avatar.addEventListener("click", function () {
     fileInput.click(); // 模拟点击文件输入框
   });
 
@@ -36,11 +38,11 @@ function deleteAvatar(deleteAvatarBtn, img) {
 // 获取盒子元素
 const box = document.getElementById("box");
 
-// 定义A4页面的高度
-const A4_HEIGHT = (29.7 - 2) * 37.7952755906; // A4 高度 (mm 转换为 px)
-
 // 检测高度是否超过A4页面的高度
 function checkHeight() {
+  // 定义A4页面的高度
+  const A4_HEIGHT = (29.7 - 2) * 37.7952755906; // A4 高度 (mm 转换为 px)
+
   const boxHeight = box.offsetHeight; // 获取盒子的当前高度
   const pnesCount = Math.floor(boxHeight / A4_HEIGHT); // 计算需要多少条横线
 
@@ -57,18 +59,21 @@ function checkHeight() {
   }
 }
 
-// 初始化检测高度
-checkHeight();
-
-setInterval(checkHeight, 1000); // 每隔1秒检测一次高度
-
-// 监听窗口大小变化时重新检测高度（比如盒子内容可能因响应式布局变化）
-// window.addEventpstener("resize", checkHeight);
-
 /* 添加编辑工具栏 */
 
-// 获取DOM元素
+// pdf打印按钮
+const printPDFButton = document.getElementById("printPDF");
+// 导入导出按钮
+const exportTextButton = document.getElementById("exportText");
+const importTextButton = document.getElementById("importText");
+// 本地存储按钮
 const locationStorageButton = document.getElementById("locationStorage");
+// 清除本地存储按钮
+const clearLocalStorageButton = document.getElementById("clearLocalStorage");
+// 清除本地存储二次确认弹窗
+const confirmationOverlay = document.getElementById("confirmationOverlay");
+const confirmClearButton = document.getElementById("confirmClear");
+const cancelClearButton = document.getElementById("cancelClear");
 
 // 监听按钮1：存储内容到本地存储
 locationStorageButton.addEventListener("click", function () {
@@ -87,9 +92,6 @@ locationStorageButton.addEventListener("click", function () {
   // 提示存储成功
   alert("内容已成功存储到本地存储！");
 });
-
-const exportTextButton = document.getElementById("exportText");
-const importTextButton = document.getElementById("importText");
 
 // 监听按钮2：导出为文本文件
 exportTextButton.addEventListener("click", function () {
@@ -135,9 +137,6 @@ importTextButton.addEventListener("click", function () {
   input.click();
 });
 
-const printPDFButton = document.getElementById("printPDF");
-const clearLocalStorageButton = document.getElementById("clearLocalStorage");
-
 // 监听按钮4：打印为PDF
 printPDFButton.addEventListener("click", function () {
   // 调用浏览器的打印功能
@@ -145,22 +144,6 @@ printPDFButton.addEventListener("click", function () {
 });
 
 // 监听按钮5：清除本地存储
-// clearLocalStorageButton.addEventListener("click", function () {
-//   // 清除本地存储
-//   localStorage.removeItem("boxContent");
-
-//   // 提示清除成功
-//   alert("本地存储已清除！");
-
-//   // 刷新页面
-//   window.location.reload();
-// });
-
-const confirmationOverlay = document.getElementById("confirmationOverlay");
-const cancelClearButton = document.getElementById("cancelClear");
-const confirmClearButton = document.getElementById("confirmClear");
-
-// 监听清除本地存储按钮
 clearLocalStorageButton.addEventListener("click", function () {
   // 显示二次确认弹窗
   confirmationOverlay.style.display = "flex";
@@ -169,7 +152,7 @@ clearLocalStorageButton.addEventListener("click", function () {
   confirmDialog.style.animation = "fadeInDialog 0.3s ease-in-out forwards";
 });
 
-// 监听取消按钮
+// 监听取消清除按钮
 cancelClearButton.addEventListener("click", function () {
   // 添加消失的动画
   const confirmDialog = document.querySelector(".confirm-dialog");
@@ -184,7 +167,7 @@ cancelClearButton.addEventListener("click", function () {
   }, 300); // 动画时间匹配
 });
 
-// 监听确认按钮
+// 监听确认清除按钮
 confirmClearButton.addEventListener("click", function () {
   // 清除本地存储
   localStorage.removeItem("boxContent");
@@ -214,33 +197,131 @@ window.onload = function () {
   const fileInput = document.getElementById("fileInput");
   const img = avatar.querySelector("img");
 
+  // 图片功能
   uploadImg(fileInput, avatar, img);
   uploadImg(fileInput, uploadAvatarBtn, img);
   deleteAvatar(deleteAvatarBtn, img);
+
+  // 初始化检测高度
+  checkHeight();
+  setInterval(checkHeight, 1000); // 每隔1秒检测一次高度
+
+  forEachquillEditorItems();
 };
 
 /* 类名选择 */
 // 获取选择框元素
-const classSelect = document.getElementById("classSelect");
+const dropdownButton = document.getElementById("dropdownButton");
+const dropdownOptions = document.getElementById("dropdownOptions");
+const options = dropdownOptions.querySelectorAll(".dropdown-option");
 
-// 监听选择框的变化
-classSelect.addEventListener("change", function () {
-  // 获取选择的类名
-  const selectedClass = this.value;
+let isOpen = false;
 
-  // 获取 box 内的所有 h2 标签
-  const h2Tags = document.querySelectorAll("#box h2");
+// Toggle dropdown visibility
+dropdownButton.addEventListener("click", () => {
+  if (isOpen) {
+    dropdownOptions.classList.remove("open");
+    dropdownOptions.classList.add("close");
+    setTimeout(() => dropdownOptions.classList.remove("close"), 300);
+  } else {
+    dropdownOptions.classList.add("open");
+  }
+  isOpen = !isOpen;
+});
 
-  // 将所有 h2 标签的 class 更新为选中的类名
-  h2Tags.forEach(function (h2) {
-    h2.className = selectedClass;
+// Handle option selection
+options.forEach((option) => {
+  option.addEventListener("click", (e) => {
+    const h2Tags = document.querySelectorAll("#box h2");
+    const selectedClass = e.target.dataset.value;
+
+    // Update button text
+    dropdownButton.textContent = e.target.textContent;
+
+    // Update class of all h2 tags
+    h2Tags.forEach((h2) => {
+      h2.className = selectedClass;
+    });
+
+    // Close dropdown
+    dropdownOptions.classList.remove("open");
+    dropdownOptions.classList.add("close");
+    setTimeout(() => dropdownOptions.classList.remove("close"), 300);
+    isOpen = false;
   });
 });
 /* 类名选择 */
 
+/* 角色选择 */
+const roleDropdownButton = document.getElementById("roleDropdownButton");
+const roleDropdownOptions = document.getElementById("roleDropdownOptions");
+const roleOptions = roleDropdownOptions.querySelectorAll(
+  ".roleDropdown-option"
+);
+let roleDropdownIsOpen = false;
+
+// Toggle dropdown visibility
+roleDropdownButton.addEventListener("click", () => {
+  if (roleDropdownIsOpen) {
+    roleDropdownOptions.classList.remove("open");
+    roleDropdownOptions.classList.add("close");
+    setTimeout(() => roleDropdownOptions.classList.remove("close"), 300);
+  } else {
+    roleDropdownOptions.classList.add("open");
+  }
+  roleDropdownIsOpen = !roleDropdownIsOpen;
+});
+
+// Handle option selection
+roleOptions.forEach((option) => {
+  option.addEventListener("click", (e) => {
+    const selectedClass = e.target.dataset.value;
+
+    // Update button text
+    roleDropdownButton.textContent = e.target.textContent;
+
+    // Update class of all h2 tags
+    h2Tags.forEach((h2) => {
+      h2.className = selectedClass;
+    });
+
+    // Close dropdown
+    roleDropdownOptions.classList.remove("open");
+    roleDropdownOptions.classList.add("close");
+    setTimeout(() => roleDropdownOptions.classList.remove("close"), 300);
+    roleDropdownIsOpen = false;
+  });
+});
+
+// Close dropdown when clicking outside
+document.addEventListener("click", (e) => {
+  if (
+    !dropdownButton.contains(e.target) &&
+    !dropdownOptions.contains(e.target)
+  ) {
+    if (isOpen) {
+      dropdownOptions.classList.remove("open");
+      dropdownOptions.classList.add("close");
+      setTimeout(() => dropdownOptions.classList.remove("close"), 300);
+      isOpen = false;
+    }
+  }
+  if (
+    !roleDropdownButton.contains(e.target) &&
+    !roleDropdownOptions.contains(e.target)
+  ) {
+    if (roleDropdownIsOpen) {
+      roleDropdownOptions.classList.remove("open");
+      roleDropdownOptions.classList.add("close");
+      setTimeout(() => roleDropdownOptions.classList.remove("close"), 300);
+      roleDropdownIsOpen = false;
+    }
+  }
+});
+
 /* 颜色选择 */
-const colorInput = document.getElementById('colorInput');
-const applyColorBtn = document.getElementById('applyColor');
+const colorInput = document.getElementById("colorInput");
+const applyColorBtn = document.getElementById("applyColor");
 
 // 辅助函数：验证颜色格式
 function isValidColor(value) {
@@ -252,38 +333,122 @@ function isValidColor(value) {
 // 应用颜色到页面
 function applyColorToPage(color) {
   // 修改 header 的边框颜色
-  document.querySelector('.header').style.borderColor = color;
+  document.querySelector(".header").style.borderColor = color;
 
   // 修改所有 h2 和 h3 的字体颜色、下边框颜色和伪类颜色
-  const headings = document.querySelectorAll('h2, h3');
-  headings.forEach(heading => {
+  const headings = document.querySelectorAll("h2, h3");
+  headings.forEach((heading) => {
     heading.style.color = color;
     heading.style.borderBottomColor = color;
 
     // 修改伪类颜色
     const pseudoStyle = `content: ''; background-color: ${color};`;
-    heading.style.setProperty('--before-color', color);
-    heading.style.setProperty('--after-color', color);
+    heading.style.setProperty("--before-color", color);
+    heading.style.setProperty("--after-color", color);
   });
 }
 
-colorInput.addEventListener('input', () => {
+colorInput.addEventListener("input", () => {
   const color = colorInput.value;
 
   if (isValidColor(color)) {
     applyColorToPage(color);
   } else {
-    alert('请输入有效的颜色值！');
-  }
-})
-
-// 按钮点击事件
-applyColorBtn.addEventListener('click', () => {
-  const color = colorInput.value;
-
-  if (isValidColor(color)) {
-    applyColorToPage(color);
-  } else {
-    alert('请输入有效的颜色值！');
+    alert("请输入有效的颜色值！");
   }
 });
+
+// 按钮点击事件
+applyColorBtn.addEventListener("click", () => {
+  const color = colorInput.value;
+
+  if (isValidColor(color)) {
+    applyColorToPage(color);
+  } else {
+    alert("请输入有效的颜色值！");
+  }
+});
+
+
+// 清空输入框内容
+function clearInput() {
+  document.getElementById("section-title").value = "";
+}
+
+// 添加 section 模板
+function addSection() {
+  const title = document.getElementById("section-title").value;
+  if (!title) {
+    alert("请输入模板标题！");
+    return;
+  }
+
+  let oldQlToolbarItems = document.querySelectorAll(".ql-toolbar");
+  const colorInput = document.getElementById("colorInput");
+  const color = colorInput.value;
+
+  const sectionHTML = `
+      <div class="section">
+        <h2 style="color:${color};">${title}</h2>
+        <div id="editor-container${oldQlToolbarItems.length}" class="quill-editor-item">
+          <ul>
+            <li>持续探索AI与音乐的结合，致力于虚拟表演技术的发展。</li>
+            <li>喜欢和粉丝互动，通过音乐表达情感和传递正能量。</li>
+            <li>偶尔客串动画角色，为更多文化作品注入生命力。</li>
+          </ul>
+        </div>
+        <div class="delete-btn" onclick="removeSection(this)">删除</div>
+      </div>
+    `;
+
+  // 将新 section 添加到 box 内部
+  document.getElementById("box").insertAdjacentHTML("beforeend", sectionHTML);
+  clearInput(); // 清空输入框
+
+  let newEditorContainer = document.getElementById(
+    `editor-container${oldQlToolbarItems.length}`
+  );
+
+  // 初始化 Quill 编辑器
+  new Quill(`#editor-container${oldQlToolbarItems.length}`, {
+    theme: "snow",
+    modules: {
+      toolbar: toolbarOptions,
+    },
+    placeholder: "Compose an epic...",
+  });
+
+  let qlToolbarItems = document.querySelectorAll(".ql-toolbar");
+
+  console.log("qlToolbarItems", qlToolbarItems);
+
+  for (var i = 0; i < qlToolbarItems.length; i++) {
+    // let quillEditorItem = quillEditorItems[i];
+    let qlToolbarItem = qlToolbarItems[i];
+
+    qlToolbarItem.addEventListener("mouseover", () => {
+      // quillEditorItem.style = "border: 1px solid #33CCBB !important;";
+      qlToolbarItem.style.display = "block";
+    });
+
+    qlToolbarItem.addEventListener("mouseout", () => {
+      // quillEditorItem.style = "border: none !important;";
+      qlToolbarItem.style.display = "none";
+    });
+
+    if (i === qlToolbarItems.length - 1) {
+      newEditorContainer.addEventListener("mouseover", () => {
+        newEditorContainer.style = "border: 1px solid #33CCBB !important;";
+        qlToolbarItem.style.display = "block";
+      });
+
+      newEditorContainer.addEventListener("mouseout", () => {
+        newEditorContainer.style = "border: none !important;";
+        qlToolbarItem.style.display = "none";
+      });
+    }
+  }
+}
+
+document.getElementById("add-section").addEventListener("click", addSection);
+document.getElementById("cancel-section").addEventListener("click", clearInput);

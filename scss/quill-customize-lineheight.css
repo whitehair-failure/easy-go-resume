@@ -1,0 +1,101 @@
+.ql-snow .ql-picker.ql-lineheight .ql-picker-label::before,
+.ql-snow .ql-picker.ql-lineheight .ql-picker-item::before {
+  content: "行高";
+}
+
+.ql-snow .ql-picker.ql-lineheight .ql-picker-label[data-value="1-25"]::before,
+.ql-snow .ql-picker.ql-lineheight .ql-picker-item[data-value="1-25"]::before {
+  content: "1.25";
+}
+
+.ql-snow .ql-picker.ql-lineheight .ql-picker-label[data-value="1-375"]::before,
+.ql-snow .ql-picker.ql-lineheight .ql-picker-item[data-value="1-375"]::before {
+  content: "1.375";
+}
+
+.ql-snow .ql-picker.ql-lineheight .ql-picker-label[data-value="1-5"]::before,
+.ql-snow .ql-picker.ql-lineheight .ql-picker-item[data-value="1-5"]::before {
+  content: "1.5";
+}
+
+.ql-snow .ql-picker.ql-lineheight .ql-picker-label[data-value="1-75"]::before,
+.ql-snow .ql-picker.ql-lineheight .ql-picker-item[data-value="1-75"]::before {
+  content: "1.75";
+}
+
+.ql-snow .ql-picker.ql-lineheight .ql-picker-label[data-value="1-875"]::before,
+.ql-snow .ql-picker.ql-lineheight .ql-picker-item[data-value="1-875"]::before {
+  content: "1.875";
+}
+
+.ql-snow .ql-picker.ql-lineheight .ql-picker-label[data-value="2"]::before,
+.ql-snow .ql-picker.ql-lineheight .ql-picker-item[data-value="2"]::before {
+  content: "2";
+}
+
+.ql-snow .ql-picker.ql-lineheight .ql-picker-label[data-value="3"]::before,
+.ql-snow .ql-picker.ql-lineheight .ql-picker-item[data-value="3"]::before {
+  content: "3";
+}
+
+.ql-snow .ql-picker.ql-lineheight {
+  width: 70px;
+}
+
+.ql-snow .ql-editor .ql-lineheight-1-25 {
+  line-height: 1.25;
+}
+
+.ql-snow .ql-editor .ql-lineheight-1-375 {
+  line-height: 1.375;
+}
+
+.ql-snow .ql-editor .ql-lineheight-1-5 {
+  line-height: 1.5;
+}
+
+.ql-snow .ql-editor .ql-lineheight-1-75 {
+  line-height: 1.75;
+}
+
+.ql-snow .ql-editor .ql-lineheight-1-875 {
+  line-height: 1.875;
+}
+
+.ql-snow .ql-editor .ql-lineheight-2 {
+  line-height: 2;
+}
+
+.ql-snow .ql-editor .ql-lineheight-3 {
+  line-height: 3;
+}
+
+/* Hide the toolbar */
+.ql-toolbar.ql-snow {
+  display: none;
+}
+
+.quill-editor-item {
+  /* margin-bottom: 16px !important; */
+  border: none !important;
+}
+
+.ql-editor {
+  padding: 0 !important;
+  font-size: 14px;
+
+  ul,
+  ol {
+    margin: 0 !important;
+    padding: 0 !important;
+
+  }
+
+  ul>li:not(.ql-direction-rtl) {
+    padding-left: 10px !important;
+  }
+
+  ul[data-checked=true]>li {
+    padding-left: 1.5em !important;
+  }
+}

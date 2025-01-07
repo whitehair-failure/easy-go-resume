@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Dropdown with Class Change</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 50px;
+    }
+
+    /* Dropdown styles */
+    .dropdown {
+      position: relative;
+      width: 200px;
+    }
+
+    .dropdown-button {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: #fff;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .dropdown-button::after {
+      content: "▼";
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .dropdown-options {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: #fff;
+      overflow: hidden;
+      opacity: 0;
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      z-index: 1000;
+    }
+
+    .dropdown-options.open {
+      opacity: 1;
+      transform: scaleY(1);
+    }
+
+    .dropdown-options.close {
+      opacity: 0;
+      transform: scaleY(0);
+    }
+
+    .dropdown-option {
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .dropdown-option:hover {
+      background: #f0f0f0;
+    }
+
+    /* Style for box and h2 */
+    #box {
+      margin-top: 30px;
+      border: 1px solid #ddd;
+      padding: 20px;
+    }
+
+    h2 {
+      margin: 10px 0;
+    }
+
+    /* Custom styles for class changes */
+    .style-1 {
+      color: red;
+    }
+
+    .style-2 {
+      color: blue;
+    }
+
+    .style-3 {
+      color: green;
+    }
+
+    .style-4 {
+      color: orange;
+    }
+
+    .style-5 {
+      color: purple;
+    }
+  </style>
+</head>
+<body>
+  <div class="dropdown">
+    <div class="dropdown-button" id="dropdownButton">原神</div>
+    <div class="dropdown-options" id="dropdownOptions">
+      <div class="dropdown-option" data-value="">原神</div>
+      <div class="dropdown-option" data-value="style-1">样式 1</div>
+      <div class="dropdown-option" data-value="style-2">样式 2</div>
+      <div class="dropdown-option" data-value="style-3">样式 3</div>
+      <div class="dropdown-option" data-value="style-4">样式 4</div>
+      <div class="dropdown-option" data-value="style-5">样式 5</div>
+    </div>
+  </div>
+
+  <div id="box">
+    <h2>标题 1</h2>
+    <h2>标题 2</h2>
+    <h2>标题 3</h2>
+  </div>
+
+  <script>
+    const dropdownButton = document.getElementById("dropdownButton");
+    const dropdownOptions = document.getElementById("dropdownOptions");
+    const options = dropdownOptions.querySelectorAll(".dropdown-option");
+    const h2Tags = document.querySelectorAll("#box h2");
+
+    let isOpen = false;
+
+    // Toggle dropdown visibility
+    dropdownButton.addEventListener("click", () => {
+      if (isOpen) {
+        dropdownOptions.classList.remove("open");
+        dropdownOptions.classList.add("close");
+        setTimeout(() => dropdownOptions.classList.remove("close"), 300);
+      } else {
+        dropdownOptions.classList.add("open");
+      }
+      isOpen = !isOpen;
+    });
+
+    // Handle option selection
+    options.forEach((option) => {
+      option.addEventListener("click", (e) => {
+        const selectedClass = e.target.dataset.value;
+
+        // Update button text
+        dropdownButton.textContent = e.target.textContent;
+
+        // Update class of all h2 tags
+        h2Tags.forEach((h2) => {
+          h2.className = selectedClass;
+        });
+
+        // Close dropdown
+        dropdownOptions.classList.remove("open");
+        dropdownOptions.classList.add("close");
+        setTimeout(() => dropdownOptions.classList.remove("close"), 300);
+        isOpen = false;
+      });
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", (e) => {
+      if (!dropdownButton.contains(e.target) && !dropdownOptions.contains(e.target)) {
+        if (isOpen) {
+          dropdownOptions.classList.remove("open");
+          dropdownOptions.classList.add("close");
+          setTimeout(() => dropdownOptions.classList.remove("close"), 300);
+          isOpen = false;
+        }
+      }
+    });
+  </script>
+</body>
+</html>

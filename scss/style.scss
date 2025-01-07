@@ -8,6 +8,7 @@ html {
   line-height: 1.6;
   font-size: 14px;
   color: #6b6b6b;
+
   h1,
   h2,
   h3,
@@ -18,7 +19,7 @@ html {
   }
 
   p {
-    line-height: 24px;
+    line-height: 1.75;
   }
 
   ul {
@@ -31,7 +32,7 @@ html {
   }
 
   body {
-    background: url(/img/body_bg.png);
+    background: url(../img/body_bg.png) #f5f7fa;
   }
 }
 
@@ -48,7 +49,8 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 4px solid #087cc1;
+  // border-bottom: 4px solid #087cc1;
+  border-bottom: 4px solid #33CCBB;
   padding-bottom: 10px;
   margin-bottom: 30px;
 
@@ -58,11 +60,11 @@ html {
 
   .header-content {
     h1 {
-      line-height: 60px !important;
+      line-height: 60px;
     }
 
     p {
-      line-height: 30px !important;
+      line-height: 1.875;
     }
   }
 
@@ -86,15 +88,16 @@ html {
     color: #000;
     // font-weight: 500;
     margin-bottom: 6px;
+    color: var(--before-color, #33CCBB);
   }
-
+  /* 为 h2 标签定义不同的样式 */
   h2.style-1 {
     position: relative;
     display: inline-block;
     width: 18cm;
     padding-left: 1cm;
     margin-bottom: 16px;
-    color: #087cc1;
+    color: var(--before-color, #33CCBB);
 
     &::before {
       content: "";
@@ -102,7 +105,7 @@ html {
       height: 4px;
       padding: 4px;
       // border: 10px solid #087cc1;
-      border: 10px solid var(--before-color, #087cc1);
+      border: 10px solid var(--before-color, #33CCBB);
       border-radius: 50%;
       position: absolute;
       left: 0;
@@ -112,7 +115,7 @@ html {
     &::after {
       content: "";
       width: 18cm;
-      border-bottom: 2px solid var(--after-color, #087cc1);
+      border-bottom: 2px solid var(--after-color, #33CCBB);
       // background-color: #087cc1;
       position: absolute;
       left: 1cm;
@@ -154,6 +157,7 @@ html {
 
   h3 {
     line-height: 32px;
+    color: var(--after-color, #000);
     // margin-top: 50px;
   }
 
@@ -183,28 +187,32 @@ html {
 /* 操作面板样式 */
 #operation-panel {
   position: fixed;
-  top: 50%;
+  top: 0;
   left: 0;
-  transform: translateY(-50%);
-  width: 250px;
+  width: 300px;
+  height: calc(100% - 40px);
   padding: 20px;
-  background-color: #333;
+  background-color: #fff;
   color: white;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
   z-index: 1000;
-  text-align: center;
+  // text-align: center;
 
-  > span {
-    display: block;
-    font-size: 24px;
-    color: pink;
-    margin-bottom: 10px;
+  .operation-item {
+    margin-bottom: 16px;
+
+    > span {
+      // display: block;
+      font-size: 16px;
+      color: #000;
+    }
   }
 
-  input {
-    width: 230px;
+  #section-title {
+    width: 280px;
     padding: 10px;
     margin-bottom: 10px;
+    background-color: #ecf1fe;
     border: none;
     border-radius: 4px;
   }
@@ -216,7 +224,7 @@ html {
     button {
       width: 48%;
       padding: 10px;
-      margin: 5px 1%;
+      margin: 0 1%;
       border: none;
       border-radius: 4px;
       cursor: pointer;
@@ -258,21 +266,21 @@ html {
   text-align: center;
   opacity: 0;
   animation: fadeInDialog 0.3s ease-in-out forwards;
-}
 
-/* 按钮样式 */
-.confirm-dialog button {
-  margin: 10px;
-  padding: 10px 20px;
-  border: none;
-  background-color: #f44336;
-  color: #fff;
-  cursor: pointer;
-  border-radius: 4px;
-}
+  /* 按钮样式 */
+  button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #f44336;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+  }
 
-.confirm-dialog button.cancel {
-  background-color: #888;
+  button.cancel {
+    background-color: #888;
+  }
 }
 
 /* 动画 - 弹窗出现 */
@@ -375,30 +383,90 @@ html {
 
 .color-picker {
   margin-bottom: 20px;
+  label {
+    color: #000;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+
+  input[type="color"],
+  input[type="text"] {
+    font-size: 16px;
+    margin-right: 10px;
+    padding: 5px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
 }
 
-.color-picker label {
-  font-weight: bold;
-  margin-right: 10px;
-}
+/* Dropdown styles */
+.dropdown {
+  position: relative;
+  width: 200px;
+  color: #000;
 
-.color-picker input[type="color"],
-.color-picker input[type="text"] {
-  font-size: 16px;
-  margin-right: 10px;
-  padding: 5px;
-}
+  .dropdown-button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer;
+    position: relative;
+    &::after {
+      content: "▼";
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
 
-.color-picker button {
-  font-size: 16px;
-  padding: 5px 10px;
-  cursor: pointer;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-}
+  .dropdown-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    overflow: hidden;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 1000;
 
-.color-picker button:hover {
-  background-color: #0056b3;
+    .roleDropdown-option,
+    .dropdown-option {
+      padding: 10px;
+      cursor: pointer;
+    }
+    .roleDropdown-option,
+    .dropdown-option:hover {
+      background: #f0f0f0;
+    }
+  }
+
+  .dropdown-options.open {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+
+  .dropdown-options.close {
+    opacity: 0;
+    transform: scaleY(0);
+  }
 }

@@ -6,206 +6,109 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>初音未来 - 虚拟偶像</title>
 
-  <link rel="stylesheet" href="scss/style.min.css">
-  <style>
-    .ql-snow .ql-picker.ql-lineheight .ql-picker-label::before,
-    .ql-snow .ql-picker.ql-lineheight .ql-picker-item::before {
-      content: "行高";
-    }
-
-    .ql-snow .ql-picker.ql-lineheight .ql-picker-label[data-value="1"]::before,
-    .ql-snow .ql-picker.ql-lineheight .ql-picker-item[data-value="1"]::before {
-      content: "1";
-    }
-
-    .ql-snow .ql-picker.ql-lineheight .ql-picker-label[data-value="1-5"]::before,
-    .ql-snow .ql-picker.ql-lineheight .ql-picker-item[data-value="1-5"]::before {
-      content: "1.5";
-    }
-
-    .ql-snow .ql-picker.ql-lineheight .ql-picker-label[data-value="1-75"]::before,
-    .ql-snow .ql-picker.ql-lineheight .ql-picker-item[data-value="1-75"]::before {
-      content: "1.75";
-    }
-
-    .ql-snow .ql-picker.ql-lineheight .ql-picker-label[data-value="2"]::before,
-    .ql-snow .ql-picker.ql-lineheight .ql-picker-item[data-value="2"]::before {
-      content: "2";
-    }
-
-    .ql-snow .ql-picker.ql-lineheight .ql-picker-label[data-value="3"]::before,
-    .ql-snow .ql-picker.ql-lineheight .ql-picker-item[data-value="3"]::before {
-      content: "3";
-    }
-
-    .ql-snow .ql-picker.ql-lineheight .ql-picker-label[data-value="4"]::before,
-    .ql-snow .ql-picker.ql-lineheight .ql-picker-item[data-value="4"]::before {
-      content: "4";
-    }
-
-    .ql-snow .ql-picker.ql-lineheight .ql-picker-label[data-value="5"]::before,
-    .ql-snow .ql-picker.ql-lineheight .ql-picker-item[data-value="5"]::before {
-      content: "5";
-    }
-
-    .ql-snow .ql-picker.ql-lineheight {
-      width: 70px;
-    }
-
-    .ql-snow .ql-editor .ql-lineheight-1 {
-      line-height: 10px;
-    }
-
-    .ql-snow .ql-editor .ql-lineheight-1-5 {
-      line-height: 24px;
-    }
-
-    .ql-snow .ql-editor .ql-lineheight-1-75 {
-      line-height: 30px;
-    }
-
-    .ql-snow .ql-editor .ql-lineheight-2 {
-      line-height: 40px;
-    }
-
-    .ql-snow .ql-editor .ql-lineheight-3 {
-      line-height: 50px;
-    }
-
-    .ql-snow .ql-editor .ql-lineheight-4 {
-      line-height: 60px;
-    }
-
-    .ql-snow .ql-editor .ql-lineheight-5 {
-      line-height: 70px;
-    }
-
-    .header {
-      border-bottom: 4px solid #33CCBB;
-    }
-
-    .section h2 {
-      color: #33CCBB;
-    }
-
-    .section h2::before {
-      border-color: #33CCBB;
-    }
-
-    .section h2::after {
-      border-bottom-color: 2px solid #33CCBB;
-    }
-
-    .ql-toolbar.ql-snow {
-      display: none;
-    }
-
-    .quill-editor-item {
-      /* margin-bottom: 16px !important; */
-      border: none !important;
-    }
-
-    .ql-editor {
-      padding: 0 !important;
-      font-size: 14px;
-
-      ul,
-      ol {
-        margin: 0 !important;
-        padding: 0 !important;
-
-      }
-
-      ul>li:not(.ql-direction-rtl) {
-        padding-left: 10px !important;
-      }
-
-      ul[data-checked=true]>li {
-        padding-left: 1.5em !important;
-      }
-    }
-
-    /* 美观现代化的下拉单选框 */
-    .select-box {
-      width: 200px;
-      height: 40px;
-      margin: 20px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      background-color: #f4f4f4;
-      color: #333;
-      font-size: 16px;
-      padding: 5px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .select-box:hover {
-      border-color: #007bff;
-      background-color: #e9f0ff;
-    }
-
-    .select-box:focus {
-      outline: none;
-      border-color: #007bff;
-    }
-
-    /* 为 h2 标签定义不同的样式 */
-  </style>
-
   <!-- 引入 Quill 的样式和脚本 -->
-  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-  <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+  <link href="./scss/quill.snow.css" rel="stylesheet">
+  <link rel="stylesheet" href="scss/quill-customize-lineheight.css">
+  <link rel="stylesheet" href="scss/style.min.css">
 </head>
 
 <body>
   <!-- 操作面板 -->
   <div id="operation-panel">
-    <span>新增模板</span>
 
-    <input type="text" id="section-title" placeholder="输入模板标题" />
+    <div class="operation-item">
+      <span>新增模板</span>
 
-    <div class="btn-box">
-      <button class="confirm" onclick="addSection()">添加模板</button>
-      <button class="cancel" onclick="clearInput()">取消模板</button>
+      <input type="text" id="section-title" placeholder="输入模板标题" />
+
+      <div class="btn-box">
+        <button id="add-section" class="confirm">添加模板</button>
+        <button id="cancel-section" class="cancel">取消模板</button>
+      </div>
     </div>
 
-    <div class="btn-box">
-      <button id="upload-avatar" class="confirm">上传头像</button>
-      <button id="delete-avatar" class="cancel">删除头像</button>
+    <div class="operation-item">
+      <span>头像</span>
+
+      <div class="btn-box">
+        <button id="upload-avatar" class="confirm">上传头像</button>
+        <button id="delete-avatar" class="cancel">删除头像</button>
+      </div>
     </div>
 
-    <div class="btn-box">
-      <button id="locationStorage" class="confirm">本地存储</button>
-      <button class="cancel">修改主题色</button>
+
+    <div class="operation-item">
+      <span>存储</span>
+      <div class="btn-box">
+        <button id="locationStorage" class="confirm">本地存储</button>
+        <button id="clearLocalStorage" class="confirm">清除本地存储</button>
+      </div>
     </div>
 
-    <div class="btn-box">
-      <button id="printPDF" class="confirm">打印为PDF</button>
-      <button id="clearLocalStorage" class="confirm">清除本地存储</button>
+
+    <div class="operation-item">
+      <span>保存</span>
+      <div class="btn-box">
+        <button id="printPDF" class="confirm">打印为PDF</button>
+        <button id="printPDF" class="confirm">保存为图片</button>
+      </div>
     </div>
 
-    <div class="btn-box">
-      <button id="exportText" class="confirm">导出为文本</button>
-      <button id="importText" class="confirm">导入文本</button>
+
+    <div class="operation-item">
+      <span>导出导入</span>
+      <div class="btn-box">
+        <button id="exportText" class="confirm">导出为文本</button>
+        <button id="importText" class="confirm">导入文本</button>
+      </div>
     </div>
 
-    <!-- 下拉单选框 -->
-    <select class="select-box" id="classSelect">
-      <option value="">原神</option>
-      <option value="style-1">样式 1</option>
-      <option value="style-2">样式 2</option>
-      <option value="style-3">样式 3</option>
-      <option value="style-4">样式 4</option>
-      <option value="style-5">样式 5</option>
-    </select>
 
-    <!-- 颜色选择器 -->
-    <div class="color-picker">
-      <label for="colorInput">选择主题颜色:</label>
-      <input type="color" id="colorInput" value="#cccccc" placeholder="或输入 HEX/RGB 颜色值 (如 #ff5733 或 rgb(255,87,51))">
-      <button id="applyColor">应用颜色</button>
+    <div class="operation-item">
+      <span>标题样式</span>
+      <!-- 下拉单选框 -->
+      <div class="dropdown">
+        <div class="dropdown-button" id="dropdownButton">原神</div>
+        <div class="dropdown-options" id="dropdownOptions">
+          <div class="dropdown-option" data-value="">原神</div>
+          <div class="dropdown-option" data-value="style-1">样式 1</div>
+          <div class="dropdown-option" data-value="style-2">样式 2</div>
+          <div class="dropdown-option" data-value="style-3">样式 3</div>
+          <div class="dropdown-option" data-value="style-4">样式 4</div>
+          <div class="dropdown-option" data-value="style-5">样式 5</div>
+        </div>
+      </div>
     </div>
+
+    <div class="operation-item">
+      <span>简历模板选择</span>
+      <!-- 下拉单选框 -->
+      <div class="dropdown">
+        <div class="dropdown-button" id="roleDropdownButton">原神</div>
+        <div class="dropdown-options" id="roleDropdownOptions">
+          <div class="roleDropdown-option" data-value="">原神</div>
+          <div class="roleDropdown-option" data-value="style-1">样式 1</div>
+          <div class="roleDropdown-option" data-value="style-2">样式 2</div>
+          <div class="roleDropdown-option" data-value="style-3">样式 3</div>
+          <div class="roleDropdown-option" data-value="style-4">样式 4</div>
+          <div class="roleDropdown-option" data-value="style-5">样式 5</div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="operation-item">
+      <span>主题颜色</span>
+
+      <!-- 颜色选择器 -->
+      <div class="color-picker">
+        <label for="colorInput">选择主题颜色:</label>
+        <input type="color" id="colorInput" value="#cccccc" placeholder="或输入 HEX/RGB 颜色值 (如 #ff5733 或 rgb(255,87,51))">
+        <button id="applyColor">应用颜色</button>
+      </div>
+
+    </div>
+
   </div>
 
   <!-- 简历盒子 -->
@@ -385,233 +288,14 @@
 
 </html>
 
-
+<script src="./js/quill.min.js"></script>
+<script type="module" src="./js/index.js"></script>
 <script>
-
-  const toolbarOptions = [
-    ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
-    [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
-
-    [{ 'list': 'ordered' }, { 'list': 'bullet' }, { 'list': 'check' }],
-
-    [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-    [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
-
-    ['link', 'image'],
-
-    ['blockquote', 'code-block'],
-
-    [{ 'indent': '-1' }, { 'indent': '+1' }],          // outdent/indent
-    [{ 'direction': 'rtl' }],                         // text direction
-
-    [{ 'font': [] }],
-    [{ 'align': [] }],
-
-    //.... 其他工具栏配置项                             
-    [{ 'lineheight': ["1", "1-5", "1-75", "2", "3", "4", "5"] }],//行高
-
-    // [{ 'line-height': ['1', false, '2'] }], // 这一步是自定义行高选择器
-
-    ['clean']                                         // remove formatting button
-  ];
-
-  //在这个位置添加下面代码
-  const Parchment = Quill.import("parchment");
-  class lineHeightAttributor extends Parchment.Attributor.Class { }
-  const lineHeightStyle = new lineHeightAttributor(
-    "lineheight",
-    "ql-lineheight",
-    {
-      scope: Parchment.Scope.BLOCK,
-      whitelist: ["", "1", "1-5", "1-75", "2", "3", "4", "5"],
-    }
-  );
-  Quill.register({ "formats/lineHeight": lineHeightStyle }, true);
-
-  function forEachquillEditorItems() {
-
-    console.log(114514);
-
-
-    let quillEditorItems = document.querySelectorAll('.quill-editor-item');
-
-    // 使用 map 获取所有元素的 id
-    let ids = Array.from(quillEditorItems).map(item => item.id);
-
-    console.log(ids); // 输出所有 id
-
-    quillEditorItems.forEach((item, index) => {
-
-      // 初始化 Quill 编辑器
-      new Quill(`#${ids[index]}`, {
-        theme: 'snow',
-        modules: {
-          toolbar: toolbarOptions
-        },
-        placeholder: 'Compose an epic...',
-      });
-
-    })
-
-    let qlToolbarItems = document.querySelectorAll('.ql-toolbar');
-
-    console.log('qlToolbarItems', qlToolbarItems);
-
-
-
-    for (var i = 0; i < quillEditorItems.length; i++) {
-
-      let quillEditorItem = quillEditorItems[i];
-      let qlToolbarItem = qlToolbarItems[i];
-
-      console.log('qlToolbarItems[' + i + ']', qlToolbarItems[i]);
-
-
-      qlToolbarItem.addEventListener('mouseover', function (delta, oldDelta, source) {
-        quillEditorItem.style = "border: 1px solid #33CCBB !important;";
-        qlToolbarItem.style.display = 'block';
-      });
-
-      qlToolbarItem.addEventListener('mouseout', function (delta, oldDelta, source) {
-        quillEditorItem.style = "border: none !important;";
-        qlToolbarItem.style.display = 'none';
-      });
-
-      quillEditorItem.addEventListener('mouseover', function (delta, oldDelta, source) {
-        quillEditorItem.style = "border: 1px solid #33CCBB !important;";
-        qlToolbarItem.style.display = 'block';
-      });
-
-      quillEditorItem.addEventListener('mouseout', function (delta, oldDelta, source) {
-        quillEditorItem.style = "border: none !important;";
-        qlToolbarItem.style.display = 'none';
-      });
-
-    }
-  }
-
-  const savedContent = localStorage.getItem("boxContent");
-  if (savedContent) {
-    // 如果存在，渲染存储的内容到#box
-    console.log("存在已存储的内容");
-
-    box.innerHTML = savedContent;
-    // console.log('savedContent',savedContent);
-  }
-  forEachquillEditorItems();
-
-
-
-
-</script>
-
-<script src="js/index.js"></script>
-
-<script>
-  // 清空输入框内容
-  function clearInput() {
-    document.getElementById('section-title').value = '';
-  }
-
-  // 添加 section 模板
-  function addSection() {
-    const title = document.getElementById('section-title').value;
-    if (!title) {
-      alert("请输入模板标题！");
-      return;
-    }
-
-    let oldQlToolbarItems = document.querySelectorAll('.ql-toolbar');
-    const colorInput = document.getElementById('colorInput');
-    const color = colorInput.value;
-
-
-    const sectionHTML = `
-      <div class="section">
-        <h2 style="color:${color};">${title}</h2>
-        <div id="editor-container${oldQlToolbarItems.length}" class="quill-editor-item">
-          <ul>
-            <li>持续探索AI与音乐的结合，致力于虚拟表演技术的发展。</li>
-            <li>喜欢和粉丝互动，通过音乐表达情感和传递正能量。</li>
-            <li>偶尔客串动画角色，为更多文化作品注入生命力。</li>
-          </ul>
-        </div>
-        <div class="delete-btn" onclick="removeSection(this)">删除</div>
-      </div>
-    `;
-
-    // 将新 section 添加到 box 内部
-    document.getElementById('box').insertAdjacentHTML('beforeend', sectionHTML);
-    clearInput(); // 清空输入框
-
-    let newEditorContainer = document.getElementById(`editor-container${oldQlToolbarItems.length}`)
-
-    // 初始化 Quill 编辑器
-    new Quill(`#editor-container${oldQlToolbarItems.length}`, {
-      theme: 'snow',
-      modules: {
-        toolbar: toolbarOptions
-      },
-      placeholder: 'Compose an epic...',
-    });
-
-    let qlToolbarItems = document.querySelectorAll('.ql-toolbar');
-
-    console.log('qlToolbarItems', qlToolbarItems);
-
-    for (var i = 0; i < qlToolbarItems.length; i++) {
-
-      // let quillEditorItem = quillEditorItems[i];
-      let qlToolbarItem = qlToolbarItems[i];
-
-      qlToolbarItem.addEventListener('mouseover', function (delta, oldDelta, source) {
-        // quillEditorItem.style = "border: 1px solid #33CCBB !important;";
-        qlToolbarItem.style.display = 'block';
-      });
-
-      qlToolbarItem.addEventListener('mouseout', function (delta, oldDelta, source) {
-        // quillEditorItem.style = "border: none !important;";
-        qlToolbarItem.style.display = 'none';
-      });
-
-      if (i === qlToolbarItems.length - 1) {
-        newEditorContainer.addEventListener('mouseover', function (delta, oldDelta, source) {
-          newEditorContainer.style = "border: 1px solid #33CCBB !important;";
-          qlToolbarItem.style.display = 'block';
-        });
-
-        newEditorContainer.addEventListener('mouseout', function (delta, oldDelta, source) {
-          newEditorContainer.style = "border: none !important;";
-          qlToolbarItem.style.display = 'none';
-        });
-      }
-    }
-
-
-  }
-
   // 删除 section 模板
   function removeSection(deleteBtn) {
-    console.log('deleteBtn', deleteBtn);
+    console.log("deleteBtn", deleteBtn);
 
-    const section = deleteBtn.closest('.section');
+    const section = deleteBtn.closest(".section");
     section.remove();
   }
 </script>
-
-<!-- <script>
-  L2Dwidget.init({
-      "model": {
-          jsonPath: "https://cdn.jsdelivr.net/gh/cn-night-ray/live2d-widget-models@1.0/packages/live2d-widget-model-shizuku/assets/shizuku.model.json",
-          scale: 1
-      },
-      "display": {
-          "superSample": 1.2,
-          "width": 200,
-          "height": 380,
-          "position": "left",
-          "hOffset": 0,
-          "vOffset": -32
-      }
-  });
-</script> -->
