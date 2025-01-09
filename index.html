@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>初音未来 - 虚拟偶像</title>
+  <title>ProjectSekai feat resume</title>
 
   <!-- 引入 Quill 的样式和脚本 -->
   <link href="./scss/quill.snow.css" rel="stylesheet">
@@ -17,14 +17,56 @@
   <div id="operation-panel">
 
     <div class="operation-item">
+      <span>优秀简历案例</span>
+      <!-- 下拉单选框 -->
+      <div class="dropdown">
+        <div class="dropdown-button" id="roleDropdownButton">初音ミク</div>
+        <div class="dropdown-options" id="roleDropdownOptions">
+          <div class="roleDropdown-option" data-value="miku">初音ミク</div>
+          <div class="roleDropdown-option" data-value="momoka">櫻井桃華</div>
+          <div class="roleDropdown-option" data-value="griffith">格里菲斯</div>
+          <div class="roleDropdown-option" data-value="voldemort">伏地魔</div>
+          <div class="roleDropdown-option" data-value="ShigureUi">しぐれうい</div>
+          <!-- <div class="roleDropdown-option" data-value="style-5">样式 5</div> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="operation-item">
       <span>新增模板</span>
 
-      <input type="text" id="section-title" placeholder="输入模板标题" />
-
-      <div class="btn-box">
-        <button id="add-section" class="confirm">添加模板</button>
-        <button id="cancel-section" class="cancel">取消模板</button>
+      <div class="add-section-box">
+        <input type="text" id="section-title" placeholder="输入模板标题" />
+        <button id="add-section" class="confirm">添加</button>
       </div>
+    </div>
+
+    <div class="operation-item">
+      <span>标题样式/主题色选择</span>
+
+      <div class="h2-style-box">
+        <!-- 下拉单选框 -->
+        <div class="dropdown">
+          <div class="dropdown-button" id="dropdownButton">纯真</div>
+          <div class="dropdown-options" id="dropdownOptions">
+            <div class="dropdown-option" data-value="">纯真</div>
+            <div class="dropdown-option" data-value="style-1">样式 1</div>
+            <div class="dropdown-option" data-value="style-2">样式 2</div>
+            <div class="dropdown-option" data-value="style-3">样式 3</div>
+            <div class="dropdown-option" data-value="style-4">样式 4</div>
+            <div class="dropdown-option" data-value="style-5">样式 5</div>
+          </div>
+        </div>
+
+        <!-- 颜色选择器 -->
+        <div class="color-picker">
+          <!-- <label for="colorInput">选择主题颜色:</label> -->
+          <input type="color" id="colorInput" value="#cccccc"
+            placeholder="或输入 HEX/RGB 颜色值 (如 #ff5733 或 rgb(255,87,51))">
+          <!-- <button id="applyColor">应用颜色</button> -->
+        </div>
+      </div>
+
     </div>
 
     <div class="operation-item">
@@ -38,16 +80,16 @@
 
 
     <div class="operation-item">
-      <span>存储</span>
+      <span>浏览器存储</span>
       <div class="btn-box">
         <button id="locationStorage" class="confirm">本地存储</button>
-        <button id="clearLocalStorage" class="confirm">清除本地存储</button>
+        <button id="clearLocalStorage" class="cancel">清除本地存储</button>
       </div>
     </div>
 
 
     <div class="operation-item">
-      <span>保存</span>
+      <span>文件保存</span>
       <div class="btn-box">
         <button id="printPDF" class="confirm">打印为PDF</button>
         <button id="printPDF" class="confirm">保存为图片</button>
@@ -56,63 +98,17 @@
 
 
     <div class="operation-item">
-      <span>导出导入</span>
+      <span>简历模板</span>
       <div class="btn-box">
-        <button id="exportText" class="confirm">导出为文本</button>
-        <button id="importText" class="confirm">导入文本</button>
+        <button id="exportText" class="confirm">导出简历模板</button>
+        <button id="importText" class="confirm">导入简历模板</button>
       </div>
-    </div>
-
-
-    <div class="operation-item">
-      <span>标题样式</span>
-      <!-- 下拉单选框 -->
-      <div class="dropdown">
-        <div class="dropdown-button" id="dropdownButton">原神</div>
-        <div class="dropdown-options" id="dropdownOptions">
-          <div class="dropdown-option" data-value="">原神</div>
-          <div class="dropdown-option" data-value="style-1">样式 1</div>
-          <div class="dropdown-option" data-value="style-2">样式 2</div>
-          <div class="dropdown-option" data-value="style-3">样式 3</div>
-          <div class="dropdown-option" data-value="style-4">样式 4</div>
-          <div class="dropdown-option" data-value="style-5">样式 5</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="operation-item">
-      <span>简历模板选择</span>
-      <!-- 下拉单选框 -->
-      <div class="dropdown">
-        <div class="dropdown-button" id="roleDropdownButton">原神</div>
-        <div class="dropdown-options" id="roleDropdownOptions">
-          <div class="roleDropdown-option" data-value="">原神</div>
-          <div class="roleDropdown-option" data-value="style-1">样式 1</div>
-          <div class="roleDropdown-option" data-value="style-2">样式 2</div>
-          <div class="roleDropdown-option" data-value="style-3">样式 3</div>
-          <div class="roleDropdown-option" data-value="style-4">样式 4</div>
-          <div class="roleDropdown-option" data-value="style-5">样式 5</div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="operation-item">
-      <span>主题颜色</span>
-
-      <!-- 颜色选择器 -->
-      <div class="color-picker">
-        <label for="colorInput">选择主题颜色:</label>
-        <input type="color" id="colorInput" value="#cccccc" placeholder="或输入 HEX/RGB 颜色值 (如 #ff5733 或 rgb(255,87,51))">
-        <button id="applyColor">应用颜色</button>
-      </div>
-
     </div>
 
   </div>
 
   <!-- 简历盒子 -->
-  <div id="box" class="container">
+  <div id="resumeBox" class="container">
     <!-- Header Section -->
     <div class="header">
       <div class="header-left">
@@ -121,13 +117,13 @@
           <h1>初音未来</h1>
 
           <p>
-            <span>全球虚拟偶像</span>
+            <span>职业：虚拟歌姬</span>
             <span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <span>现居：数字世界</span>
+            <span>全球虚拟偶像</span>
             <span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</span>
             <span>年龄：16</span>
             <span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <span>职业：虚拟歌姬</span>
+            <span>现居：数字世界</span>
           </p>
 
           <p>
@@ -153,7 +149,7 @@
 
     <!-- 专业技能 -->
     <div class="section">
-      <h2>专业技能</h2>
+      <h2 class="style-1">专业技能</h2>
 
       <!-- HTML 结构 -->
       <div id="editor-container1" class="quill-editor-item">
@@ -169,7 +165,7 @@
 
     <!-- 工作经历 -->
     <div class="section">
-      <h2>工作经历</h2>
+      <h2 class="style-1">工作经历</h2>
 
       <div id="editor-container2" class="quill-editor-item">
         <h3>Crypton Future Media | 虚拟偶像 (2007 - 至今)</h3>
@@ -186,10 +182,9 @@
       <div class="delete-btn" onclick="removeSection(this)">删除</div>
     </div>
 
-
     <!-- 个人优势 -->
     <div class="section">
-      <h2>个人优势</h2>
+      <h2 class="style-1">个人优势</h2>
 
 
       <div id="editor-container3" class="quill-editor-item">
@@ -210,7 +205,7 @@
 
         <p><strong>SEGA游戏：</strong>参与Project DIVA系列音乐游戏。</p>
         <p><strong>动画电影：</strong>主题曲创作及演绎。</p>
-        <p><strong>同人创作：</strong>插画二创P站排名第一。</p>
+        <p><strong>科技数码：</strong>为小米、索尼、戴尔等知名科技企业代言产品。</p>
       </div>
 
       <div class="delete-btn" onclick="removeSection(this)">删除</div>
@@ -218,7 +213,7 @@
 
     <!-- 教育经历 -->
     <div class="section">
-      <h2>教育经历</h2>
+      <h2 class="style-1">教育经历</h2>
 
       <div id="editor-container4" class="quill-editor-item">
         <h3>VOCALOID Institute | 数字音乐与虚拟表演学</h3>
@@ -232,7 +227,7 @@
 
     <!-- 荣誉与奖项 -->
     <div class="section">
-      <h2>荣誉与奖项</h2>
+      <h2 class="style-1">荣誉与奖项</h2>
 
       <div id="editor-container5" class="quill-editor-item">
         <ul data-checked="true">
@@ -247,7 +242,7 @@
 
     <!-- 兴趣爱好 -->
     <div class="section">
-      <h2>兴趣爱好</h2>
+      <h2 class="style-1">兴趣爱好</h2>
 
       <div id="editor-container6" class="quill-editor-item">
         <ul>
@@ -263,7 +258,7 @@
     <!-- 附加信息 -->
     <div class="section">
 
-      <h2>附加信息</h2>
+      <h2 class="style-1">附加信息</h2>
 
       <div id="editor-container7" class="quill-editor-item">
         <blockquote><span
@@ -280,8 +275,10 @@
   <div class="overlay" id="confirmationOverlay">
     <div class="confirm-dialog">
       <p>确定要清除本地存储吗？</p>
-      <button class="cancel" id="cancelClear">取消</button>
-      <button id="confirmClear">确认</button>
+      <div class="btn-box">
+        <button class="cancel" id="cancelClear">取消</button>
+        <button id="confirmClear">确认</button>
+      </div>
     </div>
   </div>
 </body>

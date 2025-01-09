@@ -106,7 +106,7 @@ if (savedContent) {
   // 如果存在，渲染存储的内容到#box
   console.log("存在已存储的内容");
 
-  box.innerHTML = savedContent;
+  resumeBox.innerHTML = savedContent;
   // console.log('savedContent',savedContent);
 }
 

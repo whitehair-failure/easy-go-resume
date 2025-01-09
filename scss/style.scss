@@ -27,7 +27,7 @@ html {
     padding-left: 20px;
 
     li {
-      margin-bottom: 10px;
+      line-height: 1.75;
     }
   }
 
@@ -50,7 +50,7 @@ html {
   justify-content: space-between;
   align-items: center;
   // border-bottom: 4px solid #087cc1;
-  border-bottom: 4px solid #33CCBB;
+  border-bottom: 4px solid #33ccbb;
   padding-bottom: 10px;
   margin-bottom: 30px;
 
@@ -70,8 +70,8 @@ html {
 
   #avatar {
     img {
-      width: 120px;
-      height: 168px;
+      max-width: 120px;
+      max-height: 168px;
       border: 1px solid skyblue;
       cursor: pointer;
     }
@@ -88,7 +88,7 @@ html {
     color: #000;
     // font-weight: 500;
     margin-bottom: 6px;
-    color: var(--before-color, #33CCBB);
+    color: var(--before-color, #33ccbb);
   }
   /* 为 h2 标签定义不同的样式 */
   h2.style-1 {
@@ -97,7 +97,7 @@ html {
     width: 18cm;
     padding-left: 1cm;
     margin-bottom: 16px;
-    color: var(--before-color, #33CCBB);
+    color: var(--before-color, #33ccbb);
 
     &::before {
       content: "";
@@ -105,7 +105,7 @@ html {
       height: 4px;
       padding: 4px;
       // border: 10px solid #087cc1;
-      border: 10px solid var(--before-color, #33CCBB);
+      border: 10px solid var(--before-color, #33ccbb);
       border-radius: 50%;
       position: absolute;
       left: 0;
@@ -115,7 +115,7 @@ html {
     &::after {
       content: "";
       width: 18cm;
-      border-bottom: 2px solid var(--after-color, #33CCBB);
+      border-bottom: 2px solid var(--after-color, #33ccbb);
       // background-color: #087cc1;
       position: absolute;
       left: 1cm;
@@ -196,48 +196,102 @@ html {
   color: white;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
   z-index: 1000;
-  // text-align: center;
-
-  .operation-item {
-    margin-bottom: 16px;
-
-    > span {
-      // display: block;
-      font-size: 16px;
-      color: #000;
-    }
-  }
-
-  #section-title {
-    width: 280px;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: #ecf1fe;
-    border: none;
-    border-radius: 4px;
-  }
+  user-select: none;
 
   .btn-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    button {
-      width: 48%;
-      padding: 10px;
-      margin: 0 1%;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
+  }
+  button {
+    width: 48%;
+    padding: 10px;
+    margin: 0 1%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  button.confirm {
+    background-color: green;
+    color: white;
+  }
+
+  button.cancel {
+    background-color: red;
+    color: white;
+  }
+
+  .operation-item {
+    margin-bottom: 16px;
+
+    > span {
+      display: block;
+      font-size: 14px;
+      color: #000;
+      margin-bottom: 4px;
     }
 
-    button.confirm {
-      background-color: green;
-      color: white;
+    .h2-style-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .color-picker {
+        // margin-bottom: 20px;
+        label {
+          color: #000;
+          font-weight: bold;
+          margin-right: 10px;
+        }
+
+        input[type="color"],
+        input[type="text"] {
+          height: 40px;
+          font-size: 16px;
+          margin-right: 10px;
+          padding: 5px;
+        }
+
+        button {
+          font-size: 16px;
+          padding: 5px 10px;
+          cursor: pointer;
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          border-radius: 4px;
+        }
+
+        button:hover {
+          background-color: #0056b3;
+        }
+      }
     }
 
-    button.cancel {
-      background-color: red;
-      color: white;
+    .add-section-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      button.confirm {
+        width: 20%;
+        padding: 10px;
+        margin: 0 1%;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        background-color: green;
+        color: white;
+      }
+
+      input {
+        width: 80%;
+        padding: 10px;
+        background-color: #ecf1fe;
+        border: none;
+        border-radius: 4px;
+      }
     }
   }
 }
@@ -259,27 +313,39 @@ html {
 /* 弹窗样式 */
 .confirm-dialog {
   background-color: #fff;
-  padding: 20px;
+  padding: 20px 40px;
   border-radius: 8px;
-  width: 300px;
+  // width: 300px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   text-align: center;
   opacity: 0;
   animation: fadeInDialog 0.3s ease-in-out forwards;
 
-  /* 按钮样式 */
-  button {
-    margin: 10px;
-    padding: 10px 20px;
-    border: none;
-    background-color: #f44336;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 4px;
+  p {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 10px 0 30px;
   }
 
-  button.cancel {
-    background-color: #888;
+  .btn-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    /* 按钮样式 */
+    button {
+      width: 49%;
+      padding: 10px 20px;
+      border: none;
+      background-color: #f44336;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    button.cancel {
+      background-color: #888;
+    }
   }
 }
 
@@ -381,36 +447,6 @@ html {
   }
 }
 
-.color-picker {
-  margin-bottom: 20px;
-  label {
-    color: #000;
-    font-weight: bold;
-    margin-right: 10px;
-  }
-
-  input[type="color"],
-  input[type="text"] {
-    font-size: 16px;
-    margin-right: 10px;
-    padding: 5px;
-  }
-
-  button {
-    font-size: 16px;
-    padding: 5px 10px;
-    cursor: pointer;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-  }
-
-  button:hover {
-    background-color: #0056b3;
-  }
-}
-
 /* Dropdown styles */
 .dropdown {
   position: relative;
@@ -418,7 +454,7 @@ html {
   color: #000;
 
   .dropdown-button {
-    width: 100%;
+    width: 180px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -439,10 +475,11 @@ html {
     top: 100%;
     left: 0;
     width: 100%;
+    max-height: 260px;
     border: 1px solid #ccc;
     border-radius: 4px;
     background: #fff;
-    overflow: hidden;
+    overflow: auto;
     opacity: 0;
     transform: scaleY(0);
     transform-origin: top;
@@ -454,7 +491,7 @@ html {
       padding: 10px;
       cursor: pointer;
     }
-    .roleDropdown-option,
+    .roleDropdown-option:hover,
     .dropdown-option:hover {
       background: #f0f0f0;
     }

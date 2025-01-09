@@ -1,13 +1,25 @@
 import { toolbarOptions, forEachquillEditorItems } from "./init.js";
-import { momoka } from "./kyara.js";
+import { miku, momoka, ShigureUi, griffith, voldemort } from "./kyara.js";
 
 // console.log('momoka',momoka);
 
-/* 图片上传 */
-// 获取DOM元素
+// 获取简历盒子
+const resumeBox = document.getElementById("resumeBox");
+// 默认标题样式
+let currentH2Style = "style-1";
+let currentColor = "#33CCBB";
 
-function uploadImg(fileInput, uploadAvatarBtn, img) {
+/* 图片上传 */
+function uploadAvatarInit() {
+  const avatar = document.getElementById("avatar");
+  const uploadAvatarBtn = document.getElementById("upload-avatar");
+  const fileInput = document.getElementById("fileInput");
+  const img = avatar.querySelector("img");
+
   // 监听点击事件，触发文件上传
+  avatar.addEventListener("click", function () {
+    fileInput.click(); // 模拟点击文件输入框
+  });
   uploadAvatarBtn.addEventListener("click", function () {
     fileInput.click(); // 模拟点击文件输入框
   });
@@ -18,7 +30,7 @@ function uploadImg(fileInput, uploadAvatarBtn, img) {
     if (file) {
       const reader = new FileReader(); // 创建文件读取器
       reader.onload = function (e) {
-        img.style.display = "block"; // 隐藏图片
+        img.style.display = "block"; // 显示图片
         img.src = e.target.result; // 替换图片源为上传的文件
       };
       reader.readAsDataURL(file); // 读取文件
@@ -26,7 +38,10 @@ function uploadImg(fileInput, uploadAvatarBtn, img) {
   });
 }
 
-function deleteAvatar(deleteAvatarBtn, img) {
+function deleteAvatarInit() {
+  const avatar = document.getElementById("avatar");
+  const img = avatar.querySelector("img");
+  const deleteAvatarBtn = document.getElementById("delete-avatar");
   // 监听点击事件，删除头像
   deleteAvatarBtn.addEventListener("click", function () {
     img.style.display = "none"; // 隐藏图片
@@ -35,19 +50,15 @@ function deleteAvatar(deleteAvatarBtn, img) {
 }
 
 /* 添加分割线 */
-// 获取盒子元素
-const box = document.getElementById("box");
-
-// 检测高度是否超过A4页面的高度
 function checkHeight() {
   // 定义A4页面的高度
   const A4_HEIGHT = (29.7 - 2) * 37.7952755906; // A4 高度 (mm 转换为 px)
 
-  const boxHeight = box.offsetHeight; // 获取盒子的当前高度
+  const boxHeight = resumeBox.offsetHeight; // 获取盒子的当前高度
   const pnesCount = Math.floor(boxHeight / A4_HEIGHT); // 计算需要多少条横线
 
   // 移除已有的横线
-  const existingpnes = box.querySelectorAll(".pne");
+  const existingpnes = resumeBox.querySelectorAll(".pne");
   existingpnes.forEach((pne) => pne.remove());
 
   // 添加横线
@@ -55,12 +66,11 @@ function checkHeight() {
     const pne = document.createElement("div");
     pne.className = "pne";
     pne.style.top = `${i * A4_HEIGHT}px`; // 横线位置
-    box.appendChild(pne);
+    resumeBox.appendChild(pne);
   }
 }
 
 /* 添加编辑工具栏 */
-
 // pdf打印按钮
 const printPDFButton = document.getElementById("printPDF");
 // 导入导出按钮
@@ -78,13 +88,13 @@ const cancelClearButton = document.getElementById("cancelClear");
 // 监听按钮1：存储内容到本地存储
 locationStorageButton.addEventListener("click", function () {
   // 过滤掉包含ql-toolbar类名的元素
-  const elementsToRemove = box.querySelectorAll(".ql-toolbar");
+  const elementsToRemove = resumeBox.querySelectorAll(".ql-toolbar");
   elementsToRemove.forEach((element) => {
     element.remove(); // 从DOM中移除
   });
 
   // 获取#box内的HTML内容（过滤后的内容）
-  const content = box.innerHTML;
+  const content = resumeBox.innerHTML;
 
   // 将内容存储到浏览器的本地存储
   localStorage.setItem("boxContent", content);
@@ -96,13 +106,13 @@ locationStorageButton.addEventListener("click", function () {
 // 监听按钮2：导出为文本文件
 exportTextButton.addEventListener("click", function () {
   // 过滤掉包含ql-toolbar类名的元素
-  const elementsToRemove = box.querySelectorAll(".ql-toolbar");
+  const elementsToRemove = resumeBox.querySelectorAll(".ql-toolbar");
   elementsToRemove.forEach((element) => {
     element.remove(); // 从DOM中移除
   });
 
   // 获取#box内的HTML内容（过滤后的内容）
-  const content = box.innerHTML;
+  const content = resumeBox.innerHTML;
 
   // 创建一个Blob对象并导出为文本文件
   const blob = new Blob([content], { type: "text/plain" });
@@ -191,22 +201,29 @@ confirmClearButton.addEventListener("click", function () {
 
 // 页面加载时，检查localStorage中是否有已存储的内容
 window.onload = function () {
-  const avatar = document.getElementById("avatar");
-  const uploadAvatarBtn = document.getElementById("upload-avatar");
-  const deleteAvatarBtn = document.getElementById("delete-avatar");
-  const fileInput = document.getElementById("fileInput");
-  const img = avatar.querySelector("img");
-
   // 图片功能
-  uploadImg(fileInput, avatar, img);
-  uploadImg(fileInput, uploadAvatarBtn, img);
-  deleteAvatar(deleteAvatarBtn, img);
+  uploadAvatarInit();
+  deleteAvatarInit();
 
   // 初始化检测高度
   checkHeight();
   setInterval(checkHeight, 1000); // 每隔1秒检测一次高度
 
   forEachquillEditorItems();
+
+  /* 颜色 */
+  document.getElementById("colorInput").value = currentColor;
+  applyColorToPage(currentColor);
+  /* 标题样式 */
+  const dropdownButton = document.getElementById("dropdownButton");
+  const h2Tags = document.querySelectorAll("#resumeBox h2");
+  // Update button text
+  dropdownButton.textContent = "样式1";
+
+  // Update class of all h2 tags
+  h2Tags.forEach((h2) => {
+    h2.className = currentH2Style;
+  });
 };
 
 /* 类名选择 */
@@ -232,9 +249,9 @@ dropdownButton.addEventListener("click", () => {
 // Handle option selection
 options.forEach((option) => {
   option.addEventListener("click", (e) => {
-    const h2Tags = document.querySelectorAll("#box h2");
+    const h2Tags = document.querySelectorAll("#resumeBox h2");
     const selectedClass = e.target.dataset.value;
-
+    currentH2Style = selectedClass;
     // Update button text
     dropdownButton.textContent = e.target.textContent;
 
@@ -275,15 +292,43 @@ roleDropdownButton.addEventListener("click", () => {
 // Handle option selection
 roleOptions.forEach((option) => {
   option.addEventListener("click", (e) => {
-    const selectedClass = e.target.dataset.value;
+    const selectedRole = e.target.dataset.value;
 
     // Update button text
     roleDropdownButton.textContent = e.target.textContent;
 
-    // Update class of all h2 tags
-    h2Tags.forEach((h2) => {
-      h2.className = selectedClass;
-    });
+    if (selectedRole == "miku") {
+      resumeBox.innerHTML = miku;
+      currentH2Style = "style-1";
+      dropdownButton.textContent = "样式1";
+      currentColor = "#33CCBB";
+    } else if (selectedRole == "momoka") {
+      currentH2Style = "style-5";
+      dropdownButton.textContent = "样式5";
+      currentColor = "#EF95CF";
+      resumeBox.innerHTML = momoka;
+    } else if (selectedRole == "griffith") {
+      resumeBox.innerHTML = griffith;
+      dropdownButton.textContent = "纯真";
+      currentColor = "#000000";
+    } else if (selectedRole == "voldemort") {
+      resumeBox.innerHTML = voldemort;
+      dropdownButton.textContent = "样式3";
+      currentColor = "#000000";
+    } else if (selectedRole == "ShigureUi") {
+      dropdownButton.textContent = "样式5";
+      currentColor = "#EED8C3";
+      resumeBox.innerHTML = ShigureUi;
+    }
+
+    // 工具栏初始化
+    forEachquillEditorItems();
+    // 图片功能
+    uploadAvatarInit();
+    deleteAvatarInit();
+    // 颜色功能
+    document.getElementById("colorInput").value = currentColor;
+    applyColorToPage(currentColor);
 
     // Close dropdown
     roleDropdownOptions.classList.remove("open");
@@ -336,7 +381,7 @@ function applyColorToPage(color) {
   document.querySelector(".header").style.borderColor = color;
 
   // 修改所有 h2 和 h3 的字体颜色、下边框颜色和伪类颜色
-  const headings = document.querySelectorAll("h2, h3");
+  const headings = document.querySelectorAll("h2");
   headings.forEach((heading) => {
     heading.style.color = color;
     heading.style.borderBottomColor = color;
@@ -368,12 +413,7 @@ applyColorBtn.addEventListener("click", () => {
     alert("请输入有效的颜色值！");
   }
 });
-
-
-// 清空输入框内容
-function clearInput() {
-  document.getElementById("section-title").value = "";
-}
+/* 颜色选择结束 */
 
 // 添加 section 模板
 function addSection() {
@@ -389,7 +429,7 @@ function addSection() {
 
   const sectionHTML = `
       <div class="section">
-        <h2 style="color:${color};">${title}</h2>
+        <h2 class="${currentH2Style}" style="color:${color}; border-bottom-color: ${color}; --before-color: ${color}; --after-color: ${color};"">${title}</h2>
         <div id="editor-container${oldQlToolbarItems.length}" class="quill-editor-item">
           <ul>
             <li>持续探索AI与音乐的结合，致力于虚拟表演技术的发展。</li>
@@ -401,9 +441,12 @@ function addSection() {
       </div>
     `;
 
-  // 将新 section 添加到 box 内部
-  document.getElementById("box").insertAdjacentHTML("beforeend", sectionHTML);
-  clearInput(); // 清空输入框
+  // 将新 section 添加到 resumeBox 内部
+  document
+    .getElementById("resumeBox")
+    .insertAdjacentHTML("beforeend", sectionHTML);
+  // 清空输入框
+  document.getElementById("section-title").value = "";
 
   let newEditorContainer = document.getElementById(
     `editor-container${oldQlToolbarItems.length}`
@@ -451,4 +494,3 @@ function addSection() {
 }
 
 document.getElementById("add-section").addEventListener("click", addSection);
-document.getElementById("cancel-section").addEventListener("click", clearInput);
