@@ -249,7 +249,7 @@ let ShigureUi = `
   </div>
 
   <div id="avatar">
-    <img src="img/ShigureUI.jpg" alt="時雨羽衣头像" style="display: block;">
+    <img src="img/ShigureUI.png" alt="時雨羽衣头像" style="display: block;">
   </div>
   <input type="file" id="fileInput" style="display:none;" accept="image/*">
 </div>
