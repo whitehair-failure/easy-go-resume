@@ -199,33 +199,6 @@ confirmClearButton.addEventListener("click", function () {
   }, 300); // 动画时间匹配
 });
 
-// 页面加载时，检查localStorage中是否有已存储的内容
-window.onload = function () {
-  // 图片功能
-  uploadAvatarInit();
-  deleteAvatarInit();
-
-  // 初始化检测高度
-  checkHeight();
-  setInterval(checkHeight, 1000); // 每隔1秒检测一次高度
-
-  forEachquillEditorItems();
-
-  /* 颜色 */
-  document.getElementById("colorInput").value = currentColor;
-  applyColorToPage(currentColor);
-  /* 标题样式 */
-  const dropdownButton = document.getElementById("dropdownButton");
-  const h2Tags = document.querySelectorAll("#resumeBox h2");
-  // Update button text
-  dropdownButton.textContent = "样式1";
-
-  // Update class of all h2 tags
-  h2Tags.forEach((h2) => {
-    h2.className = currentH2Style;
-  });
-};
-
 /* 类名选择 */
 // 获取选择框元素
 const dropdownButton = document.getElementById("dropdownButton");
@@ -366,7 +339,7 @@ document.addEventListener("click", (e) => {
 
 /* 颜色选择 */
 const colorInput = document.getElementById("colorInput");
-const applyColorBtn = document.getElementById("applyColor");
+// const applyColorBtn = document.getElementById("applyColor");
 
 // 辅助函数：验证颜色格式
 function isValidColor(value) {
@@ -404,19 +377,21 @@ colorInput.addEventListener("input", () => {
 });
 
 // 按钮点击事件
-applyColorBtn.addEventListener("click", () => {
-  const color = colorInput.value;
+// applyColorBtn.addEventListener("click", () => {
+//   const color = colorInput.value;
 
-  if (isValidColor(color)) {
-    applyColorToPage(color);
-  } else {
-    alert("请输入有效的颜色值！");
-  }
-});
+//   if (isValidColor(color)) {
+//     applyColorToPage(color);
+//   } else {
+//     alert("请输入有效的颜色值！");
+//   }
+// });
 /* 颜色选择结束 */
 
 // 添加 section 模板
 function addSection() {
+  console.log(446669);
+
   const title = document.getElementById("section-title").value;
   if (!title) {
     alert("请输入模板标题！");
@@ -493,4 +468,31 @@ function addSection() {
   }
 }
 
-document.getElementById("add-section").addEventListener("click", addSection);
+// 页面加载时，检查localStorage中是否有已存储的内容
+window.onload = function () {
+  // 图片功能
+  uploadAvatarInit();
+  deleteAvatarInit();
+
+  // 初始化检测高度
+  checkHeight();
+  setInterval(checkHeight, 1000); // 每隔1秒检测一次高度
+
+  forEachquillEditorItems();
+
+  document.getElementById("add-section").addEventListener("click", addSection);
+
+  // /* 颜色 */
+  document.getElementById("colorInput").value = currentColor;
+  applyColorToPage(currentColor);
+  /* 标题样式 */
+  const dropdownButton = document.getElementById("dropdownButton");
+  const h2Tags = document.querySelectorAll("#resumeBox h2");
+  // Update button text
+  dropdownButton.textContent = "样式1";
+
+  // Update class of all h2 tags
+  // h2Tags.forEach((h2) => {
+  //   h2.className = currentH2Style;
+  // });
+};
