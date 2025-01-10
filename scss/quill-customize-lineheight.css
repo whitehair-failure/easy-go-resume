@@ -43,31 +43,31 @@
 }
 
 .ql-snow .ql-editor .ql-lineheight-1-25 {
-  line-height: 1.25;
+  line-height: 1.25 !important;
 }
 
 .ql-snow .ql-editor .ql-lineheight-1-375 {
-  line-height: 1.375;
+  line-height: 1.375 !important;
 }
 
 .ql-snow .ql-editor .ql-lineheight-1-5 {
-  line-height: 1.5;
+  line-height: 1.5 !important;
 }
 
 .ql-snow .ql-editor .ql-lineheight-1-75 {
-  line-height: 1.75;
+  line-height: 1.75 !important;
 }
 
 .ql-snow .ql-editor .ql-lineheight-1-875 {
-  line-height: 1.875;
+  line-height: 1.875 !important;
 }
 
 .ql-snow .ql-editor .ql-lineheight-2 {
-  line-height: 2;
+  line-height: 2 !important;
 }
 
 .ql-snow .ql-editor .ql-lineheight-3 {
-  line-height: 3;
+  line-height: 3 !important;
 }
 
 /* Hide the toolbar */

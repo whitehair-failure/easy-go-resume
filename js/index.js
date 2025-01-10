@@ -1,73 +1,33 @@
-import { toolbarOptions, forEachquillEditorItems } from "./init.js";
+import {
+  toolbarOptions,
+  forEachquillEditorItems,
+  uploadAvatarInit,
+  deleteAvatarInit,
+  checkHeight,
+} from "./init.js";
 import { miku, momoka, ShigureUi, griffith, voldemort } from "./kyara.js";
 
 // console.log('momoka',momoka);
 
+// 页面加载
 // 获取简历盒子
 const resumeBox = document.getElementById("resumeBox");
 // 默认标题样式
 let currentH2Style = "style-1";
-let currentColor = "#33CCBB";
 
-/* 图片上传 */
-function uploadAvatarInit() {
-  const avatar = document.getElementById("avatar");
-  const uploadAvatarBtn = document.getElementById("upload-avatar");
-  const fileInput = document.getElementById("fileInput");
-  const img = avatar.querySelector("img");
-
-  // 监听点击事件，触发文件上传
-  avatar.addEventListener("click", function () {
-    fileInput.click(); // 模拟点击文件输入框
-  });
-  uploadAvatarBtn.addEventListener("click", function () {
-    fileInput.click(); // 模拟点击文件输入框
-  });
-
-  // 监听文件选择事件，替换图片
-  fileInput.addEventListener("change", function (event) {
-    const file = event.target.files[0]; // 获取用户选择的文件
-    if (file) {
-      const reader = new FileReader(); // 创建文件读取器
-      reader.onload = function (e) {
-        img.style.display = "block"; // 显示图片
-        img.src = e.target.result; // 替换图片源为上传的文件
-      };
-      reader.readAsDataURL(file); // 读取文件
-    }
-  });
-}
-
-function deleteAvatarInit() {
-  const avatar = document.getElementById("avatar");
-  const img = avatar.querySelector("img");
-  const deleteAvatarBtn = document.getElementById("delete-avatar");
-  // 监听点击事件，删除头像
-  deleteAvatarBtn.addEventListener("click", function () {
-    img.style.display = "none"; // 隐藏图片
-    img.src = ""; // 清空图片
-  });
-}
-
-/* 添加分割线 */
-function checkHeight() {
-  // 定义A4页面的高度
-  const A4_HEIGHT = (29.7 - 2) * 37.7952755906; // A4 高度 (mm 转换为 px)
-
-  const boxHeight = resumeBox.offsetHeight; // 获取盒子的当前高度
-  const pnesCount = Math.floor(boxHeight / A4_HEIGHT); // 计算需要多少条横线
-
-  // 移除已有的横线
-  const existingpnes = resumeBox.querySelectorAll(".pne");
-  existingpnes.forEach((pne) => pne.remove());
-
-  // 添加横线
-  for (let i = 1; i <= pnesCount; i++) {
-    const pne = document.createElement("div");
-    pne.className = "pne";
-    pne.style.top = `${i * A4_HEIGHT}px`; // 横线位置
-    resumeBox.appendChild(pne);
-  }
+// 获取本地存储简历内容
+const savedContent = localStorage.getItem("boxContent");
+let currentH2StyleText = localStorage.getItem("currentH2StyleText") || "样式4";
+let currentColor = localStorage.getItem("currentColor") || "#33CCBB";
+if (savedContent) {
+  // 如果存在，渲染存储的内容到#box
+  console.log("存在已存储的内容");
+  resumeBox.innerHTML = savedContent;
+  const dropdownButton = document.getElementById("dropdownButton");
+  dropdownButton.textContent = currentH2StyleText;
+} else {
+  // 如果不存在，渲染默认内容到#box
+  resumeBox.innerHTML = miku;
 }
 
 /* 添加编辑工具栏 */
@@ -84,24 +44,6 @@ const clearLocalStorageButton = document.getElementById("clearLocalStorage");
 const confirmationOverlay = document.getElementById("confirmationOverlay");
 const confirmClearButton = document.getElementById("confirmClear");
 const cancelClearButton = document.getElementById("cancelClear");
-
-// 监听按钮1：存储内容到本地存储
-locationStorageButton.addEventListener("click", function () {
-  // 过滤掉包含ql-toolbar类名的元素
-  const elementsToRemove = resumeBox.querySelectorAll(".ql-toolbar");
-  elementsToRemove.forEach((element) => {
-    element.remove(); // 从DOM中移除
-  });
-
-  // 获取#box内的HTML内容（过滤后的内容）
-  const content = resumeBox.innerHTML;
-
-  // 将内容存储到浏览器的本地存储
-  localStorage.setItem("boxContent", content);
-
-  // 提示存储成功
-  alert("内容已成功存储到本地存储！");
-});
 
 // 监听按钮2：导出为文本文件
 exportTextButton.addEventListener("click", function () {
@@ -137,6 +79,7 @@ importTextButton.addEventListener("click", function () {
 
       // 存储到本地存储
       localStorage.setItem("boxContent", fileContent);
+      localStorage.setItem("currentColor", currentColor);
 
       // 刷新页面
       window.location.reload();
@@ -153,7 +96,27 @@ printPDFButton.addEventListener("click", function () {
   window.print();
 });
 
-// 监听按钮5：清除本地存储
+// 监听按钮：存储内容到本地存储
+locationStorageButton.addEventListener("click", function () {
+  // 过滤掉包含ql-toolbar类名的元素
+  const elementsToRemove = resumeBox.querySelectorAll(".ql-toolbar");
+  elementsToRemove.forEach((element) => {
+    element.remove(); // 从DOM中移除
+  });
+
+  // 获取#box内的HTML内容（过滤后的内容）
+  const content = resumeBox.innerHTML;
+
+  // 将内容存储到浏览器的本地存储
+  localStorage.setItem("boxContent", content);
+  localStorage.setItem("currentColor", currentColor);
+  localStorage.setItem("currentH2StyleText", currentH2StyleText);
+
+  // 提示存储成功
+  alert("内容已成功存储到本地存储！");
+});
+
+// 监听按钮：清除本地存储
 clearLocalStorageButton.addEventListener("click", function () {
   // 显示二次确认弹窗
   confirmationOverlay.style.display = "flex";
@@ -229,6 +192,7 @@ options.forEach((option) => {
     dropdownButton.textContent = e.target.textContent;
 
     // Update class of all h2 tags
+
     h2Tags.forEach((h2) => {
       h2.className = selectedClass;
     });
@@ -274,22 +238,27 @@ roleOptions.forEach((option) => {
       resumeBox.innerHTML = miku;
       currentH2Style = "style-1";
       dropdownButton.textContent = "样式1";
+      currentH2StyleText = "样式1";
       currentColor = "#33CCBB";
     } else if (selectedRole == "momoka") {
       currentH2Style = "style-5";
       dropdownButton.textContent = "样式5";
+      currentH2StyleText = "样式5";
       currentColor = "#EF95CF";
       resumeBox.innerHTML = momoka;
     } else if (selectedRole == "griffith") {
       resumeBox.innerHTML = griffith;
       dropdownButton.textContent = "纯真";
+      currentH2StyleText = "纯真";
       currentColor = "#000000";
     } else if (selectedRole == "voldemort") {
       resumeBox.innerHTML = voldemort;
       dropdownButton.textContent = "样式3";
+      currentH2StyleText = "样式3";
       currentColor = "#000000";
     } else if (selectedRole == "ShigureUi") {
       dropdownButton.textContent = "样式5";
+      currentH2StyleText = "样式5";
       currentColor = "#EED8C3";
       resumeBox.innerHTML = ShigureUi;
     }
@@ -363,7 +332,13 @@ function applyColorToPage(color) {
     const pseudoStyle = `content: ''; background-color: ${color};`;
     heading.style.setProperty("--before-color", color);
     heading.style.setProperty("--after-color", color);
+
   });
+
+  const slider1 = document.getElementById("progress1");
+  const slider2 = document.getElementById("progress2");
+  slider1.style.setProperty("--thumb-background-color", color);
+  slider2.style.setProperty("--thumb-background-color", color);
 }
 
 colorInput.addEventListener("input", () => {
@@ -398,14 +373,21 @@ function addSection() {
     return;
   }
 
-  let oldQlToolbarItems = document.querySelectorAll(".ql-toolbar");
+  // 获取当前颜色
   const colorInput = document.getElementById("colorInput");
   const color = colorInput.value;
+  // 获取新模块ID
+  let quillEditorItems = document.querySelectorAll(".quill-editor-item");
+  let oldLastId = quillEditorItems[quillEditorItems.length-1].id.replace("editor-container", "");
+  oldLastId = parseInt(oldLastId);
+  let newEditorContainerId = oldLastId + 1;
+  newEditorContainerId = "editor-container" + newEditorContainerId;
+  
 
   const sectionHTML = `
       <div class="section">
         <h2 class="${currentH2Style}" style="color:${color}; border-bottom-color: ${color}; --before-color: ${color}; --after-color: ${color};"">${title}</h2>
-        <div id="editor-container${oldQlToolbarItems.length}" class="quill-editor-item">
+        <div id="editor-container${newEditorContainerId}" class="quill-editor-item">
           <ul>
             <li>持续探索AI与音乐的结合，致力于虚拟表演技术的发展。</li>
             <li>喜欢和粉丝互动，通过音乐表达情感和传递正能量。</li>
@@ -423,12 +405,8 @@ function addSection() {
   // 清空输入框
   document.getElementById("section-title").value = "";
 
-  let newEditorContainer = document.getElementById(
-    `editor-container${oldQlToolbarItems.length}`
-  );
-
   // 初始化 Quill 编辑器
-  new Quill(`#editor-container${oldQlToolbarItems.length}`, {
+  new Quill(`#editor-container${newEditorContainerId}`, {
     theme: "snow",
     modules: {
       toolbar: toolbarOptions,
@@ -455,6 +433,10 @@ function addSection() {
     });
 
     if (i === qlToolbarItems.length - 1) {
+      let newEditorContainer = document.getElementById(
+        `editor-container${newEditorContainerId}`
+      );
+
       newEditorContainer.addEventListener("mouseover", () => {
         newEditorContainer.style = "border: 1px solid #33CCBB !important;";
         qlToolbarItem.style.display = "block";
@@ -468,7 +450,8 @@ function addSection() {
   }
 }
 
-// 页面加载时，检查localStorage中是否有已存储的内容
+document.getElementById("add-section").addEventListener("click", addSection);
+
 window.onload = function () {
   // 图片功能
   uploadAvatarInit();
@@ -480,19 +463,136 @@ window.onload = function () {
 
   forEachquillEditorItems();
 
-  document.getElementById("add-section").addEventListener("click", addSection);
-
-  // /* 颜色 */
+  /* 颜色 */
   document.getElementById("colorInput").value = currentColor;
   applyColorToPage(currentColor);
-  /* 标题样式 */
-  const dropdownButton = document.getElementById("dropdownButton");
-  const h2Tags = document.querySelectorAll("#resumeBox h2");
-  // Update button text
-  dropdownButton.textContent = "样式1";
-
-  // Update class of all h2 tags
-  // h2Tags.forEach((h2) => {
-  //   h2.className = currentH2Style;
-  // });
 };
+
+// progressIndicator.style.left = (Math.floor(value - min) / Math.floor(max - min)) * 100 + "%";
+// progressTrack.style.width = (Math.floor(value - min) / Math.floor(max - min)) * 100 + "%";
+
+// script.js
+
+/**
+ * 初始化进度条组件
+ * @param {string} containerId - 进度条的容器ID
+ * @param {number} min - 最小值
+ * @param {number} max - 最大值
+ * @param {number} initialValue - 初始值
+ * @param {function} onChange - 进度变化时触发的回调函数
+ */
+function createProgressBar(
+  containerId,
+  min = 0,
+  max = 100,
+  initialValue = 0,
+  onChange
+) {
+  const container = document.getElementById(containerId);
+
+  if (!container) return; // 如果容器不存在，直接返回
+
+  // 创建进度条相关元素
+  const progressBar = document.createElement("input");
+  progressBar.type = "range";
+  progressBar.classList.add("progress-bar");
+  progressBar.min = min;
+  progressBar.max = max;
+  progressBar.value = initialValue;
+  progressBar.step = 1;
+
+  const progressTrack = document.createElement("div");
+  progressTrack.classList.add("progress-track");
+
+  const progressValue = document.createElement("div");
+  progressValue.classList.add("progress-value");
+  progressValue.textContent = initialValue;
+
+  // 将元素添加到容器中
+  container.appendChild(progressTrack);
+  container.appendChild(progressBar);
+  progressTrack.appendChild(progressValue);
+
+  // 更新进度指示器和进度条背景
+  function updateProgress() {
+    const value = progressBar.value;
+    progressTrack.style.width =
+      (Math.floor(value - min) / Math.floor(max - min)) * 100 + "%";
+
+    //   let tt = (Math.floor(value - min) / Math.floor(max - min)) * 100
+    // // 更新进度值的显示位置
+    // progressValue.style.left = `calc(${tt}% - 15px)`;
+
+    // 如果有传入 onChange 回调函数，则触发回调
+    if (typeof onChange === "function") {
+      let selfValue = onChange(value);
+      progressValue.textContent = selfValue || value / 100;
+    }
+  }
+
+  // 更新进度条
+  progressBar.addEventListener("input", updateProgress);
+
+  // 长按拖动
+  let isDragging = false;
+
+  progressBar.addEventListener("mousedown", function () {
+    isDragging = true;
+  });
+
+  document.addEventListener("mouseup", function () {
+    if (isDragging) {
+      isDragging = false;
+    }
+  });
+
+  document.addEventListener("mousemove", function (event) {
+    if (isDragging) {
+      let rect = progressBar.getBoundingClientRect();
+      let x = event.clientX - rect.left;
+      let value = Math.max(min, Math.min((x / rect.width) * max, max));
+      progressBar.value = value;
+      updateProgress();
+    }
+  });
+
+  // 初始化时更新
+  updateProgress();
+}
+
+// 页面加载时初始化多个进度条
+document.addEventListener("DOMContentLoaded", function () {
+  // 定义每个进度条的 onChange 事件回调
+  createProgressBar("progress1", 125, 300, 175, function (value) {
+    console.log("进度条 1 当前进度:", value);
+    const tags = document.querySelectorAll(
+      "#resumeBox h3,#resumeBox p,#resumeBox li"
+    );
+    let lineHeight = value / 100;
+    tags.forEach((h2) => {
+      h2.classList.remove("ql-lineheight-1-25");
+      h2.classList.remove("ql-lineheight-1-375");
+      h2.classList.remove("ql-lineheight-1-5");
+      h2.classList.remove("ql-lineheight-1-75");
+      h2.classList.remove("ql-lineheight-1-875");
+      h2.classList.remove("ql-lineheight-2");
+      h2.classList.remove("ql-lineheight-3");
+      h2.style.lineHeight = lineHeight;
+    });
+    return lineHeight;
+  });
+
+  createProgressBar("progress2", 0, 50, 16, function (value) {
+    console.log("进度条 2 当前进度:", value);
+    const tags = document.querySelectorAll(".section");
+    let marginTop = value;
+    tags.forEach((h2) => {
+      h2.style.marginTop = marginTop + "px";
+    });
+    return marginTop + 'px';
+  });
+
+  createProgressBar("progress3", 0, 500, 300, function (value) {
+    console.log("进度条 3 当前进度:", value);
+  });
+});

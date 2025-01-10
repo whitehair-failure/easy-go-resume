@@ -14,260 +14,122 @@
 
 <body>
   <!-- 操作面板 -->
-  <div id="operation-panel">
 
-    <div class="operation-item">
-      <span>优秀简历案例</span>
-      <!-- 下拉单选框 -->
-      <div class="dropdown">
-        <div class="dropdown-button" id="roleDropdownButton">初音ミク</div>
-        <div class="dropdown-options" id="roleDropdownOptions">
-          <div class="roleDropdown-option" data-value="miku">初音ミク</div>
-          <div class="roleDropdown-option" data-value="momoka">櫻井桃華</div>
-          <div class="roleDropdown-option" data-value="griffith">格里菲斯</div>
-          <div class="roleDropdown-option" data-value="voldemort">伏地魔</div>
-          <div class="roleDropdown-option" data-value="ShigureUi">しぐれうい</div>
-          <!-- <div class="roleDropdown-option" data-value="style-5">样式 5</div> -->
-        </div>
-      </div>
-    </div>
+  <div class="left-container">
 
-    <div class="operation-item">
-      <span>新增模板</span>
+    <div id="operation-panel">
 
-      <div class="add-section-box">
-        <input type="text" id="section-title" placeholder="输入模板标题" />
-        <button id="add-section" class="confirm">添加</button>
-      </div>
-    </div>
-
-    <div class="operation-item">
-      <span>标题样式/主题色选择</span>
-
-      <div class="h2-style-box">
+      <div class="operation-item">
+        <span>优秀简历案例</span>
         <!-- 下拉单选框 -->
         <div class="dropdown">
-          <div class="dropdown-button" id="dropdownButton">纯真</div>
-          <div class="dropdown-options" id="dropdownOptions">
-            <div class="dropdown-option" data-value="">纯真</div>
-            <div class="dropdown-option" data-value="style-1">样式 1</div>
-            <div class="dropdown-option" data-value="style-2">样式 2</div>
-            <div class="dropdown-option" data-value="style-3">样式 3</div>
-            <div class="dropdown-option" data-value="style-4">样式 4</div>
-            <div class="dropdown-option" data-value="style-5">样式 5</div>
+          <div class="dropdown-button" id="roleDropdownButton">初音ミク</div>
+          <div class="dropdown-options" id="roleDropdownOptions">
+            <div class="roleDropdown-option" data-value="miku">初音ミク</div>
+            <div class="roleDropdown-option" data-value="momoka">櫻井桃華</div>
+            <div class="roleDropdown-option" data-value="griffith">格里菲斯</div>
+            <div class="roleDropdown-option" data-value="voldemort">伏地魔</div>
+            <div class="roleDropdown-option" data-value="ShigureUi">しぐれうい</div>
+            <!-- <div class="roleDropdown-option" data-value="style-5">样式 5</div> -->
+          </div>
+        </div>
+      </div>
+      
+      <div class="operation-item">
+        <span>头像</span>
+
+        <div class="btn-box">
+          <button id="upload-avatar" class="confirm">上传头像</button>
+          <button id="delete-avatar" class="cancel">删除头像</button>
+        </div>
+      </div>
+
+      <div class="operation-item">
+        <span>新增模板</span>
+
+        <div class="add-section-box">
+          <input type="text" id="section-title" placeholder="输入模板标题" />
+          <button id="add-section" class="confirm">添加</button>
+        </div>
+      </div>
+
+      <div class="operation-item">
+        <span>标题样式/主题色选择</span>
+
+        <div class="h2-style-box">
+          <!-- 下拉单选框 -->
+          <div class="dropdown">
+            <div class="dropdown-button" id="dropdownButton">纯真</div>
+            <div class="dropdown-options" id="dropdownOptions">
+              <div class="dropdown-option" data-value="">纯真</div>
+              <div class="dropdown-option" data-value="style-1">样式 1</div>
+              <div class="dropdown-option" data-value="style-2">样式 2</div>
+              <div class="dropdown-option" data-value="style-3">样式 3</div>
+              <div class="dropdown-option" data-value="style-4">样式 4</div>
+              <div class="dropdown-option" data-value="style-5">样式 5</div>
+            </div>
+          </div>
+
+          <!-- 颜色选择器 -->
+          <div class="color-picker">
+            <!-- <label for="colorInput">选择主题颜色:</label> -->
+            <input type="color" id="colorInput" value="#cccccc"
+              placeholder="或输入 HEX/RGB 颜色值 (如 #ff5733 或 rgb(255,87,51))">
+            <!-- <button id="applyColor">应用颜色</button> -->
           </div>
         </div>
 
-        <!-- 颜色选择器 -->
-        <div class="color-picker">
-          <!-- <label for="colorInput">选择主题颜色:</label> -->
-          <input type="color" id="colorInput" value="#cccccc"
-            placeholder="或输入 HEX/RGB 颜色值 (如 #ff5733 或 rgb(255,87,51))">
-          <!-- <button id="applyColor">应用颜色</button> -->
+      </div>
+
+      <div class="operation-item">
+        <span>模块间距</span>
+
+        <div class="progress-container" id="progress2"></div>
+      </div>
+
+      <div class="operation-item">
+        <span>文字行距</span>
+
+        <div class="progress-container" id="progress1"></div>
+      </div>
+
+
+      <div class="operation-item">
+        <span>浏览器存储</span>
+        <div class="btn-box">
+          <button id="locationStorage" class="confirm">本地存储</button>
+          <button id="clearLocalStorage" class="cancel">清除本地存储</button>
+        </div>
+      </div>
+
+
+      <div class="operation-item">
+        <span>文件保存</span>
+        <div class="btn-box">
+          <button id="printPDF" class="confirm">打印为PDF</button>
+          <button id="printPDF" class="confirm">保存为图片</button>
+        </div>
+      </div>
+
+
+      <div class="operation-item">
+        <span>简历模板</span>
+        <div class="btn-box">
+          <button id="exportText" class="confirm">导出简历模板</button>
+          <button id="importText" class="confirm">导入简历模板</button>
         </div>
       </div>
 
     </div>
 
-    <div class="operation-item">
-      <span>头像</span>
-
-      <div class="btn-box">
-        <button id="upload-avatar" class="confirm">上传头像</button>
-        <button id="delete-avatar" class="cancel">删除头像</button>
-      </div>
+    <div class="panel-visible-change" onclick="tt()">
+      显示、隐藏操作面板
     </div>
-
-
-    <div class="operation-item">
-      <span>浏览器存储</span>
-      <div class="btn-box">
-        <button id="locationStorage" class="confirm">本地存储</button>
-        <button id="clearLocalStorage" class="cancel">清除本地存储</button>
-      </div>
-    </div>
-
-
-    <div class="operation-item">
-      <span>文件保存</span>
-      <div class="btn-box">
-        <button id="printPDF" class="confirm">打印为PDF</button>
-        <button id="printPDF" class="confirm">保存为图片</button>
-      </div>
-    </div>
-
-
-    <div class="operation-item">
-      <span>简历模板</span>
-      <div class="btn-box">
-        <button id="exportText" class="confirm">导出简历模板</button>
-        <button id="importText" class="confirm">导入简历模板</button>
-      </div>
-    </div>
-
   </div>
 
-  <!-- 简历盒子 -->
-  <div id="resumeBox" class="container">
-    <!-- Header Section -->
-    <div class="header">
-      <div class="header-left">
-
-        <div id="editor-container0" class="quill-editor-item header-content">
-          <h1>初音未来</h1>
-
-          <p>
-            <span>职业：虚拟歌姬</span>
-            <span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <span>全球虚拟偶像</span>
-            <span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <span>年龄：16</span>
-            <span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <span>现居：数字世界</span>
-          </p>
-
-          <p>
-            <span>Email: miku@vocaloid.world</span>
-            <span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <span>电话: 100-392-39MIKU</span>
-          </p>
-
-          <p>
-            <span>官方网站：<a href="https://www.mikufan.com" target="_blank">www.mikufan.com</a></span>
-            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <span>音乐平台：<a href="https://www.youtube.com/user/HatsuneMiku" target="_blank">Hatsune Miku
-                YouTube</a></span>
-          </p>
-        </div>
-      </div>
-
-      <div id="avatar">
-        <img src="img/miku.png" alt="初音未来头像">
-      </div>
-      <input type="file" id="fileInput" style="display:none;" accept="image/*" />
-    </div>
-
-    <!-- 专业技能 -->
-    <div class="section">
-      <h2 class="style-1">专业技能</h2>
-
-      <!-- HTML 结构 -->
-      <div id="editor-container1" class="quill-editor-item">
-        <p><strong>音乐创作：</strong>熟练使用VOCALOID软件，能够以多种风格进行音乐演唱，拥有丰富的曲库。</p>
-        <p><strong>多语言表演：</strong>日语、英语、中文等多语言歌唱能力，适应国际化舞台需求。</p>
-        <p><strong>虚拟形象塑造：</strong>深入参与虚拟IP运营，擅长通过跨平台形象推广提升品牌认知度。</p>
-        <p><strong>舞台经验：</strong>成功举办多次虚拟演唱会，掌握全息投影技术及其应用。</p>
-        <p><strong>社交媒体影响力：</strong>在各大社交媒体平台拥有百万粉丝群体，擅长打造热点话题。</p>
-      </div>
-
-      <div class="delete-btn" onclick="removeSection(this)">删除</div>
-    </div>
-
-    <!-- 工作经历 -->
-    <div class="section">
-      <h2 class="style-1">工作经历</h2>
-
-      <div id="editor-container2" class="quill-editor-item">
-        <h3>Crypton Future Media | 虚拟偶像 (2007 - 至今)</h3>
-        <p>制作并演唱超过10,000首歌曲，广泛运用于商业广告、影视作品和个人项目。</p>
-        <p>主持并参演全球范围内的虚拟演唱会，覆盖超过30个国家与地区。。</p>
-        <p>与多家品牌合作（包括Google、SEGA等），为其打造定制化音乐作品及营销方案。。</p>
-        <p>推动VOCALOID社区发展，活跃于粉丝创作圈，成为同人文化的重要推动者。。</p>
-
-        <h3><s>SEGA</s> | <em><u>游戏代言人</u></em> (2010 - 至今)</h3>
-        <p>作为《初音未来：歌姬计划》系列主角，吸引了数百万游戏玩家参与体验。</p>
-        <p>协助设计并推广游戏主题内容，提升品牌认知度与粉丝参与度。</p>
-      </div>
-
-      <div class="delete-btn" onclick="removeSection(this)">删除</div>
-    </div>
-
-    <!-- 个人优势 -->
-    <div class="section">
-      <h2 class="style-1">个人优势</h2>
-
-
-      <div id="editor-container3" class="quill-editor-item">
-        <h3>虚拟演唱会</h3>
-
-        <p><strong>日本武道馆：</strong>首次全息演唱会，引发轰动。</p>
-        <p><strong>美国洛杉矶：</strong>洛杉矶动漫展演出，开创虚拟偶像国际化先河。</p>
-        <p><strong>法国巴黎：</strong>参与Japan Expo活动，深受欧洲观众喜爱。</p>
-        <p><strong>全球巡演：</strong>HATSUNE MIKU EXPO，覆盖北美、亚洲和欧洲多个国家。</p>
-
-        <h3>音乐专辑及代表作</h3>
-
-        <p><strong>《甩葱歌》：</strong>轻快幽默，成为网络文化现象。</p>
-        <p><strong>《千本樱》：</strong>深受粉丝喜爱的经典日式流行歌曲。</p>
-        <p><strong>《深海少女》：</strong>以优美旋律和深刻情感打动人心。</p>
-
-        <h3>跨界合作</h3>
-
-        <p><strong>SEGA游戏：</strong>参与Project DIVA系列音乐游戏。</p>
-        <p><strong>动画电影：</strong>主题曲创作及演绎。</p>
-        <p><strong>科技数码：</strong>为小米、索尼、戴尔等知名科技企业代言产品。</p>
-      </div>
-
-      <div class="delete-btn" onclick="removeSection(this)">删除</div>
-    </div>
-
-    <!-- 教育经历 -->
-    <div class="section">
-      <h2 class="style-1">教育经历</h2>
-
-      <div id="editor-container4" class="quill-editor-item">
-        <h3>VOCALOID Institute | 数字音乐与虚拟表演学</h3>
-
-        <p>系统学习了音乐制作、音频处理及虚拟偶像演出技术。</p>
-        <p>专注于人机交互与创意表达，培养了强大的科技与艺术融合能力。</p>
-      </div>
-
-      <div class="delete-btn" onclick="removeSection(this)">删除</div>
-    </div>
-
-    <!-- 荣誉与奖项 -->
-    <div class="section">
-      <h2 class="style-1">荣誉与奖项</h2>
-
-      <div id="editor-container5" class="quill-editor-item">
-        <ul data-checked="true">
-          <li>全球最具影响力虚拟偶像奖（2013）</li>
-          <li>NicoNico超会议年度偶像（2018）</li>
-          <li>"全球动漫文化大使" 头衔（2019）</li>
-        </ul>
-      </div>
-
-      <div class="delete-btn" onclick="removeSection(this)">删除</div>
-    </div>
-
-    <!-- 兴趣爱好 -->
-    <div class="section">
-      <h2 class="style-1">兴趣爱好</h2>
-
-      <div id="editor-container6" class="quill-editor-item">
-        <ul>
-          <li>持续探索AI与音乐的结合，致力于虚拟表演技术的发展。</li>
-          <li>喜欢和粉丝互动，通过音乐表达情感和传递正能量。</li>
-          <li>偶尔客串动画角色，为更多文化作品注入生命力。</li>
-        </ul>
-      </div>
-
-      <div class="delete-btn" onclick="removeSection(this)">删除</div>
-    </div>
-
-    <!-- 附加信息 -->
-    <div class="section">
-
-      <h2 class="style-1">附加信息</h2>
-
-      <div id="editor-container7" class="quill-editor-item">
-        <blockquote><span
-            style="background-color: rgb(255, 255, 0); color: rgb(230, 0, 0);">具备全天候的工作热情，适应线上线下双平台需求。</span>
-        </blockquote>
-        <blockquote><span style="color: rgb(153, 51, 255);">可根据需求调整音域、形象及风格，实现定制化服务。</span></blockquote>
-      </div>
-
-      <div class="delete-btn" onclick="removeSection(this)">删除</div>
+  <div class="right-container">
+    <!-- 简历盒子 -->
+    <div id="resumeBox">
     </div>
   </div>
 
@@ -286,8 +148,26 @@
 </html>
 
 <script src="./js/quill.min.js"></script>
+<!-- <script src="i18n.js"></script> -->
 <script type="module" src="./js/index.js"></script>
 <script>
+
+  function tt() {
+    const leftContainer = document.querySelector(".left-container");
+    const rightContainer = document.querySelector(".right-container");
+    if (leftContainer.style.width === "0px") {
+      leftContainer.style.width = "300px";
+      leftContainer.style.padding = "20px";
+      rightContainer.style.width = "calc(100% - 340px)";
+      rightContainer.style.marginLeft = "340px";
+    } else {
+      leftContainer.style.width = "0px";
+      leftContainer.style.padding = "20px 0";
+      rightContainer.style.width = "100%";
+      rightContainer.style.marginLeft = "0";
+    }
+  }
+
   // 删除 section 模板
   function removeSection(deleteBtn) {
     console.log("deleteBtn", deleteBtn);

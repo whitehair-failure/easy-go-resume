@@ -101,13 +101,66 @@ function forEachquillEditorItems() {
   }
 }
 
-const savedContent = localStorage.getItem("boxContent");
-if (savedContent) {
-  // 如果存在，渲染存储的内容到#box
-  console.log("存在已存储的内容");
 
-  resumeBox.innerHTML = savedContent;
-  // console.log('savedContent',savedContent);
+/* 图片上传 */
+function uploadAvatarInit() {
+  const avatar = document.getElementById("avatar");
+  const uploadAvatarBtn = document.getElementById("upload-avatar");
+  const fileInput = document.getElementById("fileInput");
+  const img = avatar.querySelector("img");
+
+  // 监听点击事件，触发文件上传
+  avatar.addEventListener("click", function () {
+    fileInput.click(); // 模拟点击文件输入框
+  });
+  uploadAvatarBtn.addEventListener("click", function () {
+    fileInput.click(); // 模拟点击文件输入框
+  });
+
+  // 监听文件选择事件，替换图片
+  fileInput.addEventListener("change", function (event) {
+    const file = event.target.files[0]; // 获取用户选择的文件
+    if (file) {
+      const reader = new FileReader(); // 创建文件读取器
+      reader.onload = function (e) {
+        img.style.display = "block"; // 显示图片
+        img.src = e.target.result; // 替换图片源为上传的文件
+      };
+      reader.readAsDataURL(file); // 读取文件
+    }
+  });
 }
 
-export { toolbarOptions, forEachquillEditorItems };
+function deleteAvatarInit() {
+  const avatar = document.getElementById("avatar");
+  const img = avatar.querySelector("img");
+  const deleteAvatarBtn = document.getElementById("delete-avatar");
+  // 监听点击事件，删除头像
+  deleteAvatarBtn.addEventListener("click", function () {
+    img.style.display = "none"; // 隐藏图片
+    img.src = ""; // 清空图片
+  });
+}
+
+/* 添加分割线 */
+function checkHeight() {
+  // 定义A4页面的高度
+  const A4_HEIGHT = (29.7 - 2) * 37.7952755906; // A4 高度 (mm 转换为 px)
+
+  const boxHeight = resumeBox.offsetHeight; // 获取盒子的当前高度
+  const pnesCount = Math.floor(boxHeight / A4_HEIGHT); // 计算需要多少条横线
+
+  // 移除已有的横线
+  const existingpnes = resumeBox.querySelectorAll(".pne");
+  existingpnes.forEach((pne) => pne.remove());
+
+  // 添加横线
+  for (let i = 1; i <= pnesCount; i++) {
+    const pne = document.createElement("div");
+    pne.className = "pne";
+    pne.style.top = `${i * A4_HEIGHT}px`; // 横线位置
+    resumeBox.appendChild(pne);
+  }
+}
+
+export { toolbarOptions, forEachquillEditorItems, uploadAvatarInit, deleteAvatarInit, checkHeight };
