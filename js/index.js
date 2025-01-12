@@ -5,7 +5,7 @@ import {
   deleteAvatarInit,
   checkHeight,
 } from "./init.js";
-import { miku, momoka, ShigureUi, griffith, voldemort } from "./kyara.js";
+import { enCharacter, jaCharacter, zhCharacter } from "./kyara.js";
 
 // console.log('momoka',momoka);
 
@@ -27,7 +27,7 @@ if (savedContent) {
   dropdownButton.textContent = currentH2StyleText;
 } else {
   // 如果不存在，渲染默认内容到#box
-  resumeBox.innerHTML = miku;
+  resumeBox.innerHTML = zhCharacter.miku;
 }
 
 /* 添加编辑工具栏 */
@@ -167,7 +167,6 @@ confirmClearButton.addEventListener("click", function () {
 const dropdownButton = document.getElementById("dropdownButton");
 const dropdownOptions = document.getElementById("dropdownOptions");
 const options = dropdownOptions.querySelectorAll(".dropdown-option");
-
 let isOpen = false;
 
 // Toggle dropdown visibility
@@ -234,8 +233,27 @@ roleOptions.forEach((option) => {
     // Update button text
     roleDropdownButton.textContent = e.target.textContent;
 
+    let currentLanguage = localStorage.getItem("language") || "en";
+
+    let currentCharacters = null;
+
+    switch (currentLanguage) {
+      case "en":
+        currentCharacters = enCharacter;
+        break;
+      case "ja":
+        currentCharacters = jaCharacter;
+        break;
+      case "zh":
+        currentCharacters = zhCharacter;
+        break;
+      default:
+        currentCharacters = enCharacter;
+        break;
+    }
+
     if (selectedRole == "miku") {
-      resumeBox.innerHTML = miku;
+      resumeBox.innerHTML = currentCharacters.miku;
       currentH2Style = "style-1";
       dropdownButton.textContent = "样式1";
       currentH2StyleText = "样式1";
@@ -245,14 +263,14 @@ roleOptions.forEach((option) => {
       dropdownButton.textContent = "样式5";
       currentH2StyleText = "样式5";
       currentColor = "#EF95CF";
-      resumeBox.innerHTML = momoka;
+      resumeBox.innerHTML = currentCharacters.momoka;
     } else if (selectedRole == "griffith") {
-      resumeBox.innerHTML = griffith;
+      resumeBox.innerHTML = currentCharacters.griffith;
       dropdownButton.textContent = "纯真";
       currentH2StyleText = "纯真";
       currentColor = "#000000";
     } else if (selectedRole == "voldemort") {
-      resumeBox.innerHTML = voldemort;
+      resumeBox.innerHTML = currentCharacters.voldemort;
       dropdownButton.textContent = "样式3";
       currentH2StyleText = "样式3";
       currentColor = "#000000";
@@ -260,7 +278,7 @@ roleOptions.forEach((option) => {
       dropdownButton.textContent = "样式5";
       currentH2StyleText = "样式5";
       currentColor = "#EED8C3";
-      resumeBox.innerHTML = ShigureUi;
+      resumeBox.innerHTML = currentCharacters.ShigureUi;
     }
 
     // 工具栏初始化
@@ -279,6 +297,51 @@ roleOptions.forEach((option) => {
     roleDropdownIsOpen = false;
   });
 });
+/* 语言选择 */
+const langDropdownButton = document.getElementById("langDropdownButton");
+const langDropdownOptions = document.getElementById("langDropdownOptions");
+const langOptions = langDropdownOptions.querySelectorAll(
+  ".langDropdown-option"
+);
+let langDropdownIsOpen = false;
+
+/* // Toggle dropdown visibility
+langDropdownButton.addEventListener("click", () => {
+  if (langDropdownIsOpen) {
+    langDropdownOptions.classList.remove("open");
+    langDropdownOptions.classList.add("close");
+    setTimeout(() => langDropdownOptions.classList.remove("close"), 300);
+  } else {
+    langDropdownOptions.classList.add("open");
+  }
+  langDropdownIsOpen = !langDropdownIsOpen;
+});
+
+// Handle option selection
+langOptions.forEach((option) => {
+  option.addEventListener("click", (e) => {
+    const selectedlang = e.target.dataset.value;
+
+    // Update button text
+    langDropdownButton.textContent = e.target.textContent;
+
+    updateLanguage(selectedlang);
+
+    if (selectedlang == "en") {
+      // resumeBox.innerHTML = enCharacter.miku;
+    } else if (selectedlang == "ja") {
+      // resumeBox.innerHTML = jaCharacter.momoka;
+    } else if (selectedlang == "zh") {
+      // resumeBox.innerHTML = zhCharacter.griffith;
+    }
+
+    // Close dropdown
+    langDropdownOptions.classList.remove("open");
+    langDropdownOptions.classList.add("close");
+    setTimeout(() => langDropdownOptions.classList.remove("close"), 300);
+    langDropdownIsOpen = false;
+  });
+}); */
 
 // Close dropdown when clicking outside
 document.addEventListener("click", (e) => {
@@ -302,6 +365,17 @@ document.addEventListener("click", (e) => {
       roleDropdownOptions.classList.add("close");
       setTimeout(() => roleDropdownOptions.classList.remove("close"), 300);
       roleDropdownIsOpen = false;
+    }
+  }
+  if (
+    !langDropdownButton.contains(e.target) &&
+    !langDropdownOptions.contains(e.target)
+  ) {
+    if (langDropdownIsOpen) {
+      langDropdownOptions.classList.remove("open");
+      langDropdownOptions.classList.add("close");
+      setTimeout(() => langDropdownOptions.classList.remove("close"), 300);
+      langDropdownIsOpen = false;
     }
   }
 });
@@ -332,7 +406,6 @@ function applyColorToPage(color) {
     const pseudoStyle = `content: ''; background-color: ${color};`;
     heading.style.setProperty("--before-color", color);
     heading.style.setProperty("--after-color", color);
-
   });
 
   const slider1 = document.getElementById("progress1");
@@ -378,11 +451,13 @@ function addSection() {
   const color = colorInput.value;
   // 获取新模块ID
   let quillEditorItems = document.querySelectorAll(".quill-editor-item");
-  let oldLastId = quillEditorItems[quillEditorItems.length-1].id.replace("editor-container", "");
+  let oldLastId = quillEditorItems[quillEditorItems.length - 1].id.replace(
+    "editor-container",
+    ""
+  );
   oldLastId = parseInt(oldLastId);
   let newEditorContainerId = oldLastId + 1;
   newEditorContainerId = "editor-container" + newEditorContainerId;
-  
 
   const sectionHTML = `
       <div class="section">
@@ -589,7 +664,7 @@ document.addEventListener("DOMContentLoaded", function () {
     tags.forEach((h2) => {
       h2.style.marginTop = marginTop + "px";
     });
-    return marginTop + 'px';
+    return marginTop + "px";
   });
 
   createProgressBar("progress3", 0, 500, 300, function (value) {

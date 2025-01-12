@@ -18,153 +18,192 @@
   <div class="left-container">
 
     <div id="operation-panel">
-
+  
       <div class="operation-item">
-        <span>优秀简历案例</span>
-        <!-- 下拉单选框 -->
-        <div class="dropdown">
-          <div class="dropdown-button" id="roleDropdownButton">初音ミク</div>
-          <div class="dropdown-options" id="roleDropdownOptions">
-            <div class="roleDropdown-option" data-value="miku">初音ミク</div>
-            <div class="roleDropdown-option" data-value="momoka">櫻井桃華</div>
-            <div class="roleDropdown-option" data-value="griffith">格里菲斯</div>
-            <div class="roleDropdown-option" data-value="voldemort">伏地魔</div>
-            <div class="roleDropdown-option" data-value="ShigureUi">しぐれうい</div>
-            <!-- <div class="roleDropdown-option" data-value="style-5">样式 5</div> -->
+        <span data-i18n="operationOptionsTitle.title1"></span>
+  
+        <div class="example-language">
+          <!-- 下拉单选框 -->
+          <div class="dropdown">
+            <div class="dropdown-button" id="roleDropdownButton" data-i18n="resumeExampleDropdown.title"></div>
+            <div class="dropdown-options" id="roleDropdownOptions">
+              <div class="roleDropdown-option" data-value="miku" data-i18n="resumeExampleDropdown.options.miku"></div>
+              <div class="roleDropdown-option" data-value="momoka" data-i18n="resumeExampleDropdown.options.momoka"></div>
+              <div class="roleDropdown-option" data-value="ShigureUi" data-i18n="resumeExampleDropdown.options.ShigureUi"></div>
+              <div class="roleDropdown-option" data-value="griffith" data-i18n="resumeExampleDropdown.options.griffith"></div>
+              <div class="roleDropdown-option" data-value="voldemort" data-i18n="resumeExampleDropdown.options.voldemort"></div>
+              <!-- <div class="roleDropdown-option" data-value="style-5">样式 5</div> -->
+            </div>
+          </div>
+          <!-- 下拉单选框 -->
+          <div class="dropdown">
+            <div class="dropdown-button" id="langDropdownButton" data-i18n="langDropdown.title"></div>
+            <div class="dropdown-options" id="langDropdownOptions">
+              <div class="langDropdown-option" data-value="en" data-i18n="langDropdown.options.en"></div>
+              <div class="langDropdown-option" data-value="ja" data-i18n="langDropdown.options.ja"></div>
+              <div class="langDropdown-option" data-value="zh" data-i18n="langDropdown.options.zh"></div>
+            </div>
           </div>
         </div>
+  
       </div>
-      
+  
       <div class="operation-item">
-        <span>头像</span>
-
+        <span data-i18n="operationOptionsTitle.title4"></span>
+  
         <div class="btn-box">
-          <button id="upload-avatar" class="confirm">上传头像</button>
-          <button id="delete-avatar" class="cancel">删除头像</button>
+          <button id="upload-avatar" class="confirm" data-i18n="btns.uploadAvatar"></button>
+          <button id="delete-avatar" class="cancel" data-i18n="btns.deleteAvatar"></button>
         </div>
       </div>
-
+  
       <div class="operation-item">
-        <span>新增模板</span>
-
+        <span data-i18n="operationOptionsTitle.title2"></span>
+  
         <div class="add-section-box">
-          <input type="text" id="section-title" placeholder="输入模板标题" />
-          <button id="add-section" class="confirm">添加</button>
+          <input type="text" id="section-title" placeholder="" data-i18n="addSection.placeholder" />
+          <button id="add-section" class="confirm" data-i18n="btns.add"></button>
         </div>
       </div>
-
+  
       <div class="operation-item">
-        <span>标题样式/主题色选择</span>
-
+        <span data-i18n="operationOptionsTitle.title3"></span>
+  
         <div class="h2-style-box">
           <!-- 下拉单选框 -->
           <div class="dropdown">
-            <div class="dropdown-button" id="dropdownButton">纯真</div>
+            <div class="dropdown-button" id="dropdownButton" data-i18n="H2Dropdown.options.style"></div>
             <div class="dropdown-options" id="dropdownOptions">
-              <div class="dropdown-option" data-value="">纯真</div>
-              <div class="dropdown-option" data-value="style-1">样式 1</div>
-              <div class="dropdown-option" data-value="style-2">样式 2</div>
-              <div class="dropdown-option" data-value="style-3">样式 3</div>
-              <div class="dropdown-option" data-value="style-4">样式 4</div>
-              <div class="dropdown-option" data-value="style-5">样式 5</div>
+              <div class="dropdown-option" data-value="" data-i18n="H2Dropdown.options.style"></div>
+              <div class="dropdown-option" data-value="style-1" data-i18n="H2Dropdown.options.style1"></div>
+              <div class="dropdown-option" data-value="style-2" data-i18n="H2Dropdown.options.style2"></div>
+              <div class="dropdown-option" data-value="style-3" data-i18n="H2Dropdown.options.style3"></div>
+              <div class="dropdown-option" data-value="style-4" data-i18n="H2Dropdown.options.style4"></div>
+              <div class="dropdown-option" data-value="style-5" data-i18n="H2Dropdown.options.style5"></div>
             </div>
           </div>
-
+  
           <!-- 颜色选择器 -->
           <div class="color-picker">
-            <!-- <label for="colorInput">选择主题颜色:</label> -->
             <input type="color" id="colorInput" value="#cccccc"
               placeholder="或输入 HEX/RGB 颜色值 (如 #ff5733 或 rgb(255,87,51))">
-            <!-- <button id="applyColor">应用颜色</button> -->
           </div>
         </div>
-
+  
       </div>
-
+  
       <div class="operation-item">
-        <span>模块间距</span>
-
+        <span data-i18n="operationOptionsTitle.title5"></span>
+  
         <div class="progress-container" id="progress2"></div>
       </div>
-
+  
       <div class="operation-item">
-        <span>文字行距</span>
-
+        <span data-i18n="operationOptionsTitle.title6"></span>
+  
         <div class="progress-container" id="progress1"></div>
       </div>
-
-
+  
       <div class="operation-item">
-        <span>浏览器存储</span>
+        <span data-i18n="operationOptionsTitle.title7"></span>
         <div class="btn-box">
-          <button id="locationStorage" class="confirm">本地存储</button>
-          <button id="clearLocalStorage" class="cancel">清除本地存储</button>
+          <button id="locationStorage" class="confirm" data-i18n="btns.storage"></button>
+          <button id="clearLocalStorage" class="cancel" data-i18n="btns.clear"></button>
         </div>
       </div>
-
-
+  
       <div class="operation-item">
-        <span>文件保存</span>
+        <span data-i18n="operationOptionsTitle.title6"></span>
         <div class="btn-box">
-          <button id="printPDF" class="confirm">打印为PDF</button>
-          <button id="printPDF" class="confirm">保存为图片</button>
+          <button id="printPDF" class="confirm" data-i18n="btns.print"></button>
+          <button id="printPDF" class="confirm" data-i18n="btns.print"></button>
         </div>
       </div>
-
-
+  
       <div class="operation-item">
-        <span>简历模板</span>
+        <span data-i18n="operationOptionsTitle.title6"></span>
         <div class="btn-box">
-          <button id="exportText" class="confirm">导出简历模板</button>
-          <button id="importText" class="confirm">导入简历模板</button>
+          <button id="exportText" class="confirm" data-i18n="btns.exportText"></button>
+          <button id="importText" class="confirm" data-i18n="btns.importText"></button>
         </div>
       </div>
-
+  
     </div>
-
-    <div class="panel-visible-change" onclick="tt()">
-      显示、隐藏操作面板
+  
+    <div class="collapse-panel" onclick="tt()">
+      <span>👈&nbsp;&nbsp;</span>
+      <span data-i18n="btns.collapsePanel"></span>
+      <span>👈</span>
+    </div>
+  
+    <div class="ReimuHakurei" onclick="tt()">
+      <img src="./img/aside.png" alt="">
     </div>
   </div>
-
+  
   <div class="right-container">
     <!-- 简历盒子 -->
-    <div id="resumeBox">
-    </div>
+    <div id="resumeBox"></div>
   </div>
-
+  
   <!-- 二次确认弹窗 -->
   <div class="overlay" id="confirmationOverlay">
     <div class="confirm-dialog">
-      <p>确定要清除本地存储吗？</p>
+      <p data-i18n="clearDialog.description"></p>
       <div class="btn-box">
-        <button class="cancel" id="cancelClear">取消</button>
-        <button id="confirmClear">确认</button>
+        <button class="cancel" id="cancelClear" data-i18n="clearDialog.cancel"></button>
+        <button id="confirmClear" data-i18n="clearDialog.confirm"></button>
       </div>
     </div>
   </div>
+  
 </body>
 
 </html>
 
 <script src="./js/quill.min.js"></script>
-<!-- <script src="i18n.js"></script> -->
+<script src="./js/i18n.js"></script>
 <script type="module" src="./js/index.js"></script>
 <script>
 
   function tt() {
     const leftContainer = document.querySelector(".left-container");
     const rightContainer = document.querySelector(".right-container");
+
+    const collapsePanel = document.querySelector(".collapse-panel");
+    const ReimuHakurei = document.querySelector(".ReimuHakurei");
+
+
     if (leftContainer.style.width === "0px") {
-      leftContainer.style.width = "300px";
-      leftContainer.style.padding = "20px";
-      rightContainer.style.width = "calc(100% - 340px)";
-      rightContainer.style.marginLeft = "340px";
+      collapsePanel.style.opacity = "1";
+      ReimuHakurei.style.right = "0px";
+
+      setTimeout(() => {
+        ReimuHakurei.style.display = "none";
+
+        leftContainer.style.width = "300px";
+        leftContainer.style.padding = "20px";
+        rightContainer.style.width = "calc(100% - 340px)";
+        rightContainer.style.marginLeft = "340px";
+      }, 300);
+
+
+
     } else {
       leftContainer.style.width = "0px";
       leftContainer.style.padding = "20px 0";
       rightContainer.style.width = "100%";
       rightContainer.style.marginLeft = "0";
+
+
+      setTimeout(() => {
+        ReimuHakurei.style.display = "block";
+        collapsePanel.style.opacity = "0";
+      }, 300);
+      setTimeout(() => {
+        ReimuHakurei.style.right = "-160px";
+      }, 600);
+
     }
   }
 
