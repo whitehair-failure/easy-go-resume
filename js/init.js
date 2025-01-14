@@ -141,11 +141,13 @@ function deleteAvatarInit() {
     img.src = ""; // 清空图片
   });
 }
+const resumeBox = document.getElementById("resumeBox");
+const rightContainer = document.querySelector(".right-container");
 
 /* 添加分割线 */
 function checkHeight() {
   // 定义A4页面的高度
-  const A4_HEIGHT = (29.7 - 2) * 37.7952755906; // A4 高度 (mm 转换为 px)
+  const A4_HEIGHT = (29.7 - 2) * 37.7952755906; // A4 高度 (cm 转换为 px)
 
   const boxHeight = resumeBox.offsetHeight; // 获取盒子的当前高度
   const pnesCount = Math.floor(boxHeight / A4_HEIGHT); // 计算需要多少条横线
@@ -159,7 +161,7 @@ function checkHeight() {
     const pne = document.createElement("div");
     pne.className = "pne";
     pne.style.top = `${i * A4_HEIGHT}px`; // 横线位置
-    resumeBox.appendChild(pne);
+    rightContainer.appendChild(pne);
   }
 }
 

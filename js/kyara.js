@@ -3,7 +3,7 @@ const enCharacter = {
 <!-- Header Section -->
 <div class="header" style="border-color: rgb(51, 204, 187);">
   <div class="header-left">
-    <div id="editor-container0" class="quill-editor-item header-content ql-container ql-snow"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h1>Hatsune Miku</h1><p>Occupation: Virtual Singer&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Global Virtual Idol&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Age: 16&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Current Residence: Digital World</p><p>Email: miku@vocaloid.world&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Phone: 100-392-39MIKU</p><p>Official Website: <a href="https://www.mikufan.com" target="_blank">www.mikufan.com</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Music Platform: <a href="https://www.youtube.com/user/HatsuneMiku" target="_blank">Hatsune Miku YouTube</a></p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+    <div id="editor-container0" class="quill-editor-item header-content ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h1>Miku Hatsune</h1><p>Occupation: Virtual Singer&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Global Virtual Idol&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Age: 16</p><p>Current Residence: Digital World&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Music Platform: <a href="https://www.youtube.com/user/HatsuneMiku" target="_blank">Hatsune Miku YouTube</a></p><p>Email: miku@vocaloid.world&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Phone: 100-392-39MIKU</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
   </div>
   <div id="avatar">
     <img src="img/miku.png" alt="Hatsune Miku Avatar">
@@ -12,58 +12,58 @@ const enCharacter = {
 </div>
 
 <!-- Professional Skills -->
-<div class="section">
+<div class="section" style="margin-top: 16px;">
   <h2 class="style-1" style="color: rgb(51, 204, 187); border-bottom-color: rgb(51, 204, 187); --before-color: #33CCBB; --after-color: #33CCBB;">Professional Skills</h2>
   <div id="editor-container1" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><p><strong>Music Creation：</strong>Proficient in using VOCALOID software, capable of singing in various styles, and has an extensive music library.</p><p><strong>Multi-language Performance：</strong>Ability to sing in multiple languages such as Japanese, English, and Chinese, meeting the needs of international stages.</p><p><strong>Virtual Character Shaping：</strong>Deeply involved in virtual IP operations, skilled at cross-platform character promotion to enhance brand recognition.</p><p><strong>Stage Experience：</strong>Successfully hosted multiple virtual concerts, mastering holographic projection technology and its applications.</p><p><strong>Social Media Influence：</strong>Has millions of followers on major social media platforms, skilled at creating hot topics.</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
   <div class="delete-btn" onclick="removeSection(this)">Delete</div>
 </div>
 
 <!-- Work Experience -->
-<div class="section">
+<div class="section" style="margin-top: 16px;">
   <h2 class="style-1" style="color: rgb(51, 204, 187); border-bottom-color: rgb(51, 204, 187); --before-color: #33CCBB; --after-color: #33CCBB;">Work Experience</h2>
   <div id="editor-container2" class="quill-editor-item ql-container ql-snow"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h3>Crypton Future Media | Virtual Idol (2007 - Present)</h3><p>Produced and sang over 10,000 songs, widely used in commercial advertisements, film and television productions, and personal projects.</p><p>Hosted and performed in virtual concerts worldwide, covering over 30 countries and regions.</p><p>Collaborated with multiple brands (including Google, SEGA, etc.), creating customized music and marketing solutions.</p><p>Driven the development of the VOCALOID community, active in fan creation circles, and an important promoter of doujin culture.</p><h3><s>SEGA</s> | <em><u>Game Spokesperson</u></em> (2010 - Present)</h3><p>As the protagonist of the "Hatsune Miku: Project DIVA" series, attracted millions of gamers.</p><p>Assisted in designing and promoting game-themed content, enhancing brand recognition and fan engagement.</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
   <div class="delete-btn" onclick="removeSection(this)">Delete</div>
 </div>
 
 <!-- Personal Advantages -->
-<div class="section">
+<div class="section" style="margin-top: 16px;">
   <h2 class="style-1" style="color: rgb(51, 204, 187); border-bottom-color: rgb(51, 204, 187); --before-color: #33CCBB; --after-color: #33CCBB;">Personal Advantages</h2>
-  <div id="editor-container3" class="quill-editor-item ql-container ql-snow"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h3>Virtual Concerts</h3><p><strong>Budokan：</strong>The first holographic concert, causing a sensation.</p><p><strong>Los Angeles, USA：</strong>Performance at the LA Comic Con, pioneering the internationalization of virtual idols.</p><p><strong>Paris, France：</strong>Participated in Japan Expo, loved by European audiences.</p><p><strong>World Tour：</strong>HATSUNE MIKU EXPO, covering multiple countries in North America, Asia, and Europe.</p><h3>Music Albums and Representative Works</h3><p><strong>"Ponponpon"：</strong>A lively and humorous song that became an internet cultural phenomenon.</p><p><strong>"Senbonzakura"：</strong>A classic Japanese pop song loved by fans.</p><p><strong>"Deep Sea Girl"：</strong>A song that touches the heart with its beautiful melody and deep emotions.</p><h3>Cross-over Collaborations</h3><p><strong>SEGA Games：</strong>Participated in the Project DIVA series of music games.</p><p><strong>Animation Movies：</strong>Theme song creation and performance.</p><p><strong>Technology & Digital：</strong>Endorsed products for well-known technology companies such as Xiaomi, Sony, and Dell.</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+  <div id="editor-container3" class="quill-editor-item ql-container ql-snow"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h3>Virtual Concerts</h3><p><strong>Budokan：</strong>The first holographic concert, causing a sensation.</p><p><strong>Los Angeles, USA：</strong>Performance at the LA Comic Con, pioneering the internationalization of virtual idols.</p><p><strong>Paris, France：</strong>Participated in Japan Expo, loved by European audiences.</p><p><strong>World Tour：</strong>HATSUNE MIKU EXPO, covering multiple countries in North America, Asia, and Europe.</p><h3>Music Albums and Representative Works</h3><p><strong>"Ponponpon"：</strong>A lively and humorous song that became an internet cultural phenomenon.</p><p><strong>"Senbonzakura"：</strong>A classic Japanese pop song loved by fans.</p><p><strong>"Deep Sea Girl"：</strong>A song that touches the heart with its beautiful melody and deep emotions.</p><h3>Cross-over Collaborations</h3><p><strong>SEGA Games：</strong>Participated in the Project DIVA series of music games.</p><p><strong>Animation Movies：</strong>Theme song creation and performance.</p><p><strong>Technology &amp; Digital：</strong>Endorsed products for well-known technology companies such as Xiaomi, Sony, and Dell.</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
   <div class="delete-btn" onclick="removeSection(this)">Delete</div>
 </div>
 
 <!-- Education Background -->
-<div class="section">
+<div class="section" style="margin-top: 16px;">
   <h2 class="style-1" style="color: rgb(51, 204, 187); border-bottom-color: rgb(51, 204, 187); --before-color: #33CCBB; --after-color: #33CCBB;">Education Background</h2>
-  <div id="editor-container4" class="quill-editor-item ql-container ql-snow"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h3>VOCALOID Institute | Digital Music & Virtual Performance</h3><p>Systematically studied music production, audio processing, and virtual idol performance technology.</p><p>Focused on human-computer interaction and creative expression, developing strong capabilities in the fusion of technology and art.</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+  <div id="editor-container4" class="quill-editor-item ql-container ql-snow"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h3>VOCALOID Institute | Digital Music &amp; Virtual Performance</h3><p>Systematically studied music production, audio processing, and virtual idol performance technology.</p><p>Focused on human-computer interaction and creative expression, developing strong capabilities in the fusion of technology and art.</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
   <div class="delete-btn" onclick="removeSection(this)">Delete</div>
 </div>
 
 <!-- Honors and Awards -->
-<div class="section">
+<div class="section" style="margin-top: 16px;">
   <h2 class="style-1" style="color: rgb(51, 204, 187); border-bottom-color: rgb(51, 204, 187); --before-color: #33CCBB; --after-color: #33CCBB;">Honors and Awards</h2>
   <div id="editor-container5" class="quill-editor-item ql-container ql-snow"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><ul data-checked="true"><li>Most Influential Virtual Idol Award (2013)</li><li>NicoNico Super Conference Idol of the Year (2018)</li><li>"Global Anime Culture Ambassador" Title (2019)</li></ul></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
   <div class="delete-btn" onclick="removeSection(this)">Delete</div>
 </div>
 
 <!-- Hobbies and Interests -->
-<div class="section">
+<div class="section" style="margin-top: 16px;">
   <h2 class="style-1" style="color: rgb(51, 204, 187); border-bottom-color: rgb(51, 204, 187); --before-color: #33CCBB; --after-color: #33CCBB;">Hobbies and Interests</h2>
   <div id="editor-container6" class="quill-editor-item ql-container ql-snow"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><ul><li>Continuously exploring the combination of AI and music, dedicated to the development of virtual performance technology.</li><li>Enjoys interacting with fans, expressing emotions and conveying positive energy through music.</li><li>Occasionally guest stars in animations, injecting vitality into more cultural works.</li></ul></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
   <div class="delete-btn" onclick="removeSection(this)">Delete</div>
 </div>
 
 <!-- Additional Information -->
-<div class="section">
+<div class="section" style="margin-top: 16px;">
   <h2 class="style-1" style="color: rgb(51, 204, 187); border-bottom-color: rgb(51, 204, 187); --before-color: #33CCBB; --after-color: #33CCBB;">Additional Information</h2>
-  <div id="editor-container7" class="quill-editor-item ql-container ql-snow"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><blockquote><span style="color: rgb(230, 0, 0); background-color: rgb(255, 255, 0);">Possesses a passion for working around the clock, adaptable to the needs of both online and offline platforms.</span></blockquote><blockquote><span style="color: rgb(153, 51, 255);">Can adjust vocal range, image, and style according to needs, providing customized services.</span></blockquote></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+  <div id="editor-container7" class="quill-editor-item ql-container ql-snow"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><blockquote><span style="background-color: rgb(255, 255, 0); color: rgb(230, 0, 0);">Possesses a passion for working around the clock, adaptable to the needs of both online and offline platforms.</span></blockquote><blockquote><span style="color: rgb(153, 51, 255);">Can adjust vocal range, image, and style according to needs, providing customized services.</span></blockquote></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
   <div class="delete-btn" onclick="removeSection(this)">Delete</div>
 </div>
 `,
   momoka: `<!-- Header Section -->
 <div class="header" style="border-color: rgb(239, 149, 207);">
   <div class="header-left">
-    <div id="editor-container0" class="quill-editor-item header-content ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h1>Sakurai Momoka</h1><p>Occupation: Idol&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Age: 12&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Weight: 39kg&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Bust-Waist-Hip: 72-53-75&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Hometown: Kobe</p><p>Email: momoka@idolmaster.com&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Phone: 090-1234-MOMOKA</p><p>Agency: 346 Production&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Official Website: <a href="www.lolimama.love" target="_blank">www.lolimama.love</a></p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+    <div id="editor-container0" class="quill-editor-item header-content ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h1>Momoka Sakurai</h1><p>Occupation: Idol&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Age: 12&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Weight: 39kg</p><p>Bust-Waist-Hip: 72-53-75&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Hometown: Kobe</p><p>Email: momoka@idolmaster.com&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Phone: 090-1234-MOMOKA</p><p>Agency: 346 Production&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Official Website: <a href="www.lolimama.love" target="_blank">www.lolimama.love</a></p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
   </div>
   <div id="avatar">
     <img src="img/momoka.png" alt="Sakurai Momoka Avatar">
@@ -81,7 +81,7 @@ const enCharacter = {
 <!-- Work Experience -->
 <div class="section">
   <h2 style="color: rgb(239, 149, 207); border-bottom-color: rgb(239, 149, 207); --before-color: #EF95CF; --after-color: #EF95CF;" class="style-5">Work Experience</h2>
-  <div id="editor-container2" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h3>L.M.B.G | Idol (2013 - Present)</h3><p>As a member of the idol group, she has participated in many live performances and received a warm response from fans for her outstanding performance.</p><p>She has recorded many singles, covering various styles, and several of them have achieved excellent results on the music charts.</p><p>She has served as the lead singer in many major events and concerts, winning widespread attention with her sweet voice and lively stage performance.</p><p>She actively cooperates with team members to improve the overall performance quality and stage atmosphere, becoming an important member of the group.</p><h3><strong>U149</strong> | Idol (2016 - Present)</h3><p>Joined the <span style="color: rgb(44, 62, 80); background-color: rgba(255, 255, 255, 0.9);">Third Performing Arts Class</span>, participated in many concerts and interactive activities, and expanded her influence among fans.</p><p>She formed a team with other idols to contribute original songs for game and animation projects and actively participated in publicity and promotion.</p><p>She interacted with fans on social media and official events, attracting a large number of fans with her personal charm.</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+  <div id="editor-container2" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h3>L.M.B.G | Idol (2013 - Present)</h3><p>As a member of the idol group, she has participated in many live performances and received a warm response from fans for her outstanding performance.</p><p>She has recorded many singles, covering various styles, and several of them have achieved excellent results on the music charts.</p><p>She has served as the lead singer in many major events and concerts, winning widespread attention with her sweet voice and lively stage performance.</p><p>She actively cooperates with team members to improve the overall performance quality and stage atmosphere, becoming an important member of the group.</p><h3><strong>U149</strong> | Idol (2016 - Present)</h3><p>Joined the <span style="background-color: rgba(255, 255, 255, 0.9); color: rgb(44, 62, 80);">Third Performing Arts Class</span>, participated in many concerts and interactive activities, and expanded her influence among fans.</p><p>She formed a team with other idols to contribute original songs for game and animation projects and actively participated in publicity and promotion.</p><p>She interacted with fans on social media and official events, attracting a large number of fans with her personal charm.</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
   <div class="delete-btn" onclick="removeSection(this)">Delete</div>
 </div>
 
@@ -92,60 +92,194 @@ const enCharacter = {
   <div class="delete-btn" onclick="removeSection(this)">Delete</div>
 </div>`,
 
-  ShigureUi: `<!-- Header Section -->
-<div class="header" style="border-color: rgb(238, 219, 195);">
+  ShigureUi: `<div class="header" style="border-color: rgb(238, 216, 195);">
+    <div class="header-left">
+        <div id="editor-container0" class="quill-editor-item header-content ql-container ql-snow" style="border: none !important;">
+            <div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic...">
+                <h1>Ui Shigure</h1>
+                <p>Illustrator &amp; Manga Artist &amp; VTuber&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Age: 16?&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Residence: Tokyo, Japan</p>
+                <p>Email: <a href="mailto:ui.shigure@gmail.com" target="_blank">ui.shigure@gmail.com</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Pixiv: <a href="https://www.pixiv.net/member.php?id=431873" target="_blank">www.pixiv.net/member.php?id=431873</a></p>
+                <p>X: <a href="https://x.com/ui_shig" target="_blank">しぐれうい (@ui_shig) / X</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;YouTube: <a href="https://www.youtube.com/@ui_shig" target="_blank">https://www.youtube.com/@ui_shig</a></p>
+            </div>
+        </div>
+    </div>
+    <div id="avatar">
+        <img src="img/shigureui.png" alt="Shigure Ui's Profile Picture">
+    </div>
+    <input type="file" id="fileInput" style="display:none;" accept="image/*">
+</div>
+
+<div class="section">
+    <h2 style="color: rgb(238, 216, 195); border-bottom-color: rgb(238, 216, 195); --before-color: #EED8C3; --after-color: #EED8C3;" class="style-5">Professional Skills</h2>
+    <div id="editor-container1" class="quill-editor-item ql-container ql-snow" style="border: none !important;">
+        <div class="ql-editor">
+            <p><strong>Exceptional Drawing Skills:</strong> Possesses a solid foundation in drawing and excels at creating various types of illustrations.</p>
+            <p><strong>Unique Art Style:</strong> Has a highly recognizable art style with fresh colors and cute characters.</p>
+            <p><strong>Excellent Communication Skills:</strong> Able to interact well with viewers and create a lively stream atmosphere.</p>
+            <p><strong>Fluent Japanese:</strong> Native Japanese speaker, capable of fluent Japanese communication.</p>
+            <p><strong>Proficient Use of Various Painting Software:</strong> Proficient in using painting software such as Photoshop and SAI.</p>
+            <p><strong>Basic Understanding of Live2D and 3D Modeling Technologies:</strong> Understands VTuber-related technologies.</p>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h2 class="style-5" style="color: rgb(238, 216, 195); border-bottom-color: rgb(238, 216, 195); --before-color: #EED8C3; --after-color: #EED8C3;">Work Experience</h2>
+    <div id="editor-container2" class="quill-editor-item ql-container ql-snow" style="border: none !important;">
+        <div class="ql-editor">
+            <h3><strong>Freelance Illustrator (2018–Present)</strong></h3>
+            <ul>
+                <li>Creates illustrations for light novels, collaborating with publishers including but not limited to GA Bunko and Dengeki Bunko.</li>
+                <li>Participates in illustration work for games, TCGs, and other fields.</li>
+                <li>Designs characters for VTubers, with notable works including Subaru Oozora.</li>
+                <li>Holds solo exhibitions, such as "Tugging at the Rain Threads."</li>
+            </ul>
+            <h3><strong>VTuber (May 18, 2019–Present)</strong></h3>
+            <ul>
+                <li>Streams on YouTube, primarily content such as drawing streams and chat sessions.</li>
+                <li>Beloved by viewers for her clear voice and soothing style.</li>
+                <li>Occasionally shows a "teasing" side, creating unexpected humor.</li>
+                <li>Received the YouTube Silver Creator Award and Gold Creator Award.</li>
+                <li>Also active on platforms such as Bilibili.</li>
+                <li>Participates in doujin activities under the name "Shigure Doki."</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h2 class="style-5" style="color: rgb(238, 216, 195); border-bottom-color: rgb(238, 216, 195); --before-color: #EED8C3; --after-color: #EED8C3;">Strengths</h2>
+    <div id="editor-container5" class="quill-editor-item ql-container ql-snow" style="border: none !important;">
+        <div class="ql-editor">
+            <p><strong>Clear and Healing:</strong> Her voice and speech are very soothing, bringing peace and relaxation to people.</p>
+            <p><strong>Serious and Hardworking:</strong> Takes her work seriously and responsibly, constantly improving her drawing and streaming skills.</p>
+            <p><strong>Gentle Personality:</strong> Friendly and easy to get along with.</p>
+            <p><strong>Unique Sense of Humor:</strong> Occasionally shows a "sly" side, creating unexpected laughter.</p>
+            <p><strong>Versatile and Talented:</strong> Holds dual roles as an illustrator and VTuber, showcasing talent in multiple areas.</p>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h2 class="style-5" style="color: rgb(238, 216, 195); border-bottom-color: rgb(238, 216, 195); --before-color: #EED8C3; --after-color: #EED8C3;">Life Experience</h2>
+    <div id="editor-container6" class="quill-editor-item ql-container ql-snow" style="border: none !important;">
+        <div class="ql-editor">
+            <ul>
+                <li>Born in Yokkaichi, Mie Prefecture.</li>
+                <li>Graduated from an art university.</li>
+                <li>Debuted as a manga artist in 2015 with the serialization of the manga "Kankitsu Punch!" in the magazine "Manga Time Kirara Miracle!"</li>
+                <li>Moved to Tokyo after graduating in 2017 and worked at a game company.</li>
+                <li>Began activities as a freelance illustrator in 2018.</li>
+                <li>Started activities as a VTuber on May 18, 2019.</li>
+                <li>Held several solo exhibitions and participated in various doujin activities.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h2 class="style-5" style="color: rgb(238, 216, 195); border-bottom-color: rgb(238, 216, 195); --before-color: #EED8C3; --after-color: #EED8C3;">Self-Evaluation</h2>
+    <div id="editor-container7" class="quill-editor-item ql-container ql-snow" style="border: none !important;">
+        <div class="ql-editor">
+            <p>As an illustrator and VTuber, I love creating and am dedicated to bringing wonderful works and enjoyable experiences to my viewers. I will continue to work hard, constantly challenge myself, and bring even more wonderful content to everyone!</p>
+        </div>
+    </div>
+</div>`,
+
+  GawrGura: `<!-- Header Section -->
+<div class="header" style="border-color: rgb(58, 105, 178);">
   <div class="header-left">
-    <div id="editor-container0" class="quill-editor-item header-content ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h1>Shigure Ui</h1><p>Illustrator &amp; Manga Artist &amp; VTuber&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Age: 16?&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Location: Tokyo, Japan</p><p>Email: <a href="mailto:ui.shigure@gmail.com" target="_blank">ui.shigure@gmail.com</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Pixiv: <a href="https://www.pixiv.net/member.php?id=431873" target="_blank">https://www.pixiv.net/member.php?id=431873</a></p><p>X: <a href="https://x.com/ui_shig" target="_blank">Shigure Ui (@ui_shig) / X</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;YouTube: <a href="https://www.youtube.com/@ui_shig" target="_blank">https://www.youtube.com/@ui_shig</a></p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+    <div id="editor-container0" class="quill-editor-item header-content ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h1>Gawr Gura</h1><p>Descendant of Atlantis&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Current Residence: Land</p><p>Age: 9000+&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Occupation: Virtual YouTuber</p><p>YouTube：<a href="https://www.youtube.com/@GawrGura" target="_blank">Gawr Gura YouTube</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Twitter/X：<a href="https://x.com/gawrgura" target="_blank">@gawrgura</a></p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
   </div>
   <div id="avatar">
-    <img src="img/shigureui.png" alt="Shigure Ui Avatar" style="display: block;">
+    <img src="img/gawrgura.png" alt="Gawr Gura Avatar">
+  </div>
+  <input type="file" id="fileInput" style="display:none;" accept="image/*">
+</div>
+
+<!-- Work Experience -->
+<div class="section">
+  <h2 class="style-4" style="color: rgb(58, 105, 178); border-bottom-color: rgb(58, 105, 178); --before-color: #3A69B2; --after-color: #3A69B2;">Work Experience</h2>
+  <div id="editor-container2" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h3>Hololive English | Virtual YouTuber (September 2020 - Present)</h3><ul><li>Conducted live game streaming, covering various genres including horror, RPG, casual games, etc.</li><li>Performed singing live streams, showcasing a unique singing voice and taste in music selection.</li><li>Engaged in talk live streams, interacting with viewers and sharing interesting life stories and various topics.</li><li>Participated in various collaboration projects, working with other VTubers and guests.</li><li>Has over 4 million subscribers on YouTube, making her one of the most subscribed VTubers in the world.</li><li>Received YouTube Silver and Gold Creator Awards.</li><li>Served as an official Tokyo Tourism Ambassador recognized by the Tokyo Metropolitan Government.</li></ul></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+
+<div class="delete-btn" onclick="removeSection(this)">Delete</div> </div><!-- Professional Skills --><div class="section"> <h2 class="style-4" style="color: rgb(58, 105, 178); border-bottom-color: rgb(58, 105, 178); --before-color: #3A69B2; --after-color: #3A69B2;">Professional Skills</h2> <div id="editor-container1" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><ul><li><strong>Excellent Live Streaming Skills：</strong>Can liven up the atmosphere of live streams and interact well with viewers.</li><li><strong>Unique Voice and Singing Ability：Has a cute voice and infectious singing.</strong></li><li><strong>Fluent English：Native English speaker, capable of fluent English communication.</strong></li><li><strong>Learning Japanese：Actively learning Japanese, able to conduct simple daily conversations.</strong></li><li><strong>Strong Adaptability：Can quickly adapt to various games and live streaming environments.</strong></li><li><strong>Communication with Marine Life (Claimed)：Allegedly able to communicate with marine life (Is it true?).</strong></li></ul></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div><strong>
+  <div class="delete-btn" onclick="removeSection(this)">Delete</div>
+</strong></div><strong>
+
+<!-- Strengths -->
+<div class="section">
+  <h2 class="style-4" style="color: rgb(58, 105, 178); border-bottom-color: rgb(58, 105, 178); --before-color: #3A69B2; --after-color: #3A69B2;">Strengths</h2>
+  <div id="editor-container3" class="quill-editor-item ql-container ql-snow"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><ul><li><strong>Naive and Cheerful：</strong>Has a bright and lively personality, always bringing joy to others.</li><li><strong>Cute and Charismatic：</strong>Has a very cute appearance and voice, loved by viewers.</li><li><strong>Full of Energy：</strong>Is always energetic during live streams, able to infect the audience.</li><li><strong>Helpful：</strong>Actively participates in charity activities, contributing to society.</li><li><strong>Strong Fan Community (Chumbuds)：</strong>Has a loyal and enthusiastic fan community, providing great support.</li></ul></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+  <div class="delete-btn" onclick="removeSection(this)">Delete</div>
+</div>
+
+<!-- Life Experience -->
+<div class="section">
+  <h2 class="style-4" style="color: rgb(58, 105, 178); border-bottom-color: rgb(58, 105, 178); --before-color: #3A69B2; --after-color: #3A69B2;">Life Experience</h2>
+  <div id="editor-container4" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><p>Debut as a member of Hololive English Myth on September 13, 2020.</p><p>Rapidly gained popularity with a cute appearance and unique personality, becoming a notable Virtual YouTuber.</p><p>Achieved great success on YouTube, with subscriber counts quickly surpassing millions.</p><p>Participated in a variety of activities and projects, including game streaming, singing, collaborations, and offline events.</p><p>Became a world-renowned Virtual YouTuber with fans from all over the globe.</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+  <div class="delete-btn" onclick="removeSection(this)">Delete</div>
+</div>
+
+<!-- Hobbies and Interests -->
+<div class="section">
+  <h2 class="style-4" style="color: rgb(58, 105, 178); border-bottom-color: rgb(58, 105, 178); --before-color: #3A69B2; --after-color: #3A69B2;">Hobbies and Interests</h2>
+  <div id="editor-container6" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><ul><li>Likes: Sharks, water, Japanese culture, games, singing.</li><li>Dislikes: Boredom.</li></ul></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+  <div class="delete-btn" onclick="removeSection(this)">Delete</div>
+</div>
+
+<!-- Self-Evaluation -->
+<div class="section">
+  <h2 class="style-4" style="color: rgb(58, 105, 178); border-bottom-color: rgb(58, 105, 178); --before-color: #3A69B2; --after-color: #3A69B2;">Self-Evaluation</h2>
+  <div id="editor-container7" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><p>As a Virtual YouTuber, I am passionate about my work and committed to bringing joy and entertainment to my viewers. I will continue to strive and improve myself to bring you even more exciting content! A!</p><p>I hope you like this "resume"! After all, I am a top predator (Apex Predator)! A!</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+  <div class="delete-btn" onclick="removeSection(this)">Delete</div>
+</div></strong>`,
+
+  TadokoroKoji: `<!-- Header Section -->
+<div class="header" style="border-color: rgb(238, 69, 20);">
+  <div class="header-left">
+    <div id="editor-container0" class="quill-editor-item header-content ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h1>Koji Tadokoro</h1><p>Age: 24&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Occupation: Student&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Height: 170cm&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Weight: 74kg</p><p>Nationality: Japanese&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Current Residence: Shimokitazawa</p><p>Email: 1919810@yaju.com&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Phone: 114-514-1919</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+  </div>
+  <div id="avatar">
+    <img src="img/TadokoroKoji.png" alt="Koji Tadokoro Avatar">
   </div>
   <input type="file" id="fileInput" style="display:none;" accept="image/*">
 </div>
 
 <!-- Professional Skills -->
 <div class="section">
-  <h2 style="color: rgb(238, 219, 195); border-bottom-color: rgb(238, 219, 195); --before-color: #eedbc3; --after-color: #eedbc3;" class="style-5">Professional Skills</h2>
-  <div id="editor-container1" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><p><strong>Illustration and Manga Creation：</strong>Proficient in digital painting software, skilled in drawing various styles of character illustrations and manga scenes, and has a unique insight into color combinations and composition.</p><p><strong>Video Production and Editing：</strong>Familiar with the process of video production, able to independently complete the recording, editing, and post-processing of VTuber live broadcasts and video content.</p><p><strong>Social Media Management：</strong>Has extensive experience in operating social media platforms such as Twitter and Instagram, communicates with fans, and enhances personal brand influence.</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+  <h2 style="color: rgb(238, 69, 20); border-bottom-color: rgb(238, 69, 20); --before-color: #EE4514; --after-color: #EE4514;" class="style-2">Professional Skills</h2>
+  <div id="editor-container1" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><p><strong>Sleepy Tea Brewing：</strong>Can quickly brew tea that induces sleep in targets.</p><p><strong>Beast Roar：</strong>Can emit a powerful roar with a strong deterrent effect in specific situations.</p><p><strong>Combat Skills：</strong>A karate expert with excellent physical fitness.</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
   <div class="delete-btn" onclick="removeSection(this)">Delete</div>
 </div>
 
 <!-- Work Experience -->
 <div class="section">
-  <h2 style="color: rgb(238, 219, 195); border-bottom-color: rgb(238, 219, 195); --before-color: #eedbc3; --after-color: #eedbc3;" class="style-5">Work Experience</h2>
-  <div id="editor-container2" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h3>Illustration and Manga Creation</h3><p>Light Novel Illustrations: Since 2018, after leaving a game company, worked as a freelance illustrator, creating illustrations for various light novels, and received widespread acclaim for delicate brushwork and unique style.</p><p>Manga Serialization: Continuously published manga works in magazines, demonstrating deep skills in storytelling and visual expression.</p><h3>VTuber Activities</h3><p>YouTube Channel Management: Since 2019, opened a YouTube channel as a VTuber, interacted with fans through live broadcasts and videos, shared the process of illustration creation, snippets of daily life, and game live streams, gaining a large number of loyal fans.</p><p>Virtual Image Design: Participated in the design process of the VTuber image, ensuring a personal touch and an image that attracts the audience's attention.</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+  <h2 style="color: rgb(238, 69, 20); border-bottom-color: rgb(238, 69, 20); --before-color: #EE4514; --after-color: #EE4514;" class="style-2">Work Experience</h2>
+  <div id="editor-container2" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h3>Secret Organization | Member</h3><p>Participated in special tasks such as information transmission and intelligence gathering.</p><p>Received the title of "Beast Senior" for outstanding performance.</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
   <div class="delete-btn" onclick="removeSection(this)">Delete</div>
 </div>
 
-<!-- Education Background -->
+<!-- Personal Achievements -->
 <div class="section">
-  <h2 style="color: rgb(238, 219, 195); border-bottom-color: rgb(238, 219, 195); --before-color: #eedbc3; --after-color: #eedbc3;" class="style-5">Education Background</h2>
-  <div id="editor-container4" class="quill-editor-item ql-container ql-snow"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h3>Enrollment in Art University</h3><p>Originating from Tsu City, Mie Prefecture, later specialized in art in Tokyo, laying the foundation for future illustration and manga creation.</p><p>Debut Opportunity: In 2015, serialized the manga "Kankitsu Punch!" in "Manga Time Kirara Miracle!" magazine, debuting as a manga artist.</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+  <h2 style="color: rgb(238, 69, 20); border-bottom-color: rgb(238, 69, 20); --before-color: #EE4514; --after-color: #EE4514;" class="style-2">Personal Achievements</h2>
+  <div id="editor-container3" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><ul><li>Received the honorary title of "Beast Senior".</li><li>Widely circulated on the internet and became a hot topic of discussion.</li></ul></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
   <div class="delete-btn" onclick="removeSection(this)">Delete</div>
 </div>
 
-<!-- Strengths -->
+<!-- Educational Background -->
 <div class="section">
-  <h2 style="color: rgb(238, 219, 195); border-bottom-color: rgb(238, 219, 195); --before-color: #eedbc3; --after-color: #eedbc3;" class="style-5">Strengths</h2>
-  <div id="editor-container5" class="quill-editor-item ql-container ql-snow"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><ul><li>Takes Responsibility Seriously: Consistently maintains a strict attitude towards work, striving to ensure each piece achieves the best effect.</li><li>Infinite Creativity: Possesses a rich imagination and creativity, always bringing fresh and interesting content to the audience.</li><li>Good at Communication: Skilled in communicating with fans and partners, building good interpersonal relationships.</li><li>Continuous Learning: Has a high level of curiosity and enthusiasm for learning new knowledge and skills, continuously improving professional素养.</li></ul></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+  <h2 style="color: rgb(238, 69, 20); border-bottom-color: rgb(238, 69, 20); --before-color: #EE4514; --after-color: #EE4514;" class="style-2">Educational Background</h2>
+  <div id="editor-container4" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><p>Received strict home education from a young age and has a deep interest in classical Chinese literature.</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
   <div class="delete-btn" onclick="removeSection(this)">Delete</div>
 </div>
 
-<!-- Life Experience -->
+<!-- Hobbies and Interests -->
 <div class="section">
-  <h2 style="color: rgb(238, 219, 195); border-bottom-color: rgb(238, 219, 195); --before-color: #eedbc3; --after-color: #eedbc3;" class="style-5">Life Experience</h2>
-  <div id="editor-container6" class="quill-editor-item ql-container ql-snow"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><p>From Game Company to Freelance Illustrator: After graduating from university, worked in a game company, accumulating valuable industry experience. However, driven by love and pursuit of illustration art, decided to leave the company and start a new career as a freelance illustrator.</p><p>Explorer in the VTuber Field: In addition to illustration and manga creation, actively challenges new things in spare time. In 2019, entered the VTuber field and became a popular virtual broadcaster. Through this new identity, expanded creative boundaries and built deeper emotional connections with more fans.</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
-  <div class="delete-btn" onclick="removeSection(this)">Delete</div>
-</div>
+  <h2 style="color: rgb(238, 69, 20); border-bottom-color: rgb(238, 69, 20); --before-color: #EE4514; --after-color: #EE4514;" class="style-2">Hobbies and Interests</h2>
 
-<!-- Self-Assessment -->
-<div class="section">
-  <h2 style="color: rgb(238, 219, 195); border-bottom-color: rgb(238, 219, 195); --before-color: #eedbc3; --after-color: #eedbc3;" class="style-5">Self-Assessment</h2>
-  <div id="editor-container7" class="quill-editor-item ql-container ql-snow"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><p>As an illustrator, manga artist, and VTuber, I always maintain a love and pursuit of art. I continue to work hard and learn, believing that I can bring better and more interesting content to the audience. At the same time, I look forward to growing and progressing with more like-minded friends in the future.</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
-  <div class="delete-btn" onclick="removeSection(this)">Delete</div>
-</div>`,
+<div id="editor-container5" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><ul><li>Study of Classical Chinese Literature: Often studies classical literary works independently.</li><li>Fitness and Karate: Maintains good physical fitness.</li></ul></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div> <div class="delete-btn" onclick="removeSection(this)">Delete</div> </div><!-- Additional Information --><div class="section"> <h2 style="color: rgb(238, 69, 20); border-bottom-color: rgb(238, 69, 20); --before-color: #EE4514; --after-color: #EE4514;" class="style-2">Additional Information</h2> <div id="editor-container6" class="quill-editor-item ql-container ql-snow"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><blockquote>Always committed to completing organizational tasks and contributing to the organization.</blockquote></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div> <div class="delete-btn" onclick="removeSection(this)">Delete</div> </div> `,
 
-griffith: `<!-- Header Section -->
+  griffith: `<!-- Header Section -->
 <div class="header" style="border-color: rgb(0, 0, 0);">
   <div class="header-left">
     <div id="editor-container0" class="quill-editor-item header-content ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h1 class="ql-align-center">Griffith</h1><p class="ql-align-center">White Hawk&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Leader of the Band of the Hawk&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Hand of God&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Emperor</p><p class="ql-align-center">Age: ???&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Current Residence: Kingdom of Midland&nbsp;&nbsp;&nbsp;&nbsp;</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
@@ -190,7 +324,6 @@ griffith: `<!-- Header Section -->
   <div id="editor-container7" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><ul><li>Reading and Historical Research：Continuously improve strategic literacy by reading classic battles and political strategies from ancient and modern times, both domestic and international.</li><li>Board Games and Strategy Simulation：Through strategy games like chess, exercise thinking methods and predict the direction of future situations.</li><li>Music and Art：Occasionally participate in artistic creations to relax and review the aesthetics behind complex situations.</li></ul></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
   <div class="delete-btn" onclick="removeSection(this)">Delete</div>
 </div>`,
-
 
   voldemort: `<!-- Resume Box -->
   <!-- Header Section -->
@@ -248,13 +381,13 @@ griffith: `<!-- Header Section -->
 
   <!-- Additional Information -->
 
-<div class="pne" style="top: 1046.93px;"></div>`,
+`,
 };
 const jaCharacter = {
   miku: `<!-- ヘッダーセクション -->
 <div class="header" style="border-color: rgb(51, 204, 187);">
   <div class="header-left">
-    <div id="editor-container0" class="quill-editor-item header-content ql-container ql-snow"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h1>初音ミク</h1><p>職業：バーチャルシンガー&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;グローバルバーチャルアイドル&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;年齢：16&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;現住所：デジタルワールド</p><p>Email: miku@vocaloid.world&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;電話: 100-392-39MIKU</p><p>公式サイト：<a href="https://www.mikufan.com" target="_blank">www.mikufan.com</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;音楽プラットフォーム：<a href="https://www.youtube.com/user/HatsuneMiku" target="_blank">Hatsune Miku YouTube</a></p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+    <div id="editor-container0" class="quill-editor-item header-content ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h1>初音ミク</h1><p>職業：バーチャルシンガー&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;グローバルバーチャルアイドル</p><p>年齢：16&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;現住所：デジタルワールド</p><p>Email: miku@vocaloid.world&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;電話: 100-392-39MIKU</p><p>公式サイト：<a href="https://www.mikufan.com" target="_blank">www.mikufan.com</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;音楽プラットフォーム：<a href="https://www.youtube.com/user/HatsuneMiku" target="_blank">Hatsune Miku YouTube</a></p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
   </div>
   <div id="avatar">
     <img src="img/miku.png" alt="初音ミクのアイコン">
@@ -307,7 +440,7 @@ const jaCharacter = {
 <!-- 追加情報 -->
 <div class="section">
   <h2 class="style-1" style="color: rgb(51, 204, 187); border-bottom-color: rgb(51, 204, 187); --before-color: #33CCBB; --after-color: #33CCBB;">追加情報</h2>
-  <div id="editor-container7" class="quill-editor-item ql-container ql-snow"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><blockquote><span style="color: rgb(230, 0, 0); background-color: rgb(255, 255, 0);">24時間いつでも働く情熱を持っており、オンラインとオフラインの両方のプラットフォームのニーズに適応できます。</span></blockquote><blockquote><span style="color: rgb(153, 51, 255);">ニーズに応じて音域、イメージ、スタイルを調整し、カスタマイズされたサービ。</span></blockquote></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+  <div id="editor-container7" class="quill-editor-item ql-container ql-snow"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><blockquote><span style="background-color: rgb(255, 255, 0); color: rgb(230, 0, 0);">24時間いつでも働く情熱を持っており、オンラインとオフラインの両方のプラットフォームのニーズに適応できます。</span></blockquote><blockquote><span style="color: rgb(153, 51, 255);">ニーズに応じて音域、イメージ、スタイルを調整し、カスタマイズされたサービ。</span></blockquote></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
 
   <div class="delete-btn" onclick="removeSection(this)">删除</div>
 </div>
@@ -343,77 +476,188 @@ const jaCharacter = {
   <div id="editor-container3" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h3>エレガントさと可愛らしさ</h3><p>甘い声と高貴なオーラで、ファンに愛され、アイドル業界のベンチマークの一つとなっています。</p><h3>親和力</h3><p>ファンとの交流はいつも温かく誠実で、深いファンリレーションシップを築くことができます。</p><h3>勤勉さと努力</h3><p>音楽への情熱とステージパフォーマンスへの集中により、常に自己突破と成長を追求しています。</p><h3>クロスフィールド発展</h3><p>異なる分野の仕事を試すことを恐れず、例えばスポークスパーソンや映画・テレビなど、私の職業発展スペースを広げます。</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
 
 <div class="delete-btn" onclick="removeSection(this)">削除</div> </div> `,
-  ShigureUi: `
-<!-- Header Section -->
-<div class="header" style="border-color: rgb(238, 219, 195);">
-  <div class="header-left">
-    <div id="editor-container0" class="quill-editor-item header-content ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h1>しぐれうい</h1><p>イラストレーター &amp; 漫画家 &amp; VTuber&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;年齢：16？&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;住所：日本東京都</p><p>Email: <a href="mailto:ui.shigure@gmail.com" target="_blank">ui.shigure@gmail.com</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Pixiv：<a href="https://www.pixiv.net/member.php?id=431873" target="_blank">www.pixiv.net/member.php?id=431873</a></p><p>X: <a href="https://x.com/ui_shig" target="_blank">しぐれうい🌂 (@ui_shig) / X</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;YouTube: <a href="https://www.youtube.com/@ui_shig" target="_blank">https://www.youtube.com/@ui_shig</a></p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
-  </div>
+  ShigureUi: `<div class="header" style="border-color: rgb(238, 216, 195);">
+    <div class="header-left">
+        <div id="editor-container0" class="quill-editor-item header-content ql-container ql-snow" style="border: none !important;">
+            <div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic...">
+                <h1>時雨羽衣</h1>
+                <p>イラストレーター &amp; 漫画家 &amp; VTuber&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;年齢：16？&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;居住地：日本東京</p>
+                <p>Email: <a href="mailto:ui.shigure@gmail.com" target="_blank">ui.shigure@gmail.com</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Pixiv：<a href="https://www.pixiv.net/member.php?id=431873" target="_blank">www.pixiv.net/member.php?id=431873</a></p>
+                <p>X: <a href="https://x.com/ui_shig" target="_blank">しぐれうい (@ui_shig) / X</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;YouTube: <a href="https://www.youtube.com/@ui_shig" target="_blank">https://www.youtube.com/@ui_shig</a></p>
+            </div>
+        </div>
+    </div>
+    <div id="avatar">
+        <img src="img/shigureui.png" alt="時雨羽衣のプロフィール画像">
+    </div>
+    <input type="file" id="fileInput" style="display:none;" accept="image/*">
+</div>
 
+<div class="section">
+    <h2 style="color: rgb(238, 216, 195); border-bottom-color: rgb(238, 216, 195); --before-color: #EED8C3; --after-color: #EED8C3;" class="style-5">専門スキル</h2>
+    <div id="editor-container1" class="quill-editor-item ql-container ql-snow" style="border: none !important;">
+        <div class="ql-editor">
+            <p><strong>卓越した絵画技術：</strong>確かな絵画の基礎を持ち、様々な種類のイラストを描くことに長けています。</p>
+            <p><strong>独特な画風：</strong>識別性の高い画風を持ち、色彩は清涼で、人物は可愛らしいです。</p>
+            <p><strong>優れたコミュニケーション能力：</strong>視聴者と良好なコミュニケーションを取り、配信の雰囲気を盛り上げることができます。</p>
+            <p><strong>流暢な日本語：</strong>母語は日本語で、流暢な日本語でのコミュニケーションが可能です。</p>
+            <p><strong>様々なペイントソフトの熟練した使用：</strong>Photoshop、SAIなどのペイントソフトを熟練して使用できます。</p>
+            <p><strong>Live2Dと3Dモデリング技術にある程度の理解：</strong>VTuber関連の技術を理解しています。</p>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h2 class="style-5" style="color: rgb(238, 216, 195); border-bottom-color: rgb(238, 216, 195); --before-color: #EED8C3; --after-color: #EED8C3;">職務経歴</h2>
+    <div id="editor-container2" class="quill-editor-item ql-container ql-snow" style="border: none !important;">
+        <div class="ql-editor">
+            <h3><strong>フリーランスのイラストレーター (2018年～現在)</strong></h3>
+            <ul>
+                <li>ライトノベルの挿絵を制作。協力した文庫には、GA文庫、電撃文庫などが含まれます。</li>
+                <li>ゲーム、TCGなどの分野のイラスト制作に参加。</li>
+                <li>VTuberのキャラクターデザインを手掛け、代表作には大空スバルなどがいます。</li>
+                <li>「雨を繋ぐ」などの個展を開催。</li>
+            </ul>
+            <h3><strong>VTuber (2019年5月18日～現在)</strong></h3>
+            <ul>
+                <li>YouTubeで配信活動を行っており、内容は主に絵の作業配信、雑談などです。</li>
+                <li>澄んだ声と癒し系のスタイルで視聴者に愛されています。</li>
+                <li>時折「煽り」の一面を見せ、意図しない笑いを誘います。</li>
+                <li>YouTubeシルバークリエイター賞とゴールドクリエイター賞を受賞。</li>
+                <li>Bilibiliなどのプラットフォームでも活動しています。</li>
+                <li>「しぐれどき」の名義で同人活動に参加。</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h2 class="style-5" style="color: rgb(238, 216, 195); border-bottom-color: rgb(238, 216, 195); --before-color: #EED8C3; --after-color: #EED8C3;">長所</h2>
+    <div id="editor-container5" class="quill-editor-item ql-container ql-snow" style="border: none !important;">
+        <div class="ql-editor">
+            <p><strong>清楚で癒し系：</strong>声と話し方は非常に癒し系で、人々に安らぎとリラックスをもたらします。</p>
+            <p><strong>真面目で努力家：</strong>仕事に対して真面目で責任感が強く、絵と配信の技術向上に絶えず取り組んでいます。</p>
+            <p><strong>穏やかな性格：</strong>人当たりが良く、付き合いやすいです。</p>
+            <p><strong>独特なユーモアセンス：</strong>時折「腹黒」な一面を見せ、予想外の笑いを誘います。</p>
+            <p><strong>多才多芸：</strong>イラストレーターとVTuberの二つの顔を持ち、多方面で才能を発揮しています。</p>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h2 class="style-5" style="color: rgb(238, 216, 195); border-bottom-color: rgb(238, 216, 195); --before-color: #EED8C3; --after-color: #EED8C3;">人生経験</h2>
+    <div id="editor-container6" class="quill-editor-item ql-container ql-snow" style="border: none !important;">
+        <div class="ql-editor">
+            <ul>
+                <li>三重県四日市市生まれ。</li>
+                <li>美術大学卒業。</li>
+                <li>2015年から雑誌『Manga Time Kirara Miracle!』で漫画『かんきつパンチ！』を連載し、漫画家としてデビュー。</li>
+                <li>2017年卒業後、東京へ上京し、ゲーム会社に就職。</li>
+                <li>2018年からフリーランスのイラストレーターとして活動。</li>
+                <li>2019年5月18日からVTuberとして活動開始。</li>
+                <li>数回の個展を開催し、様々な同人活動に参加。</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h2 class="style-5" style="color: rgb(238, 216, 195); border-bottom-color: rgb(238, 216, 195); --before-color: #EED8C3; --after-color: #EED8C3;">自己評価</h2>
+    <div id="editor-container7" class="quill-editor-item ql-container ql-snow" style="border: none !important;">
+        <div class="ql-editor">
+            <p>イラストレーターとVTuberとして、私は創作を愛し、視聴者の皆様に素晴らしい作品と楽しい体験をお届けすることに尽力しています。これからも努力を続け、常に挑戦し、皆様にもっと多くの素晴らしいコンテンツをお届けします！</p>
+        </div>
+    </div>
+</div>`,
+
+  GawrGura: `<!-- ヘッダーセクション -->
+<div class="header" style="border-color: rgb(58, 105, 178);">
+  <div class="header-left">
+    <div id="editor-container0" class="quill-editor-item header-content ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h1>ガウル・グラ</h1><p>アトランティスの後裔&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;現住所：陸地&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;年齢：9000+&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;職業：バーチャルYouTuber</p><p>Email: GawrGura@hololive.tv&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;電話: 100-392-39SHARK</p><p>YouTube：<a href="https://www.youtube.com/@GawrGura" target="_blank">Gawr Gura YouTube</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Twitter/X：<a href="https://x.com/gawrgura" target="_blank">@gawrgura</a></p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+  </div>
   <div id="avatar">
-    <img src="img/shigureui.png" alt="時雨羽衣头像" style="display: block;">
+    <img src="img/gawrgura.png" alt="ガウル・グラのアイコン">
   </div>
   <input type="file" id="fileInput" style="display:none;" accept="image/*">
 </div>
 
-<!-- 専門技能 -->
-<div class="section">
-  <h2 style="color: rgb(238, 219, 195); border-bottom-color: rgb(238, 219, 195); --before-color: #eedbc3; --after-color: #eedbc3;" class="style-5">専門技能</h2>
-
-  <div id="editor-container1" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><p><strong>イラストと漫画創作：</strong>デジタル絵画ソフトウェアを熟練し、様々なスタイルの人物イラストと漫画シーンを描くことに巧みで、色の組み合わせと構図に独特の見識を持ちます。</p><p><strong>ビデオ制作と編集：</strong>ビデオ制作の流れを熟知し、VTuberの生放送とビデオコンテンツの録音、編集、後期処理を独自で完成できます。</p><p><strong>ソーシャルメディア運営：</strong>Twitter、Instagramなどのソーシャルメディアプラットフォームで豊富な運営経験を持ち、ファンとコミュニケーションをとり、個人的ブランドの影響力を高めます。</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
-
-  <div class="delete-btn" onclick="removeSection(this)">削除</div>
-</div>
-
 <!-- 職歴 -->
 <div class="section">
-  <h2 style="color: rgb(238, 219, 195); border-bottom-color: rgb(238, 219, 195); --before-color: #eedbc3; --after-color: #eedbc3;" class="style-5">職歴</h2>
-
-  <div id="editor-container2" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h3>イラストと漫画創作</h3><p>ライトノベルイラスト：2018年からゲーム会社を辞め、フリーのイラストレーターとして活動し、様々な文庫のライトノベルのイラストを描き、繊細な筆筆と独特なスタイルで広範な好評を博しました。</p><p>漫画連載：雑誌で漫画作品を継続的に発表し、物語と画面表現の深い腕前を発揮しました。</p><h3>VTuber活動</h3><p>YouTubeチャンネル運営：2019年からVTuberとしてYouTubeでチャンネルを開設し、生放送、ビデオなどを通じてファンと交流し、イラスト創作のプロセス、日常生活の点々、ゲームの実況などをシェアし、大量の忠実なファンを獲得しました。</p><p>仮想イメージデザイン：VTuberイメージのデザインプロセスに参加し、個人的な特色と観客の注意を引き付けるイメージを確保しました。</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
-
+  <h2 class="style-4" style="color: rgb(58, 105, 178); border-bottom-color: rgb(58, 105, 178); --before-color: #3A69B2; --after-color: #3A69B2;">職歴</h2>
+  <div id="editor-container2" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h3>Hololive English | バーチャルYouTuber (2020年9月至今)</h3><ul><li>ゲーム配信を行い、ホラー、RPG、カジュアルゲームなど様々なジャンルをカバー。</li><li>歌回配信を行い、独特な歌声と選曲センスを披露。</li><li>雑談配信を行い、視聴者と互動し、生活の面白エピソードや様々なトピックを共有。</li><li>様々なコラボ企画に参加し、他のVTuberやゲストと協力。</li><li>YouTubeで400万以上の登録者を持ち、世界で最も登録者数の多いVTuberの一人。</li><li>YouTubeシルバーアワード、ゴールドアワードを受賞。</li><li>東京都公認の東京観光大使を務めた。</li></ul></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
   <div class="delete-btn" onclick="removeSection(this)">削除</div>
 </div>
 
-<!-- 教育背景 -->
+<!-- 専門スキル -->
 <div class="section">
-  <h2 style="color: rgb(238, 219, 195); border-bottom-color: rgb(238, 219, 195); --before-color: #eedbc3; --after-color: #eedbc3;" class="style-5">教育背景</h2>
-
-  <div id="editor-container4" class="quill-editor-item ql-container ql-snow"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h3>美術大学進学</h3><p>三重県四日市市出身で、その後東京で美術の分野を専攻し、日後のイラストと漫画創作の基礎を築きました。</p><p>デビューのきっかけ：2015年、『Manga Time Kirara Miracle!』誌で漫画「かんきつパンチ！」を連載し、漫画家としてデビューしました。</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
-
+  <h2 class="style-4" style="color: rgb(58, 105, 178); border-bottom-color: rgb(58, 105, 178); --before-color: #3A69B2; --after-color: #3A69B2;">専門スキル</h2>
+  <div id="editor-container1" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><ul><li><strong>優れた配信スキル：</strong>配信の雰囲気を活性化し、視聴者との良好な互動を行う。</li><li><strong>独特な声質と歌唱力：</strong>可愛らしい声で、歌が感染力がある。</li><li><strong>流暢な英語：</strong>母国語が英語で、流暢な英語でのコミュニケーションが可能。</li><li><strong>学習中の日本語：</strong>日本語の学習に努めており、簡単な日常会話が可能。</li><li><strong>強力な適応能力：</strong>様々なゲームや配信環境に迅速に適応できる。</li><li><strong>海洋生物とのコミュニケーション（自称）：</strong>海洋生物との交流が可能だと言われている（本当？）。</li></ul></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
   <div class="delete-btn" onclick="removeSection(this)">削除</div>
 </div>
 
 <!-- 長所 -->
 <div class="section">
-  <h2 style="color: rgb(238, 219, 195); border-bottom-color: rgb(238, 219, 195); --before-color: #eedbc3; --after-color: #eedbc3;" class="style-5">長所</h2>
-
-  <div id="editor-container5" class="quill-editor-item ql-container ql-snow"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><ul><li>真剣に責任を負う：仕事に一貫して厳しい態度をとり、それぞれの作品が最高の効果を達成できるように努めます。</li><li>創意無限：豊富な想像力と創造力を持ち、観客に常に新しく面白いコンテンツをもたらすことができます。</li><li>コミュニケーションが上手：ファンとパートナーとのコミュニケーションに巧みで、良好な人間関係を築きます。</li><li>学習を続ける：新しい知識とスキルに高度な好奇心と学習の熱意を持ち、自身の専門素養を高め続けます。</li></ul></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
-
+  <h2 class="style-4" style="color: rgb(58, 105, 178); border-bottom-color: rgb(58, 105, 178); --before-color: #3A69B2; --after-color: #3A69B2;">長所</h2>
+  <div id="editor-container3" class="quill-editor-item ql-container ql-snow"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><ul><li><strong>天真爛漫：</strong>性格が明るく活発で、いつも人々に欢乐をもたらす。</li><li><strong>可愛迷人：</strong>外見と声が非常に可愛らしく、視聴者に愛されている。</li><li><strong>充满活力：</strong>配信中はいつも活力に溢れており、視聴者を感染させる。</li><li><strong>乐于助人：</strong>慈善活動に積極的に参加し、社会に貢献。</li><li><strong>強力なファンコミュニティ（Chumbuds）：</strong>忠実で熱心なファンコミュニティを持ち、大きな支持を得ている。</li></ul></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
   <div class="delete-btn" onclick="removeSection(this)">削除</div>
 </div>
 
 <!-- 人生経歴 -->
 <div class="section">
-  <h2 style="color: rgb(238, 219, 195); border-bottom-color: rgb(238, 219, 195); --before-color: #eedbc3; --after-color: #eedbc3;" class="style-5">人生経歴</h2>
+  <h2 class="style-4" style="color: rgb(58, 105, 178); border-bottom-color: rgb(58, 105, 178); --before-color: #3A69B2; --after-color: #3A69B2;">人生経歴</h2>
+  <div id="editor-container4" class="quill-editor-item ql-container ql-snow" style="border: none !important;">
+  <div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><p>2020年9月13日、Hololive English Mythのメンバーとしてデビュー。</p><p>可愛らしい外見と独特な個性で急速に人気を博し、注目のバーチャルYouTuberとなった。</p><p>YouTubeで大きな成功を収め、登録者数が急速に百万、数百万を突破。</p><p>ゲーム配信、歌回、コラボ、オフラインイベントなど様々な活動と企画に参加。</p><p>世界で知られるようになったバーチャルYouTuberで、世界各地からのファンを持つ。</p></div>
+  <div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div> <div class="delete-btn" onclick="removeSection(this)">削除</div> </div><!-- 趣味 --><div class="section"> <h2 class="style-4" style="color: rgb(58, 105, 178); border-bottom-color: rgb(58, 105, 178); --before-color: #3A69B2; --after-color: #3A69B2;">趣味</h2> <div id="editor-container6" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><ul><li>好きなもの：サメ、水、日本の文化、ゲーム、歌うこと。</li><li>嫌いなもの：退屈。</li></ul></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div> <div class="delete-btn" onclick="removeSection(this)">削除</div> </div><!-- 自己評価 --><div class="section"> <h2 class="style-4" style="color: rgb(58, 105, 178); border-bottom-color: rgb(58, 105, 178); --before-color: #3A69B2; --after-color: #3A69B2;">自己評価</h2> <div id="editor-container7" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><p>バーチャルYouTuberとして、私の仕事に情熱を傾けており、視聴者に欢乐とエンターテイメントを提供することに努めています。引き続き努力し、自分を向上させ、皆さんに更多精彩なコンテンツをお届けします！A！</p><p>この「レジュメ」が気に入っていただけたら幸いです！私はトップの捕食者（Apex Predator）ですから！A！</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div> <div class="delete-btn" onclick="removeSection(this)">削除</div> </div>`,
 
-  <div id="editor-container6" class="quill-editor-item ql-container ql-snow"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><p>ゲーム会社からフリーイラストレーターへ：大学卒業後、一度ゲーム会社で勤務し、貴重な業界経験を蓄積しました。しかし、イラストアートへの愛と追求のため、決意を固めて会社を辞め、フリーのイラストレーターとして新たなキャリアを始めました。</p><p>VTuber分野の探検者：イラストと漫画創作の余暇に、新しい事物に積極的に挑戦し、2019年にVTuberの分野に入り、人気のある仮想主播としてなりました。この新たな身分を通じて、私は創作の境界を広げり、さらに多くのファンと深い情感の繋がりを築きました。</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
-
-  <div class="delete-btn" onclick="removeSection(this)">削除</div>
+  TadokoroKoji: `<!-- ヘッダーセクション -->
+<div class="header" style="border-color: rgb(238, 69, 20);">
+  <div class="header-left">
+    <div id="editor-container0" class="quill-editor-item header-content ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h1>田所浩二</h1><p>年齢：24&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;職業：学生&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;身長：170cm&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;体重：74kg</p><p>国籍：日本&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;現住所：下北沢&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;趣味：漢文学、フィットネス、空手</p><p>Email: 1919810@yaju.com&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;電話: 114-514-1919</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+  </div>
+  <div id="avatar">
+    <img src="img/TadokoroKoji.png" alt="たどころこうじのアイコン">
+  </div>
+  <input type="file" id="fileInput" style="display:none;" accept="image/*">
 </div>
 
-<!-- 自己評価 -->
+<!-- 専門スキル -->
 <div class="section">
-  <h2 style="color: rgb(238, 219, 195); border-bottom-color: rgb(238, 219, 195); --before-color: #eedbc3; --after-color: #eedbc3;" class="style-5">自己評価</h2>
-
-  <div id="editor-container7" class="quill-editor-item ql-container ql-snow"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><p>私はイラストレーター、漫画家、そしてVTuberとして、芸術への愛と追求を常に保持しております。私は努力と学習を続け、観客により良い、面白いコンテンツをもたらすことができると信じています。同時に、将来の日々で、より多くの志を同じくする友人と一緒に成長し、進歩することを期待しています。</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
-
+  <h2 style="color: rgb(238, 69, 20); border-bottom-color: rgb(238, 69, 20); --before-color: #EE4514; --after-color: #EE4514;" class="style-2">専門スキル</h2>
+  <div id="editor-container1" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><p><strong>昏睡紅茶調製：</strong>短时间内で目標を昏睡させる紅茶を作製できる。</p><p><strong>野獣咆哮：</strong>特定の状況で強力な威嚇効果の咆哮を発する。</p><p><strong>格闘技巧：</strong>空手の達人で、優れた身体能力を持つ。</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
   <div class="delete-btn" onclick="removeSection(this)">削除</div>
 </div>
-`,
+
+<!-- 職歴 -->
+<div class="section">
+  <h2 style="color: rgb(238, 69, 20); border-bottom-color: rgb(238, 69, 20); --before-color: #EE4514; --after-color: #EE4514;" class="style-2">職歴</h2>
+  <div id="editor-container2" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h3>ある秘密組織 | メンバー</h3><p>情報伝達、情報収集などの特殊任務に参加。</p><p>優れた表現で、「野獣先輩」の称号を得る。</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+  <div class="delete-btn" onclick="removeSection(this)">削除</div>
+</div>
+
+<!-- 個人成績 -->
+<div class="section">
+  <h2 style="color: rgb(238, 69, 20); border-bottom-color: rgb(238, 69, 20); --before-color: #EE4514; --after-color: #EE4514;" class="style-2">個人成績</h2>
+  <div id="editor-container3" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><ul><li>「野獣先輩」の荣誉称号を得る。</li><li>ネット上で広く流传り、ホットな議論の対象となる。</li></ul></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+  <div class="delete-btn" onclick="removeSection(this)">削除</div>
+</div>
+
+<!-- 教育背景 -->
+<div class="section">
+  <h2 style="color: rgb(238, 69, 20); border-bottom-color: rgb(238, 69, 20); --before-color: #EE4514; --after-color: #EE4514;" class="style-2">教育背景</h2>
+  <div id="editor-container4" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><p>幼い頃から厳しい家庭教育を受けており、漢文学に深い興味がある。</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+  <div class="delete-btn" onclick="removeSection(this)">削除</div>
+</div>
+
+<!-- 趣味 -->
+<div class="section">
+  <h2 style="color: rgb(238, 69, 20); border-bottom-color: rgb(238, 69, 20); --before-color: #EE4514; --after-color: #EE4514;" class="style-2">趣味</h2>
+  <div id="editor-container5" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><ul><li>漢文学研究：よく古典文学作品を独学で研究する。</li><li>フィットネスと空手：良い身体能力を維持する。</li></ul></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+
+<div class="delete-btn" onclick="removeSection(this)">削除</div> </div><!-- 付加情報 --><div class="section"> <h2 style="color: rgb(238, 69, 20); border-bottom-color: rgb(238, 69, 20); --before-color: #EE4514; --after-color: #EE4514;" class="style-2">付加情報</h2> <div id="editor-container6" class="quill-editor-item ql-container ql-snow"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><blockquote>常に組織の任務を完了し、組織に貢献することに努めている。</blockquote></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div> <div class="delete-btn" onclick="removeSection(this)">削除</div> </div> `,
   griffith: `<!-- ヘッダーセクション -->
 <div class="header" style="border-color: rgb(0, 0, 0);">
   <div class="header-left">
-    <div id="editor-container0" class="quill-editor-item header-content ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h1 class="ql-align-center">グリフィス</h1><p class="ql-align-center">白鷹&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;鷹団団長&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;神の手&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;帝王</p><p class="ql-align-center">年齢：???&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;現住所：ミトランド王国&nbsp;&nbsp;&nbsp;&nbsp;</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+    <div id="editor-container0" class="quill-editor-item header-content ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h1 class="ql-align-center">グリフィス</h1><p class="ql-align-center">白い鷹&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;鷹の団団長&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;神の手&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;帝王</p><p class="ql-align-center">年齢：???&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;現住所：ミトランド王国&nbsp;&nbsp;&nbsp;&nbsp;</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
   </div>
   <div id="avatar">
     <img src="" alt="グリフィスのアイコン" style="display: none;">
@@ -424,21 +668,21 @@ const jaCharacter = {
 <!-- 専門スキル -->
 <div class="section">
   <h2 style="color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); --before-color: #000000; --after-color: #000000;" class="">専門スキル</h2>
-  <div id="editor-container1" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><p><strong>軍事戦略と指揮：</strong>「鷹団」を成功裡に領導し、巧妙な戦術と先見の明による配置で、一連の勝利を収めた。敵の弱点を利用するだけでなく、戦場の細部にも注目し、戦局を正確に掌握する。</p><p><strong>領導力と激励：</strong>比類のない個人的魅力と領導力を持ち、チームメンバーを鼓舞し、鉄血の戦闘力を築く。どんな状況でも、チームに信念を植え付け、勝利へと導く。</p><p><strong>交渉と権力ゲーム：</strong>政治、軍事、経済の分野での交渉と権力ゲームに長けており、言葉と知恵で状況を操り、有利な地位を勝ち取る。</p><p><strong>壮大なビジョンと実行力：</strong>明確な長期目標と強力な実行力を備え、複雑な環境の中で未来を計画し、着実に推進する。</p><p><strong>完璧主義と効率的な管理：</strong>自分自身と他人に非常に高い要求を持ち、完璧を追求し、すべての仕事を極限まで行い、各段階が効率的に動作することを確保する。</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+  <div id="editor-container1" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><p><strong>軍事戦略と指揮：</strong>「鷹の団」を成功裡に領導し、巧妙な戦術と先見の明による配置で、一連の勝利を収めた。敵の弱点を利用するだけでなく、戦場の細部にも注目し、戦局を正確に掌握する。</p><p><strong>領導力と激励：</strong>比類のない個人的魅力と領導力を持ち、チームメンバーを鼓舞し、鉄血の戦闘力を築く。どんな状況でも、チームに信念を植え付け、勝利へと導く。</p><p><strong>交渉と権力ゲーム：</strong>政治、軍事、経済の分野での交渉と権力ゲームに長けており、言葉と知恵で状況を操り、有利な地位を勝ち取る。</p><p><strong>壮大なビジョンと実行力：</strong>明確な長期目標と強力な実行力を備え、複雑な環境の中で未来を計画し、着実に推進する。</p><p><strong>完璧主義と効率的な管理：</strong>自分自身と他人に非常に高い要求を持ち、完璧を追求し、すべての仕事を極限まで行い、各段階が効率的に動作することを確保する。</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
   <div class="delete-btn" onclick="removeSection(this)">削除</div>
 </div>
 
 <!-- 職歴 -->
 <div class="section">
   <h2 style="color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); --before-color: #000000; --after-color: #000000;" class="">職歴</h2>
-  <div id="editor-container2" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h3>神の手</h3><p>「神の手」の核心メンバーとして、複数の重要な政治と軍事の決定を主導し、無数の国と地域の状況を操作し、影響を与えた。</p><p>厳密な計画と戦略的配置を通じて、組織の継続的な権力拡大と強化を助けた。</p><p>この地位において、個人の領導力を絶えず磨き、具体的な行動と実際の成果を通じて、卓越した評判を築いた。</p><h3>鷹団団長</h3><p>「鷹団」の創設者であり団長として、厳しい規律と容赦ない戦略で、団員を領導し、戦場で勝利を収めた。</p><p>数え切れないほどの戦いの中で、戦闘配置を成功裡に指揮し、計画し、団員たちが様々な困難な状況から脱出するのを助け、甚至敗北を反転させた。</p><p>正確な資源配分と人員管理を通じて、毎回の任務を効率的に完了させた。</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+  <div id="editor-container2" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h3>神の手</h3><p>「神の手」の核心メンバーとして、複数の重要な政治と軍事の決定を主導し、無数の国と地域の状況を操作し、影響を与えた。</p><p>厳密な計画と戦略的配置を通じて、組織の継続的な権力拡大と強化を助けた。</p><p>この地位において、個人の領導力を絶えず磨き、具体的な行動と実際の成果を通じて、卓越した評判を築いた。</p><h3>鷹の団団長</h3><p>「鷹の団」の創設者であり団長として、厳しい規律と容赦ない戦略で、団員を領導し、戦場で勝利を収めた。</p><p>数え切れないほどの戦いの中で、戦闘配置を成功裡に指揮し、計画し、団員たちが様々な困難な状況から脱出するのを助け、甚至敗北を反転させた。</p><p>正確な資源配分と人員管理を通じて、毎回の任務を効率的に完了させた。</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
   <div class="delete-btn" onclick="removeSection(this)">削除</div>
 </div>
 
 <!-- 賞と栄誉 -->
 <div class="section">
   <h2 style="color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); --before-color: #000000; --after-color: #000000;" class="">賞と栄誉</h2>
-  <div id="editor-container5" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><ul data-checked="true"><li>「鷹団」の創設者であり団長として、団員をゼロから領導し、徐々に頭角を現し、有名な部隊となった。</li><li>複数の重要な戦いを成功裡に指揮し、繰り返し弱い立場から強者を倒し、歴史の流れを変えた。</li><li>「神の手」のメンバーとして、組織の中で重要な役割を果たし、大規模な政治と軍事の状況を成功裡に操作した。</li><li>「止められない力」として知られ、多くの不可能と思われた戦略目標を実現した。</li></ul></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+  <div id="editor-container5" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><ul data-checked="true"><li>「鷹の団」の創設者であり団長として、団員をゼロから領導し、徐々に頭角を現し、有名な部隊となった。</li><li>複数の重要な戦いを成功裡に指揮し、繰り返し弱い立場から強者を倒し、歴史の流れを変えた。</li><li>「神の手」のメンバーとして、組織の中で重要な役割を果たし、大規模な政治と軍事の状況を成功裡に操作した。</li><li>「止められない力」として知られ、多くの不可能と思われた戦略目標を実現した。</li></ul></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
   <div class="delete-btn" onclick="removeSection(this)">削除</div>
 </div>
 
@@ -494,7 +738,7 @@ const jaCharacter = {
 <div id="editor-container4" class="quill-editor-item ql-container ql-snow"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h3>ホグワーツ魔法学校 | 学生 (1937 - 1945)</h3><p>黒魔法、魔法防御、魔法史、魔法界の政治理論を専攻しました。</p><p>超常の魔法の才能を持ち、魔法界で最も有望な黒魔法の達人の一人となりました。</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
 <div class="delete-btn" onclick="removeSection(this)">削除</div>
 
-</div> <!-- 賞と栄誉 --> <div class="section"> <h2 style="color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); --before-color: #000000; --after-color: #000000;" class="style-3">賞と栄誉</h2> <div id="editor-container5" class="quill-editor-item ql-container ql-snow"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><ul data-checked="true"><li>魔法界の最高支配者（2度の魔法戦争に勝利）</li><li>永遠の命を得て、魔法界の神話と脅威となる</li><li>食死徒の台頭、ダークパワーの掌握</li></ul></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div> <div class="delete-btn" onclick="removeSection(this)">削除</div> </div> <!-- 趣味 --> <div class="section"> <h2 style="color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); --before-color: #000000; --after-color: #000000;" class="style-3">趣味</h2> <div id="editor-container6" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><ul><li>黒魔法と禁忌魔法の深奥な研究を行い、魔法の限界を突破します。</li><li>権力闘争を企て、実行するのが好きで、強大な支配体制を築くことに専念します。</li><li>魂を分ける魔法の研究を行い、どのようにして生命と永遠の命を操作するかを探求します。</li></ul></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div> <div class="delete-btn" onclick="removeSection(this)">削除</div> </div> <!-- 追加情報 --><div class="pne" style="top: 1046.93px;"></div> `,
+</div> <!-- 賞と栄誉 --> <div class="section"> <h2 style="color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); --before-color: #000000; --after-color: #000000;" class="style-3">賞と栄誉</h2> <div id="editor-container5" class="quill-editor-item ql-container ql-snow"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><ul data-checked="true"><li>魔法界の最高支配者（2度の魔法戦争に勝利）</li><li>永遠の命を得て、魔法界の神話と脅威となる</li><li>食死徒の台頭、ダークパワーの掌握</li></ul></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div> <div class="delete-btn" onclick="removeSection(this)">削除</div> </div> <!-- 趣味 --> <div class="section"> <h2 style="color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); --before-color: #000000; --after-color: #000000;" class="style-3">趣味</h2> <div id="editor-container6" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><ul><li>黒魔法と禁忌魔法の深奥な研究を行い、魔法の限界を突破します。</li><li>権力闘争を企て、実行するのが好きで、強大な支配体制を築くことに専念します。</li><li>魂を分ける魔法の研究を行い、どのようにして生命と永遠の命を操作するかを探求します。</li></ul></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div> <div class="delete-btn" onclick="removeSection(this)">削除</div> </div> <!-- 追加情報 --> `,
 };
 const zhCharacter = {
   miku: `
@@ -576,7 +820,7 @@ const zhCharacter = {
 
   <div class="delete-btn" onclick="removeSection(this)">删除</div>
 </div>
-<div class="pne" style="top: 1046.93px;"></div>
+
 `,
   momoka: `<!-- Header Section -->
   <div class="header" style="border-color: rgb(239, 149, 207);">
@@ -626,7 +870,7 @@ const zhCharacter = {
   <div class="section">
     <h2 style="color: rgb(238, 216, 195); border-bottom-color: rgb(238, 216, 195); --before-color: #EED8C3; --after-color: #EED8C3;" class="style-5">专业技能</h2>
 
-    <div id="editor-container1" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><p><strong>插画与漫画创作：</strong>熟练掌握数字绘画软件，擅长绘制各种风格的人物插画与漫画场景，对色彩搭配与构图有独到见解。</p><p><strong>视频制作与编辑：</strong>熟悉视频制作流程，能够独立完成VTuber直播与视频内容的录制、剪辑与后期处理。</p><p><strong>社交媒体运营：</strong>在Twitter、Instagram等社交媒体平台上拥有丰富的运营经验，擅长与粉丝互动，提升个人品牌影响力。</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+    <div id="editor-container1" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><p><strong>精湛的绘画技巧：</strong> 拥有扎实的绘画功底，擅长绘制各种类型的插画。</p><p><strong>独特的画风：</strong> 拥有辨识度高的画风，色彩清新，人物可爱。</p><p><strong>优秀的沟通能力：</strong> 能够与观众进行良好的互动，活跃直播气氛。</p><p><strong>流利的日语：</strong> 母语为日语，能够进行流利的日语交流。</p><p><strong>熟练使用各种绘画软件：</strong> 能够熟练使用Photoshop、SAI等绘画软件。</p><p><strong>Live2D和3D建模技术有一定的了解：</strong> 了解VTuber相关的技术。</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
 
     <div class="delete-btn" onclick="removeSection(this)">删除</div>
   </div>
@@ -635,25 +879,19 @@ const zhCharacter = {
   <div class="section">
     <h2 class="style-5" style="color: rgb(238, 216, 195); border-bottom-color: rgb(238, 216, 195); --before-color: #EED8C3; --after-color: #EED8C3;">工作经历</h2>
 
-    <div id="editor-container2" class="quill-editor-item ql-container ql-snow"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h3>插画与漫画创作</h3><p>轻小说插画：自2018年起，辞去游戏公司工作，成为自由身插画家，专注于为不同文库的轻小说绘制插画，以细腻的笔触和独特的风格赢得了广泛赞誉。</p><p>漫画连载：持续在杂志上发表漫画作品，展现了我在叙事与画面表现上的深厚功底。</p><h3>VTuber活动</h3><p>YouTube频道运营：自2019年起，作为VTuber在YouTube上开设频道，通过直播、视频等形式与粉丝互动，分享插画创作过程、日常生活点滴及游戏实况等，积累了大量忠实粉丝。</p><p>虚拟形象设计：参与了自己VTuber形象的设计过程，确保形象既符合个人特色又能吸引观众注意。</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+    <div id="editor-container2" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h3><strong>自由插画家 (2018年至今)</strong></h3><ul><li>为轻小说绘制插画，合作文库包括但不限于：GA文库、电击文库等。</li><li>参与游戏、TCG等领域的插画绘制工作。</li><li>为VTuber设计形象，代表作包括大空昴等。</li><li>举办个人画展，如“牵动雨丝”等。</li></ul><h3><strong>VTuber (2019年5月18日至今)</strong></h3><ul><li>在YouTube上进行直播活动，内容主要包括绘画作业、杂谈等。</li><li>以清楚的声音和治愈的风格受到观众喜爱。</li><li>偶尔会展现出“拱火”的一面，制造意外的笑点。</li><li>拥有YouTube白银创作者奖和黄金创作者奖。</li><li>在Bilibili等平台也有活动。</li><li>以“しぐれどき”的名义参与同人活动。</li></ul></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
 
     <div class="delete-btn" onclick="removeSection(this)">删除</div>
   </div>
 
   <!-- 教育背景 -->
-  <div class="section">
-    <h2 class="style-5" style="color: rgb(238, 216, 195); border-bottom-color: rgb(238, 216, 195); --before-color: #EED8C3; --after-color: #EED8C3;">教育背景</h2>
-
-    <div id="editor-container4" class="quill-editor-item ql-container ql-snow"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h3>美术大学进修</h3><p>于三重县四日市市出身，后前往东京深造，专攻美术领域，为日后的插画与漫画创作奠定了坚实的基础。</p><p>出道契机：2015年，在杂志《Manga Time Kirara Miracle!》上连载漫画「かんきつパンチ！」，正式以漫画家身份出道。</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
-
-    <div class="delete-btn" onclick="removeSection(this)">删除</div>
-  </div>
+  
 
   <!-- 优点信息 -->
   <div class="section">
     <h2 class="style-5" style="color: rgb(238, 216, 195); border-bottom-color: rgb(238, 216, 195); --before-color: #EED8C3; --after-color: #EED8C3;">优点信息</h2>
 
-    <div id="editor-container5" class="quill-editor-item ql-container ql-snow"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><ul><li>认真负责：对待工作一丝不苟，确保每一幅作品都能达到最佳效果。</li><li>创意无限：拥有丰富的想象力与创造力，能够不断为观众带来新颖有趣的内容。</li><li>善于沟通：擅长与粉丝及合作伙伴沟通交流，建立良好的人际关系。</li><li>持续学习：对新知识、新技能保持高度的好奇心与学习热情，不断提升自己的专业素养。</li></ul></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+    <div id="editor-container5" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><p><strong>清楚治愈：</strong> 声音和谈吐都非常治愈，能够带给人们平静和放松。</p><p><strong>认真努力：</strong> 对待工作认真负责，不断提升自己的绘画和直播技巧。</p><p><strong>性格温柔：</strong> 待人友善，容易相处。</p><p><strong>拥有独特的幽默感：</strong> 偶尔会展现出“腹黑”的一面，制造意想不到的笑点。</p><p><strong>多才多艺：</strong> 身兼插画家和VTuber双重身份，拥有多方面的才能。</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
 
     <div class="delete-btn" onclick="removeSection(this)">删除</div>
   </div>
@@ -662,7 +900,7 @@ const zhCharacter = {
   <div class="section">
     <h2 class="style-5" style="color: rgb(238, 216, 195); border-bottom-color: rgb(238, 216, 195); --before-color: #EED8C3; --after-color: #EED8C3;">人生经历</h2>
 
-    <div id="editor-container6" class="quill-editor-item ql-container ql-snow"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><p>从游戏公司到自由插画师：大学毕业后，我曾在一家游戏公司就职，积累了宝贵的行业经验。然而，出于对插画艺术的热爱与追求，我毅然决定辞职成为自由身插画家，开启了全新的职业生涯。</p><p>VTuber领域的探索者：在插画与漫画创作之余，我积极尝试新事物，于2019年踏入VTuber领域，成为了一名备受欢迎的虚拟主播。通过这一新身份，我不仅拓宽了自己的创作边界，还与更多粉丝建立了深厚的情感联系。</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+    <div id="editor-container6" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><ul><li>出生于三重县四日市市。</li><li>毕业于美术大学。</li><li>2015年开始在杂志《Manga Time Kirara Miracle!》连载漫画《かんきつパンチ！》，作为漫画家出道。</li><li>2017年毕业后前往东京发展，曾在游戏公司就职。</li><li>2018年开始以自由插画家的身份活动。</li><li>2019年5月18日开始作为VTuber进行活动。</li><li>举办多次个人画展，并参与各种同人活动。</li></ul></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
 
     <div class="delete-btn" onclick="removeSection(this)">删除</div>
   </div>
@@ -671,10 +909,130 @@ const zhCharacter = {
   <div class="section">
     <h2 class="style-5" style="color: rgb(238, 216, 195); border-bottom-color: rgb(238, 216, 195); --before-color: #EED8C3; --after-color: #EED8C3;">自我评价</h2>
 
-    <div id="editor-container7" class="quill-editor-item ql-container ql-snow"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><p>作为一名插画家、漫画家及VTuber，我始终保持着对艺术的热爱与追求。我坚信，通过不断努力与学习，我能够为观众带来更多优质、有趣的内容。同时，我也期待在未来的日子里，能够与更多志同道合的朋友一起成长、进步。</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+    <div id="editor-container7" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><p>作为一名插画家和VTuber，我热爱创作，并致力于为观众带来美好的作品和愉快的体验。我会继续努力，不断挑战自己，为大家带来更多精彩的内容！</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
 
     <div class="delete-btn" onclick="removeSection(this)">删除</div>
-  </div><div class="pne" style="top: 1046.93px;"></div>`,
+  </div>`,
+
+  GawrGura: `  <!-- Header Section -->
+  <div class="header" style="border-color: rgb(58, 105, 178);">
+    <div class="header-left">
+      <div id="editor-container0" class="quill-editor-item header-content ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h1>噶呜·古拉</h1><p>来自亚特兰蒂斯的后裔&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;现居：陆地&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;年龄：9000+&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;职业：虚拟YouTuber</p><p>Email: GawrGura@hololive.tv&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;电话: 100-392-39SHARK</p><p>YouTube：<a href="https://www.youtube.com/@GawrGura" target="_blank">Gawr Gura YouTube</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Twitter/X：<a href="https://x.com/gawrgura" target="_blank">@gawrgura</a></p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+    </div>
+    <div id="avatar">
+      <img src="img/gawrgura.png" alt="噶呜·古拉头像">
+    </div>
+    <input type="file" id="fileInput" style="display:none;" accept="image/*">
+  </div>
+
+  <!-- 工作经历 -->
+  <div class="section" style="margin-top: 16px;">
+    <h2 class="style-4" style="color: rgb(58, 105, 178); border-bottom-color: rgb(58, 105, 178); --before-color: #3A69B2; --after-color: #3A69B2;">工作经历</h2>
+    <div id="editor-container2" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h3>Hololive English | 虚拟YouTuber (2020年9月至今)</h3><ul><li>进行游戏直播，涵盖各种类型，包括但不限于恐怖游戏、角色扮演游戏、休闲游戏等。</li><li>进行歌回直播，展现独特的歌喉和选曲品味。</li><li>进行杂谈直播，与观众互动，分享生活趣事和各种话题。</li><li>参与各种联动企划，与其他VTuber和嘉宾合作。</li><li>在YouTube上拥有超过400万的订阅者，是世界上订阅人数最多的VTuber之一。</li><li>荣获YouTube白银创作者奖、黄金创作者奖。</li><li>曾担任东京都公认的东京观光大使。</li></ul></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+    <div class="delete-btn" onclick="removeSection(this)">删除</div>
+  </div>
+
+  <!-- 专业技能 -->
+  <div class="section" style="margin-top: 16px;">
+    <h2 class="style-4" style="color: rgb(58, 105, 178); border-bottom-color: rgb(58, 105, 178); --before-color: #3A69B2; --after-color: #3A69B2;">专业技能</h2>
+    <div id="editor-container1" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><ul><li><strong>出色的直播技巧：</strong>能够活跃直播气氛，与观众进行良好的互动。</li><li><strong>独特的声线和歌唱能力：</strong>声音可爱，唱歌富有感染力。</li><li><strong>流利的英语：</strong>母语为英语，能够进行流利的英语交流。</li><li><strong>不断学习的日语：</strong>正在努力学习日语，能够进行简单的日常对话。</li><li><strong>强大的适应能力：</strong>能够快速适应各种游戏和直播环境。</li><li><strong>与海洋生物沟通（自称）：</strong>据说可以和海洋生物进行交流（是真的吗？）。</li></ul></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+    <div class="delete-btn" onclick="removeSection(this)">删除</div>
+  </div>
+
+  <!-- 优点 -->
+  <div class="section" style="margin-top: 16px;">
+    <h2 class="style-4" style="color: rgb(58, 105, 178); border-bottom-color: rgb(58, 105, 178); --before-color: #3A69B2; --after-color: #3A69B2;">优点</h2>
+    <div id="editor-container3" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><ul><li><strong>天真烂漫：</strong>性格开朗活泼，总是能带给人们欢乐。</li><li><strong>可爱迷人：</strong>外表和声音都非常可爱，深受观众喜爱。</li><li><strong>充满活力：</strong>直播时总是充满活力，能够感染观众。</li><li><strong>乐于助人：</strong>经常参与慈善活动，为社会做出贡献。</li><li><strong>拥有强大的粉丝群体（Chumbuds）：</strong>拥有忠诚且热情的粉丝群体，给予我巨大的支持。</li></ul></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+    <div class="delete-btn" onclick="removeSection(this)">删除</div>
+  </div>
+
+  <!-- 人生经历 -->
+  <div class="section" style="margin-top: 16px;">
+    <h2 class="style-4" style="color: rgb(58, 105, 178); border-bottom-color: rgb(58, 105, 178); --before-color: #3A69B2; --after-color: #3A69B2;">人生经历</h2>
+    <div id="editor-container4" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><p>2020年9月13日，作为Hololive English Myth的一员出道。</p><p>凭借可爱的外表和独特的个性迅速走红，成为备受瞩目的VTuber。</p><p>在YouTube上获得了巨大的成功，订阅人数迅速突破百万、数百万大关。</p><p>参与了各种各样的活动和企划，包括游戏直播、歌回、联动、线下活动等。</p><p>成为了世界知名的VTuber，拥有了来自世界各地的粉丝。</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+    <div class="delete-btn" onclick="removeSection(this)">删除</div>
+  </div>
+
+  <!-- 兴趣爱好 -->
+  <div class="section" style="margin-top: 16px;">
+    <h2 class="style-4" style="color: rgb(58, 105, 178); border-bottom-color: rgb(58, 105, 178); --before-color: #3A69B2; --after-color: #3A69B2;">兴趣爱好</h2>
+    <div id="editor-container6" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><ul><li>喜欢的东西：鲨鱼、水、日本文化、游戏、唱歌。</li><li>讨厌的东西：无聊。</li></ul></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+    <div class="delete-btn" onclick="removeSection(this)">删除</div>
+  </div>
+
+  <!-- 自我评价 -->
+  <div class="section" style="margin-top: 16px;">
+    <h2 class="style-4" style="color: rgb(58, 105, 178); border-bottom-color: rgb(58, 105, 178); --before-color: #3A69B2; --after-color: #3A69B2;">自我评价</h2>
+    <div id="editor-container7" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><p>作为一名VTuber，我热爱我的工作，并致力于为观众带来快乐和娱乐。我会继续努力，不断提升自己，为大家带来更多精彩的内容！A！</p><p>希望这份“简历”还不错！毕竟我可是顶级的掠食者（Apex Predator）！A！</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+    <div class="delete-btn" onclick="removeSection(this)">删除</div>
+  </div>`,
+
+  TadokoroKoji: ` <!-- Header Section -->
+  <div class="header" style="border-color: rgb(238, 69, 20);">
+    <div class="header-left">
+
+      <div id="editor-container0" class="quill-editor-item header-content ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h1>李田所</h1><p>年龄：24&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;职业：学生&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;身高：170cm&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;体重：74kg</p><p>国籍：日本&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;现居：下北泽&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;兴趣：汉文学、健身、空手道</p><p>Email: 1919810@yaju.com&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;电话: 114-514-1919</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+    </div>
+
+    <div id="avatar">
+      <img src="img/TadokoroKoji.png" alt="田所浩二头像">
+    </div>
+    <input type="file" id="fileInput" style="display:none;" accept="image/*">
+  </div>
+
+  <!-- 专业技能 -->
+  <div class="section">
+    <h2 style="color: rgb(238, 69, 20); border-bottom-color: rgb(238, 69, 20); --before-color: #EE4514; --after-color: #EE4514;" class="style-2">专业技能</h2>
+
+    <div id="editor-container1" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><p><strong>昏睡红茶调制：</strong>能够在短时间内制作出让目标昏睡的红茶。</p><p><strong>野兽咆哮：</strong>特定情境下发出强大威慑力的咆哮声。</p><p><strong>格斗技巧：</strong>空手道高手，拥有出色的身体素质。</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+
+    <div class="delete-btn" onclick="removeSection(this)">删除</div>
+  </div>
+
+  <!-- 工作经历 -->
+  <div class="section">
+    <h2 style="color: rgb(238, 69, 20); border-bottom-color: rgb(238, 69, 20); --before-color: #EE4514; --after-color: #EE4514;" class="style-2">工作经历</h2>
+
+    <div id="editor-container2" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h3>某秘密组织 | 成员</h3><p>参与信息传递、情报收集等特殊任务。</p><p>因表现优异，获得“野兽先辈”的称号。</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+
+    <div class="delete-btn" onclick="removeSection(this)">删除</div>
+  </div>
+
+  <!-- 个人成就 -->
+  <div class="section">
+    <h2 style="color: rgb(238, 69, 20); border-bottom-color: rgb(238, 69, 20); --before-color: #EE4514; --after-color: #EE4514;" class="style-2">个人成就</h2>
+
+    <div id="editor-container3" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><ul><li>获得“野兽先辈”荣誉称号。</li><li>在网络上广为流传，成为热门讨论对象。</li></ul></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+
+    <div class="delete-btn" onclick="removeSection(this)">删除</div>
+  </div>
+
+  <!-- 教育背景 -->
+  <div class="section">
+    <h2 style="color: rgb(238, 69, 20); border-bottom-color: rgb(238, 69, 20); --before-color: #EE4514; --after-color: #EE4514;" class="style-2">教育背景</h2>
+
+    <div id="editor-container4" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><p>自幼接受严格家庭教育，对汉文学有深厚兴趣。</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+
+    <div class="delete-btn" onclick="removeSection(this)">删除</div>
+  </div>
+
+  <!-- 兴趣爱好 -->
+  <div class="section">
+    <h2 style="color: rgb(238, 69, 20); border-bottom-color: rgb(238, 69, 20); --before-color: #EE4514; --after-color: #EE4514;" class="style-2">兴趣爱好</h2>
+
+    <div id="editor-container5" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><ul><li>汉文学研读：常独自研读古典文学作品。</li><li>健身与空手道：保持良好的身体素质。</li></ul></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+
+    <div class="delete-btn" onclick="removeSection(this)">删除</div>
+  </div>
+
+  <!-- 附加信息 -->
+  <div class="section">
+    <h2 style="color: rgb(238, 69, 20); border-bottom-color: rgb(238, 69, 20); --before-color: #EE4514; --after-color: #EE4514;" class="style-2">附加信息</h2>
+
+    <div id="editor-container6" class="quill-editor-item ql-container ql-snow"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><blockquote>始终致力于完成组织任务，为组织贡献力量。</blockquote></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+
+    <div class="delete-btn" onclick="removeSection(this)">删除</div>
+  </div>`,
   griffith: `
 <!-- Header Section -->
 <div class="header" style="border-color: rgb(0, 0, 0);">
@@ -724,7 +1082,7 @@ const zhCharacter = {
   <div id="editor-container7" class="quill-editor-item ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><ul><li>阅读与历史研究：我通过阅读古今中外的经典战役和政治谋略，持续提升自己的战略素养。</li><li>棋类游戏与策略模拟：通过下棋等策略游戏，我能够锻炼自己的思维方式并预测未来局势的走向。</li><li>音乐与艺术：偶尔，我也会参与一些艺术创作，借此放松自己，审视复杂局势背后的美学。</li></ul></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
   <div class="delete-btn" onclick="removeSection(this)">删除</div>
 </div>
-<div class="pne" style="top: 1046.93px;"></div>
+
 `,
   voldemort: `
 <!-- 简历盒子 -->
@@ -797,7 +1155,7 @@ const zhCharacter = {
 
   <!-- 附加信息 -->
 
-<div class="pne" style="top: 1046.93px;"></div>
+
 `,
 };
 

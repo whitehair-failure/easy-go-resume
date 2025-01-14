@@ -5,8 +5,6 @@
 
 html {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
-  font-size: 14px;
   color: #6b6b6b;
 
   h1,
@@ -39,11 +37,15 @@ html {
 /* 简历盒子样式 */
 #resumeBox {
   width: 19cm; /* A4 页面宽度 */
+  width: 44.875rem; /* A4 页面宽度 */
   height: auto;
+  min-height: 25.7cm; /* A4 页面高度 */
   margin: 0 auto;
   padding: 1cm;
   border: 1px solid #ccc;
   background-color: white;
+  line-height: 1.6;
+  font-size: 14px;
 }
 
 .header {
@@ -168,14 +170,14 @@ html {
     height: 30px;
     line-height: 30px;
     text-align: center;
-    border: 1px solid red;
+    // border: 1px solid #000000;
     border-radius: 10px;
-    background-color: skyblue;
+    background-color: #e9546b;
     position: absolute;
     top: 0;
     right: 0;
     display: none;
-    color: red;
+    color: #fdeff2;
     cursor: pointer;
     /* margin-left: 10px; */
   }
@@ -231,19 +233,30 @@ html {
       justify-content: space-between;
       align-items: center;
 
+      .color-HEX-picker {
+        width: 100px;
+        // height: 40px;
+        // border: 1px solid #ccc;
+
+        > input {
+          width: calc(100% - 20px);
+          height: 100%;
+          padding: 8px 10px;
+          font-size: 18px;
+        }
+      }
+
       .color-picker {
-        // margin-bottom: 20px;
         label {
           color: #000;
           font-weight: bold;
           margin-right: 10px;
         }
 
-        input[type="color"],
-        input[type="text"] {
+        input[type="color"] {
           height: 40px;
           font-size: 16px;
-          margin-right: 10px;
+          // margin-right: 10px;
           padding: 5px;
         }
 
@@ -314,10 +327,10 @@ html {
 
   .collapse-panel {
     width: 50px;
-    height: 100px;
+    height: 120px;
     padding: 20px 0 30px;
     background-color: #fff;
-    border-radius: 0 50px 50px 0;
+    border-radius: 0 20px 20px 0;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
     position: absolute;
     top: 50%;
@@ -325,7 +338,7 @@ html {
     transform: translateY(-50%);
     color: black;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     // text-align: center;
     // line-height: 50px;
@@ -367,6 +380,7 @@ html {
   justify-content: center;
   align-items: center;
   animation: fadeIn 0.3s ease-in-out;
+  z-index: 100;
 }
 
 /* 弹窗样式 */
@@ -379,6 +393,7 @@ html {
   text-align: center;
   opacity: 0;
   animation: fadeInDialog 0.3s ease-in-out forwards;
+  z-index: 200;
 
   p {
     font-size: 20px;
@@ -516,11 +531,11 @@ html {
 /* Dropdown styles */
 .dropdown {
   position: relative;
-  width: 140px;
+  width: 120px;
   color: #000;
 
   .dropdown-button {
-    width: 120px;
+    width: 100px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -541,7 +556,7 @@ html {
     top: 100%;
     left: 0;
     width: 100%;
-    max-height: 260px;
+    max-height: 300px;
     border: 1px solid #ccc;
     border-radius: 4px;
     background: #fff;
@@ -573,6 +588,22 @@ html {
   .dropdown-options.close {
     opacity: 0;
     transform: scaleY(0);
+  }
+}
+
+.dropdown.roleDropdown {
+  width: 160px;
+  .dropdown-button {
+    width: 140px;
+    padding: 10px;
+  }
+}
+
+.dropdown.langDropdown {
+  width: 120px;
+  .dropdown-button {
+    width: 100px;
+    padding: 10px;
   }
 }
 

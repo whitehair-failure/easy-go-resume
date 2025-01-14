@@ -18,25 +18,33 @@
   <div class="left-container">
 
     <div id="operation-panel">
-  
+
       <div class="operation-item">
         <span data-i18n="operationOptionsTitle.title1"></span>
-  
+
         <div class="example-language">
           <!-- 下拉单选框 -->
-          <div class="dropdown">
+          <div class="dropdown roleDropdown">
             <div class="dropdown-button" id="roleDropdownButton" data-i18n="resumeExampleDropdown.title"></div>
             <div class="dropdown-options" id="roleDropdownOptions">
               <div class="roleDropdown-option" data-value="miku" data-i18n="resumeExampleDropdown.options.miku"></div>
-              <div class="roleDropdown-option" data-value="momoka" data-i18n="resumeExampleDropdown.options.momoka"></div>
-              <div class="roleDropdown-option" data-value="ShigureUi" data-i18n="resumeExampleDropdown.options.ShigureUi"></div>
-              <div class="roleDropdown-option" data-value="griffith" data-i18n="resumeExampleDropdown.options.griffith"></div>
-              <div class="roleDropdown-option" data-value="voldemort" data-i18n="resumeExampleDropdown.options.voldemort"></div>
+              <div class="roleDropdown-option" data-value="momoka" data-i18n="resumeExampleDropdown.options.momoka">
+              </div>
+              <div class="roleDropdown-option" data-value="ShigureUi"
+                data-i18n="resumeExampleDropdown.options.ShigureUi"></div>
+              <div class="roleDropdown-option" data-value="GawrGura" data-i18n="resumeExampleDropdown.options.GawrGura">
+              </div>
+              <div class="roleDropdown-option" data-value="TadokoroKoji"
+                data-i18n="resumeExampleDropdown.options.TadokoroKoji"></div>
+              <div class="roleDropdown-option" data-value="griffith" data-i18n="resumeExampleDropdown.options.griffith">
+              </div>
+              <div class="roleDropdown-option" data-value="voldemort"
+                data-i18n="resumeExampleDropdown.options.voldemort"></div>
               <!-- <div class="roleDropdown-option" data-value="style-5">样式 5</div> -->
             </div>
           </div>
           <!-- 下拉单选框 -->
-          <div class="dropdown">
+          <div class="dropdown langDropdown">
             <div class="dropdown-button" id="langDropdownButton" data-i18n="langDropdown.title"></div>
             <div class="dropdown-options" id="langDropdownOptions">
               <div class="langDropdown-option" data-value="en" data-i18n="langDropdown.options.en"></div>
@@ -45,30 +53,30 @@
             </div>
           </div>
         </div>
-  
+
       </div>
-  
+
       <div class="operation-item">
         <span data-i18n="operationOptionsTitle.title4"></span>
-  
+
         <div class="btn-box">
           <button id="upload-avatar" class="confirm" data-i18n="btns.uploadAvatar"></button>
           <button id="delete-avatar" class="cancel" data-i18n="btns.deleteAvatar"></button>
         </div>
       </div>
-  
+
       <div class="operation-item">
         <span data-i18n="operationOptionsTitle.title2"></span>
-  
+
         <div class="add-section-box">
-          <input type="text" id="section-title" placeholder="" data-i18n="addSection.placeholder" />
+          <input type="text" id="section-title" />
           <button id="add-section" class="confirm" data-i18n="btns.add"></button>
         </div>
       </div>
-  
+
       <div class="operation-item">
         <span data-i18n="operationOptionsTitle.title3"></span>
-  
+
         <div class="h2-style-box">
           <!-- 下拉单选框 -->
           <div class="dropdown">
@@ -82,28 +90,33 @@
               <div class="dropdown-option" data-value="style-5" data-i18n="H2Dropdown.options.style5"></div>
             </div>
           </div>
-  
+
+          <!-- 颜色选择器 -->
+          <div class="color-HEX-picker">
+            <input type="text" id="colorHEXInput" value="#cccccc"
+              placeholder="color">
+          </div>
           <!-- 颜色选择器 -->
           <div class="color-picker">
             <input type="color" id="colorInput" value="#cccccc"
-              placeholder="或输入 HEX/RGB 颜色值 (如 #ff5733 或 rgb(255,87,51))">
+              placeholder="color">
           </div>
         </div>
-  
+
       </div>
-  
+
       <div class="operation-item">
         <span data-i18n="operationOptionsTitle.title5"></span>
-  
+
         <div class="progress-container" id="progress2"></div>
       </div>
-  
+
       <div class="operation-item">
         <span data-i18n="operationOptionsTitle.title6"></span>
-  
+
         <div class="progress-container" id="progress1"></div>
       </div>
-  
+
       <div class="operation-item">
         <span data-i18n="operationOptionsTitle.title7"></span>
         <div class="btn-box">
@@ -111,41 +124,41 @@
           <button id="clearLocalStorage" class="cancel" data-i18n="btns.clear"></button>
         </div>
       </div>
-  
+
       <div class="operation-item">
-        <span data-i18n="operationOptionsTitle.title6"></span>
+        <span data-i18n="operationOptionsTitle.title8"></span>
         <div class="btn-box">
           <button id="printPDF" class="confirm" data-i18n="btns.print"></button>
-          <button id="printPDF" class="confirm" data-i18n="btns.print"></button>
+          <button id="exportImg" class="confirm" data-i18n="btns.exportImg"></button>
         </div>
       </div>
-  
+
       <div class="operation-item">
-        <span data-i18n="operationOptionsTitle.title6"></span>
+        <span data-i18n="operationOptionsTitle.title9"></span>
         <div class="btn-box">
           <button id="exportText" class="confirm" data-i18n="btns.exportText"></button>
           <button id="importText" class="confirm" data-i18n="btns.importText"></button>
         </div>
       </div>
-  
+
     </div>
-  
-    <div class="collapse-panel" onclick="tt()">
+
+    <div class="collapse-panel">
       <span>👈&nbsp;&nbsp;</span>
       <span data-i18n="btns.collapsePanel"></span>
       <span>👈</span>
     </div>
-  
-    <div class="ReimuHakurei" onclick="tt()">
+
+    <div class="ReimuHakurei">
       <img src="./img/aside.png" alt="">
     </div>
   </div>
-  
+
   <div class="right-container">
     <!-- 简历盒子 -->
     <div id="resumeBox"></div>
   </div>
-  
+
   <!-- 二次确认弹窗 -->
   <div class="overlay" id="confirmationOverlay">
     <div class="confirm-dialog">
@@ -156,61 +169,38 @@
       </div>
     </div>
   </div>
-  
+
 </body>
 
 </html>
 
+<!-- 引入 html2canvas 库 -->
 <script src="./js/quill.min.js"></script>
-<script src="./js/i18n.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+<script type="module" src="./js/i18n.js"></script>
 <script type="module" src="./js/index.js"></script>
 <script>
+  document.getElementById('exportImg').addEventListener('click', function () {
+    // 获取要导出的元素
+    const element = document.getElementById('resumeBox');
 
-  function tt() {
-    const leftContainer = document.querySelector(".left-container");
-    const rightContainer = document.querySelector(".right-container");
+    // 使用 html2canvas 渲染为图片（使用回调方式）
+    html2canvas(element, {
+      onrendered: function (canvas) {
+        // 创建一个图片链接
+        const imgData = canvas.toDataURL('image/png');
 
-    const collapsePanel = document.querySelector(".collapse-panel");
-    const ReimuHakurei = document.querySelector(".ReimuHakurei");
-
-
-    if (leftContainer.style.width === "0px") {
-      collapsePanel.style.opacity = "1";
-      ReimuHakurei.style.right = "0px";
-
-      setTimeout(() => {
-        ReimuHakurei.style.display = "none";
-
-        leftContainer.style.width = "300px";
-        leftContainer.style.padding = "20px";
-        rightContainer.style.width = "calc(100% - 340px)";
-        rightContainer.style.marginLeft = "340px";
-      }, 300);
-
-
-
-    } else {
-      leftContainer.style.width = "0px";
-      leftContainer.style.padding = "20px 0";
-      rightContainer.style.width = "100%";
-      rightContainer.style.marginLeft = "0";
-
-
-      setTimeout(() => {
-        ReimuHakurei.style.display = "block";
-        collapsePanel.style.opacity = "0";
-      }, 300);
-      setTimeout(() => {
-        ReimuHakurei.style.right = "-160px";
-      }, 600);
-
-    }
-  }
+        // 创建一个下载链接
+        const link = document.createElement('a');
+        link.href = imgData;
+        link.download = 'resume.png';  // 设置文件名
+        link.click();  // 模拟点击下载
+      }
+    });
+  });
 
   // 删除 section 模板
   function removeSection(deleteBtn) {
-    console.log("deleteBtn", deleteBtn);
-
     const section = deleteBtn.closest(".section");
     section.remove();
   }

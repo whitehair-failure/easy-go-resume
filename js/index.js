@@ -16,7 +16,7 @@ const resumeBox = document.getElementById("resumeBox");
 let currentH2Style = "style-1";
 
 // 获取本地存储简历内容
-const savedContent = localStorage.getItem("boxContent");
+const savedContent = localStorage.getItem("resume-text");
 let currentH2StyleText = localStorage.getItem("currentH2StyleText") || "样式4";
 let currentColor = localStorage.getItem("currentColor") || "#33CCBB";
 if (savedContent) {
@@ -26,8 +26,24 @@ if (savedContent) {
   const dropdownButton = document.getElementById("dropdownButton");
   dropdownButton.textContent = currentH2StyleText;
 } else {
+  let currentLanguage = localStorage.getItem("language") || "en";
+  let currentCharacters = null;
+  switch (currentLanguage) {
+    case "en":
+      currentCharacters = enCharacter;
+      break;
+    case "ja":
+      currentCharacters = jaCharacter;
+      break;
+    case "zh":
+      currentCharacters = zhCharacter;
+      break;
+    default:
+      currentCharacters = enCharacter;
+      break;
+  }
   // 如果不存在，渲染默认内容到#box
-  resumeBox.innerHTML = zhCharacter.miku;
+  resumeBox.innerHTML = currentCharacters.miku;
 }
 
 /* 添加编辑工具栏 */
@@ -60,7 +76,7 @@ exportTextButton.addEventListener("click", function () {
   const blob = new Blob([content], { type: "text/plain" });
   const link = document.createElement("a");
   link.href = URL.createObjectURL(blob);
-  link.download = "boxContent.txt";
+  link.download = "resume-text.txt";
   link.click();
 });
 
@@ -78,7 +94,7 @@ importTextButton.addEventListener("click", function () {
       const fileContent = e.target.result;
 
       // 存储到本地存储
-      localStorage.setItem("boxContent", fileContent);
+      localStorage.setItem("resume-text", fileContent);
       localStorage.setItem("currentColor", currentColor);
 
       // 刷新页面
@@ -108,7 +124,7 @@ locationStorageButton.addEventListener("click", function () {
   const content = resumeBox.innerHTML;
 
   // 将内容存储到浏览器的本地存储
-  localStorage.setItem("boxContent", content);
+  localStorage.setItem("resume-text", content);
   localStorage.setItem("currentColor", currentColor);
   localStorage.setItem("currentH2StyleText", currentH2StyleText);
 
@@ -143,7 +159,9 @@ cancelClearButton.addEventListener("click", function () {
 // 监听确认清除按钮
 confirmClearButton.addEventListener("click", function () {
   // 清除本地存储
-  localStorage.removeItem("boxContent");
+  localStorage.removeItem("resume-text");
+  localStorage.removeItem("currentH2StyleText");
+  localStorage.removeItem("currentColor");
 
   // 提示清除成功
   alert("本地存储已清除！");
@@ -236,32 +254,37 @@ roleOptions.forEach((option) => {
     let currentLanguage = localStorage.getItem("language") || "en";
 
     let currentCharacters = null;
+    let currentStyleTextContent = "样式";
 
     switch (currentLanguage) {
       case "en":
         currentCharacters = enCharacter;
+        currentStyleTextContent = "Style";
         break;
       case "ja":
         currentCharacters = jaCharacter;
+        currentStyleTextContent = "スタイル";
         break;
       case "zh":
         currentCharacters = zhCharacter;
+        currentStyleTextContent = "样式";
         break;
       default:
         currentCharacters = enCharacter;
+        currentStyleTextContent = "Style";
         break;
     }
 
     if (selectedRole == "miku") {
       resumeBox.innerHTML = currentCharacters.miku;
       currentH2Style = "style-1";
-      dropdownButton.textContent = "样式1";
-      currentH2StyleText = "样式1";
+      dropdownButton.textContent = `${currentStyleTextContent}1`;
+      currentH2StyleText = `${currentStyleTextContent}1`;
       currentColor = "#33CCBB";
     } else if (selectedRole == "momoka") {
       currentH2Style = "style-5";
-      dropdownButton.textContent = "样式5";
-      currentH2StyleText = "样式5";
+      dropdownButton.textContent = `${currentStyleTextContent}5`;
+      currentH2StyleText = `${currentStyleTextContent}5`;
       currentColor = "#EF95CF";
       resumeBox.innerHTML = currentCharacters.momoka;
     } else if (selectedRole == "griffith") {
@@ -271,14 +294,24 @@ roleOptions.forEach((option) => {
       currentColor = "#000000";
     } else if (selectedRole == "voldemort") {
       resumeBox.innerHTML = currentCharacters.voldemort;
-      dropdownButton.textContent = "样式3";
-      currentH2StyleText = "样式3";
+      dropdownButton.textContent = `${currentStyleTextContent}3`;
+      currentH2StyleText = `${currentStyleTextContent}3`;
       currentColor = "#000000";
     } else if (selectedRole == "ShigureUi") {
-      dropdownButton.textContent = "样式5";
-      currentH2StyleText = "样式5";
+      dropdownButton.textContent = `${currentStyleTextContent}5`;
+      currentH2StyleText = `${currentStyleTextContent}5`;
       currentColor = "#EED8C3";
       resumeBox.innerHTML = currentCharacters.ShigureUi;
+    } else if (selectedRole == "GawrGura") {
+      dropdownButton.textContent = `${currentStyleTextContent}4`;
+      currentH2StyleText = `${currentStyleTextContent}4`;
+      currentColor = "#3A69B2";
+      resumeBox.innerHTML = currentCharacters.GawrGura;
+    } else if (selectedRole == "TadokoroKoji") {
+      dropdownButton.textContent = `${currentStyleTextContent}2`;
+      currentH2StyleText = `${currentStyleTextContent}2`;
+      currentColor = "#EE4514";
+      resumeBox.innerHTML = currentCharacters.TadokoroKoji;
     }
 
     // 工具栏初始化
@@ -297,51 +330,6 @@ roleOptions.forEach((option) => {
     roleDropdownIsOpen = false;
   });
 });
-/* 语言选择 */
-const langDropdownButton = document.getElementById("langDropdownButton");
-const langDropdownOptions = document.getElementById("langDropdownOptions");
-const langOptions = langDropdownOptions.querySelectorAll(
-  ".langDropdown-option"
-);
-let langDropdownIsOpen = false;
-
-/* // Toggle dropdown visibility
-langDropdownButton.addEventListener("click", () => {
-  if (langDropdownIsOpen) {
-    langDropdownOptions.classList.remove("open");
-    langDropdownOptions.classList.add("close");
-    setTimeout(() => langDropdownOptions.classList.remove("close"), 300);
-  } else {
-    langDropdownOptions.classList.add("open");
-  }
-  langDropdownIsOpen = !langDropdownIsOpen;
-});
-
-// Handle option selection
-langOptions.forEach((option) => {
-  option.addEventListener("click", (e) => {
-    const selectedlang = e.target.dataset.value;
-
-    // Update button text
-    langDropdownButton.textContent = e.target.textContent;
-
-    updateLanguage(selectedlang);
-
-    if (selectedlang == "en") {
-      // resumeBox.innerHTML = enCharacter.miku;
-    } else if (selectedlang == "ja") {
-      // resumeBox.innerHTML = jaCharacter.momoka;
-    } else if (selectedlang == "zh") {
-      // resumeBox.innerHTML = zhCharacter.griffith;
-    }
-
-    // Close dropdown
-    langDropdownOptions.classList.remove("open");
-    langDropdownOptions.classList.add("close");
-    setTimeout(() => langDropdownOptions.classList.remove("close"), 300);
-    langDropdownIsOpen = false;
-  });
-}); */
 
 // Close dropdown when clicking outside
 document.addEventListener("click", (e) => {
@@ -367,22 +355,11 @@ document.addEventListener("click", (e) => {
       roleDropdownIsOpen = false;
     }
   }
-  if (
-    !langDropdownButton.contains(e.target) &&
-    !langDropdownOptions.contains(e.target)
-  ) {
-    if (langDropdownIsOpen) {
-      langDropdownOptions.classList.remove("open");
-      langDropdownOptions.classList.add("close");
-      setTimeout(() => langDropdownOptions.classList.remove("close"), 300);
-      langDropdownIsOpen = false;
-    }
-  }
 });
 
 /* 颜色选择 */
 const colorInput = document.getElementById("colorInput");
-// const applyColorBtn = document.getElementById("applyColor");
+const colorHEXInput = document.getElementById("colorHEXInput");
 
 // 辅助函数：验证颜色格式
 function isValidColor(value) {
@@ -412,28 +389,25 @@ function applyColorToPage(color) {
   const slider2 = document.getElementById("progress2");
   slider1.style.setProperty("--thumb-background-color", color);
   slider2.style.setProperty("--thumb-background-color", color);
+  colorHEXInput.value = color;
+  colorInput.value = color;
 }
+
+colorHEXInput.addEventListener("input", () => {
+  const color = colorHEXInput.value;
+
+  if (isValidColor(color)) {
+    applyColorToPage(color);
+  }
+});
 
 colorInput.addEventListener("input", () => {
   const color = colorInput.value;
 
   if (isValidColor(color)) {
     applyColorToPage(color);
-  } else {
-    alert("请输入有效的颜色值！");
   }
 });
-
-// 按钮点击事件
-// applyColorBtn.addEventListener("click", () => {
-//   const color = colorInput.value;
-
-//   if (isValidColor(color)) {
-//     applyColorToPage(color);
-//   } else {
-//     alert("请输入有效的颜色值！");
-//   }
-// });
 /* 颜色选择结束 */
 
 // 添加 section 模板
@@ -527,26 +501,46 @@ function addSection() {
 
 document.getElementById("add-section").addEventListener("click", addSection);
 
-window.onload = function () {
-  // 图片功能
-  uploadAvatarInit();
-  deleteAvatarInit();
+/* 侧边栏动画 */
+function leftContainerChange() {
+  const leftContainer = document.querySelector(".left-container");
+  const rightContainer = document.querySelector(".right-container");
 
-  // 初始化检测高度
-  checkHeight();
-  setInterval(checkHeight, 1000); // 每隔1秒检测一次高度
+  const collapsePanel = document.querySelector(".collapse-panel");
+  const ReimuHakurei = document.querySelector(".ReimuHakurei");
 
-  forEachquillEditorItems();
+  if (leftContainer.style.width === "0px") {
+    collapsePanel.style.opacity = "1";
+    ReimuHakurei.style.right = "0px";
 
-  /* 颜色 */
-  document.getElementById("colorInput").value = currentColor;
-  applyColorToPage(currentColor);
-};
+    setTimeout(() => {
+      ReimuHakurei.style.display = "none";
 
-// progressIndicator.style.left = (Math.floor(value - min) / Math.floor(max - min)) * 100 + "%";
-// progressTrack.style.width = (Math.floor(value - min) / Math.floor(max - min)) * 100 + "%";
+      leftContainer.style.width = "300px";
+      leftContainer.style.padding = "20px";
+      rightContainer.style.width = "calc(100% - 340px)";
+      rightContainer.style.marginLeft = "340px";
+    }, 300);
+  } else {
+    leftContainer.style.width = "0px";
+    leftContainer.style.padding = "20px 0";
+    rightContainer.style.width = "100%";
+    rightContainer.style.marginLeft = "0";
 
-// script.js
+    setTimeout(() => {
+      ReimuHakurei.style.display = "block";
+      collapsePanel.style.opacity = "0";
+    }, 300);
+    setTimeout(() => {
+      ReimuHakurei.style.right = "-160px";
+    }, 600);
+  }
+}
+let collapsePanel = document.querySelector(".collapse-panel");
+let ReimuHakurei = document.querySelector(".ReimuHakurei");
+collapsePanel.addEventListener("click", leftContainerChange);
+ReimuHakurei.addEventListener("click", leftContainerChange);
+/* 侧边栏动画 */
 
 /**
  * 初始化进度条组件
@@ -637,6 +631,20 @@ function createProgressBar(
 
 // 页面加载时初始化多个进度条
 document.addEventListener("DOMContentLoaded", function () {
+  // 头像功能
+  uploadAvatarInit();
+  deleteAvatarInit();
+
+  // 初始化检测高度
+  checkHeight();
+  setInterval(checkHeight, 1000); // 每隔1秒检测一次高度
+
+  forEachquillEditorItems();
+
+  /* 颜色 */
+  document.getElementById("colorInput").value = currentColor;
+  applyColorToPage(currentColor);
+
   // 定义每个进度条的 onChange 事件回调
   createProgressBar("progress1", 125, 300, 175, function (value) {
     console.log("进度条 1 当前进度:", value);
@@ -660,14 +668,20 @@ document.addEventListener("DOMContentLoaded", function () {
   createProgressBar("progress2", 0, 50, 16, function (value) {
     console.log("进度条 2 当前进度:", value);
     const tags = document.querySelectorAll(".section");
+    const h2Tags = document.querySelectorAll("h2");
     let marginTop = value;
     tags.forEach((h2) => {
       h2.style.marginTop = marginTop + "px";
     });
+    if (marginTop < 6) {
+      h2Tags.forEach((h2) => {
+        h2.style.marginBottom = marginTop + "px";
+      });
+    } else {
+      h2Tags.forEach((h2) => {
+        h2.style.marginBottom = 6 + "px";
+      });
+    }
     return marginTop + "px";
-  });
-
-  createProgressBar("progress3", 0, 500, 300, function (value) {
-    console.log("进度条 3 当前进度:", value);
   });
 });
