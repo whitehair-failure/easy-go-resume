@@ -192,7 +192,7 @@ const enCharacter = {
     <div id="editor-container0" class="quill-editor-item header-content ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h1>Gawr Gura</h1><p>Descendant of Atlantis&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Current Residence: Land</p><p>Age: 9000+&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Occupation: Virtual YouTuber</p><p>YouTube：<a href="https://www.youtube.com/@GawrGura" target="_blank">Gawr Gura YouTube</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Twitter/X：<a href="https://x.com/gawrgura" target="_blank">@gawrgura</a></p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
   </div>
   <div id="avatar">
-    <img src="img/gawrgura.png" alt="Gawr Gura Avatar">
+    <img src="img/GawrGura.png" alt="Gawr Gura Avatar">
   </div>
   <input type="file" id="fileInput" style="display:none;" accept="image/*">
 </div>
@@ -576,7 +576,7 @@ const jaCharacter = {
     <div id="editor-container0" class="quill-editor-item header-content ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h1>ガウル・グラ</h1><p>アトランティスの後裔&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;現住所：陸地&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;年齢：9000+&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;職業：バーチャルYouTuber</p><p>Email: GawrGura@hololive.tv&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;電話: 100-392-39SHARK</p><p>YouTube：<a href="https://www.youtube.com/@GawrGura" target="_blank">Gawr Gura YouTube</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Twitter/X：<a href="https://x.com/gawrgura" target="_blank">@gawrgura</a></p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
   </div>
   <div id="avatar">
-    <img src="img/gawrgura.png" alt="ガウル・グラのアイコン">
+    <img src="img/GawrGura.png" alt="ガウル・グラのアイコン">
   </div>
   <input type="file" id="fileInput" style="display:none;" accept="image/*">
 </div>
@@ -920,7 +920,7 @@ const zhCharacter = {
       <div id="editor-container0" class="quill-editor-item header-content ql-container ql-snow" style="border: none !important;"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Compose an epic..."><h1>噶呜·古拉</h1><p>来自亚特兰蒂斯的后裔&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;现居：陆地&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;年龄：9000+&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;职业：虚拟YouTuber</p><p>Email: GawrGura@hololive.tv&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;电话: 100-392-39SHARK</p><p>YouTube：<a href="https://www.youtube.com/@GawrGura" target="_blank">Gawr Gura YouTube</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Twitter/X：<a href="https://x.com/gawrgura" target="_blank">@gawrgura</a></p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
     </div>
     <div id="avatar">
-      <img src="img/gawrgura.png" alt="噶呜·古拉头像">
+      <img src="img/GawrGura.png" alt="噶呜·古拉头像">
     </div>
     <input type="file" id="fileInput" style="display:none;" accept="image/*">
   </div>
