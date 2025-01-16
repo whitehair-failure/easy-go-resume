@@ -151,9 +151,9 @@ function checkHeight() {
 
   const boxHeight = resumeBox.offsetHeight; // 获取盒子的当前高度
   const pnesCount = Math.floor(boxHeight / A4_HEIGHT); // 计算需要多少条横线
-
+  
   // 移除已有的横线
-  const existingpnes = resumeBox.querySelectorAll(".pne");
+  const existingpnes = rightContainer.querySelectorAll(".pne");
   existingpnes.forEach((pne) => pne.remove());
 
   // 添加横线

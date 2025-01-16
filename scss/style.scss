@@ -22,7 +22,6 @@ html {
 
   ul {
     margin: 0;
-    padding-left: 20px;
 
     li {
       line-height: 1.75;
@@ -42,20 +41,20 @@ html {
   min-height: 25.7cm; /* A4 页面高度 */
   margin: 0 auto;
   padding: 1cm;
-  border: 1px solid #ccc;
+  border: 0.0625rem solid #ccc;
   background-color: white;
   line-height: 1.6;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // border-bottom: 4px solid #087cc1;
-  border-bottom: 4px solid #33ccbb;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
+  // border-bottom: 0.25rem solid #087cc1;
+  border-bottom: 0.25rem solid #33ccbb;
+  padding-bottom: 0.625rem;
+  margin-bottom: 1.25rem;
 
   .header-left {
     flex-grow: 1;
@@ -63,7 +62,7 @@ html {
 
   .header-content {
     h1 {
-      line-height: 60px;
+      line-height: 3.75rem;
     }
 
     p {
@@ -73,9 +72,9 @@ html {
 
   #avatar {
     img {
-      max-width: 120px;
-      max-height: 168px;
-      border: 1px solid skyblue;
+      max-width: 7.5rem;
+      max-height: 10.5rem;
+      border: 0.0625rem solid skyblue;
       cursor: pointer;
     }
   }
@@ -83,14 +82,14 @@ html {
 
 .section {
   position: relative;
-  margin-top: 16px;
+  margin-top: 1rem;
 
   h2 {
     position: relative;
-    font-size: 22px;
+    font-size: 1.375rem;
     color: #000;
     // font-weight: 500;
-    margin-bottom: 6px;
+    margin-bottom: 0.375rem;
     color: var(--before-color, #33ccbb);
   }
   /* 为 h2 标签定义不同的样式 */
@@ -98,17 +97,19 @@ html {
     position: relative;
     display: inline-block;
     width: 18cm;
+    width: 42.5rem;
     padding-left: 1cm;
-    margin-bottom: 16px;
+    padding-left: 37.8px;
+    margin-bottom: 1rem;
     color: var(--before-color, #33ccbb);
 
     &::before {
       content: "";
-      width: 4px;
-      height: 4px;
-      padding: 4px;
-      // border: 10px solid #087cc1;
-      border: 10px solid var(--before-color, #33ccbb);
+      width: 0.25rem;
+      height: 0.25rem;
+      padding: 0.25rem;
+      // border: 0.625rem solid #087cc1;
+      border: 0.625rem solid var(--before-color, #33ccbb);
       border-radius: 50%;
       position: absolute;
       left: 0;
@@ -118,7 +119,8 @@ html {
     &::after {
       content: "";
       width: 18cm;
-      border-bottom: 2px solid var(--after-color, #33ccbb);
+      width: 42.5rem;
+      border-bottom: 0.125rem solid var(--after-color, #33ccbb);
       // background-color: #087cc1;
       position: absolute;
       left: 1cm;
@@ -127,31 +129,31 @@ html {
   }
 
   h2.style-2 {
-    border-bottom: 2px solid var(--after-color, #087cc1);
+    border-bottom: 0.125rem solid var(--after-color, #087cc1);
   }
 
   h2.style-3 {
-    padding-left: 8px;
-    border-left: 8px solid var(--after-color, #087cc1);
+    padding-left: 0.5rem;
+    border-left: 0.5rem solid var(--after-color, #087cc1);
   }
 
   h2.style-4 {
-    padding-left: 8px;
-    border-left: 8px solid var(--after-color, #087cc1);
+    padding-left: 0.5rem;
+    border-left: 0.5rem solid var(--after-color, #087cc1);
     z-index: 10;
     background-color: #ecf1fe;
   }
 
   h2.style-5 {
     display: inline-block;
-    padding: 0 12px;
+    padding: 0 0.75rem;
     background-color: var(--after-color, #436eee);
     color: #fff !important;
 
     &::after {
       content: "";
       width: 18cm;
-      border-bottom: 2px solid var(--after-color, #087cc1);
+      border-bottom: 0.125rem solid var(--after-color, #087cc1);
       position: absolute;
       left: 1cm;
       bottom: 0;
@@ -159,19 +161,19 @@ html {
   }
 
   h3 {
-    line-height: 32px;
+    line-height: 2rem;
     color: var(--after-color, #000);
-    // margin-top: 50px;
+    // margin-top: 3.125rem;
   }
 
   /* 删除按钮样式 */
   .delete-btn {
-    width: 60px;
-    height: 30px;
-    line-height: 30px;
+    width: 3.75rem;
+    height: 1.875rem;
+    line-height: 1.875rem;
     text-align: center;
-    // border: 1px solid #000000;
-    border-radius: 10px;
+    // border: 0.0625rem solid #000000;
+    border-radius: 0.625rem;
     background-color: #e9546b;
     position: absolute;
     top: 0;
@@ -179,7 +181,8 @@ html {
     display: none;
     color: #fdeff2;
     cursor: pointer;
-    /* margin-left: 10px; */
+    z-index: 999;
+    /* margin-left: 0.625rem; */
   }
 
   &:hover .delete-btn {
@@ -189,7 +192,7 @@ html {
 
 /* 操作面板样式 */
 #operation-panel {
-  height: calc(100% - 40px);
+  height: calc(100% - 2.5rem);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -202,10 +205,10 @@ html {
   }
   button {
     width: 48%;
-    padding: 10px;
+    padding: 0.625rem;
     margin: 0 1%;
     border: none;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     cursor: pointer;
   }
 
@@ -223,9 +226,9 @@ html {
     > span {
       display: block;
       font-weight: 700;
-      font-size: 14px;
+      font-size: 0.875rem;
       color: #000;
-      margin-bottom: 4px;
+      margin-bottom: 0.25rem;
     }
 
     .h2-style-box {
@@ -234,15 +237,15 @@ html {
       align-items: center;
 
       .color-HEX-picker {
-        width: 100px;
-        // height: 40px;
-        // border: 1px solid #ccc;
+        width: 6.25rem;
+        // height: 2.5rem;
+        // border: 0.0625rem solid #ccc;
 
         > input {
-          width: calc(100% - 20px);
+          width: calc(100% - 1.25rem);
           height: 100%;
-          padding: 8px 10px;
-          font-size: 18px;
+          padding: 0.5rem 0.625rem;
+          font-size: 1.125rem;
         }
       }
 
@@ -250,24 +253,24 @@ html {
         label {
           color: #000;
           font-weight: bold;
-          margin-right: 10px;
+          margin-right: 0.625rem;
         }
 
         input[type="color"] {
-          height: 40px;
-          font-size: 16px;
-          // margin-right: 10px;
-          padding: 5px;
+          height: 2.5rem;
+          font-size: 1rem;
+          // margin-right: 0.625rem;
+          padding: 0.3125rem;
         }
 
         button {
-          font-size: 16px;
-          padding: 5px 10px;
+          font-size: 1rem;
+          padding: 0.3125rem 0.625rem;
           cursor: pointer;
           background-color: #007bff;
           color: #fff;
           border: none;
-          border-radius: 4px;
+          border-radius: 0.25rem;
         }
 
         button:hover {
@@ -283,10 +286,10 @@ html {
 
       button.confirm {
         width: 20%;
-        padding: 10px;
+        padding: 0.625rem;
         margin: 0 1%;
         border: none;
-        border-radius: 4px;
+        border-radius: 0.25rem;
         cursor: pointer;
         background-color: green;
         color: white;
@@ -294,10 +297,10 @@ html {
 
       input {
         width: 80%;
-        padding: 10px;
+        padding: 0.625rem;
         background-color: #ecf1fe;
         border: none;
-        border-radius: 4px;
+        border-radius: 0.25rem;
       }
     }
 
@@ -314,34 +317,34 @@ html {
   position: fixed;
   top: 0;
   left: 0;
-  width: 300px;
+  width: 18.75rem;
   height: 100%;
-  padding: 20px;
+  padding: 1.25rem;
   background-color: #fff;
   color: white;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0.125rem 0.125rem 0.625rem rgba(0, 0, 0, 0.2);
   z-index: 1000;
   user-select: none;
   white-space: nowrap;
   transition: width 0.3s ease, padding 0.3s ease;
 
   .collapse-panel {
-    width: 50px;
-    height: 120px;
-    padding: 20px 0 30px;
+    width: 3.125rem;
+    height: 7.5rem;
+    padding: 1.25rem 0 1.875rem;
     background-color: #fff;
-    border-radius: 0 20px 20px 0;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 0 1.25rem 1.25rem 0;
+    box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
     position: absolute;
     top: 50%;
-    right: -50px;
+    right: -3.125rem;
     transform: translateY(-50%);
     color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     // text-align: center;
-    // line-height: 50px;
+    // line-height: 3.125rem;
     writing-mode: vertical-rl;
     cursor: pointer;
     transition: opacity 0.3s ease;
@@ -350,12 +353,12 @@ html {
   .ReimuHakurei {
     position: absolute;
     top: 50%;
-    right: 0px;
+    right: 0rem;
     display: none;
     transform: translateY(-50%);
     color: black;
     text-align: center;
-    line-height: 50px;
+    line-height: 3.125rem;
     writing-mode: vertical-rl;
     cursor: pointer;
     transition: right 0.3s ease;
@@ -363,8 +366,8 @@ html {
 }
 
 .right-container {
-  width: calc(100% - 340px);
-  margin-left: 340px;
+  width: calc(100% - 21.25rem);
+  margin-left: 21.25rem;
   transition: width 0.3s ease, margin-left 0.3s ease;
 }
 
@@ -386,19 +389,19 @@ html {
 /* 弹窗样式 */
 .confirm-dialog {
   background-color: #fff;
-  padding: 20px 40px;
-  border-radius: 8px;
-  // width: 300px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  padding: 1.25rem 2.5rem;
+  border-radius: 0.5rem;
+  // width: 18.75rem;
+  box-shadow: 0 0 0.9375rem rgba(0, 0, 0, 0.3);
   text-align: center;
   opacity: 0;
   animation: fadeInDialog 0.3s ease-in-out forwards;
   z-index: 200;
 
   p {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 700;
-    margin: 10px 0 30px;
+    margin: 0.625rem 0 1.875rem;
   }
 
   .btn-box {
@@ -409,12 +412,12 @@ html {
     /* 按钮样式 */
     button {
       width: 49%;
-      padding: 10px 20px;
+      padding: 0.625rem 1.25rem;
       border: none;
       background-color: #f44336;
       color: #fff;
       cursor: pointer;
-      border-radius: 4px;
+      border-radius: 0.25rem;
     }
 
     button.cancel {
@@ -469,10 +472,194 @@ html {
 .pne {
   position: absolute;
   width: 100%;
-  height: 2px;
-  border-top: 2px dashed pink;
+  height: 0.125rem;
+  border-top: 0.125rem dashed pink;
   left: 0;
 }
+
+/* Dropdown styles */
+.dropdown {
+  position: relative;
+  width: 7.5rem;
+  color: #000;
+
+  .dropdown-button {
+    width: 6.25rem;
+    padding: 0.625rem;
+    border: 0.0625rem solid #ccc;
+    border-radius: 0.25rem;
+    background: #fff;
+    cursor: pointer;
+    position: relative;
+    &::after {
+      content: "▼";
+      position: absolute;
+      right: 0.625rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .dropdown-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 18.75rem;
+    border: 0.0625rem solid #ccc;
+    border-radius: 0.25rem;
+    background: #fff;
+    overflow: auto;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 1000;
+
+    .roleDropdown-option,
+    .dropdown-option,
+    .langDropdown-option {
+      padding: 0.625rem;
+      cursor: pointer;
+    }
+    .roleDropdown-option:hover,
+    .dropdown-option:hover,
+    .langDropdown-option:hover {
+      background: #f0f0f0;
+    }
+  }
+
+  .dropdown-options.open {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+
+  .dropdown-options.close {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+}
+
+.dropdown.roleDropdown {
+  width: 10rem;
+  .dropdown-button {
+    width: 8.75rem;
+    padding: 0.625rem;
+  }
+}
+
+.dropdown.langDropdown {
+  width: 7.5rem;
+  .dropdown-button {
+    width: 6.25rem;
+    padding: 0.625rem;
+  }
+}
+
+/* 进度条样式 */
+.progress-container {
+  position: relative;
+  width: 90%;
+  height: 0.625rem;
+  background: #f5f7fa;
+  margin: 1.25rem auto;
+
+  .progress-bar {
+    width: 100%;
+    height: 100%;
+    appearance: none;
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2; /* 保证滑动条在上层 */
+
+    &::-webkit-slider-runnable-track {
+      height: 100%;
+      background: transparent;
+    }
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      width: 0.9375rem;
+      height: 1.875rem;
+      transform: translateY(-0.625rem);
+      background: var(--thumb-background-color, #33ccbb);
+      // border-radius: 50%;
+      cursor: pointer;
+    }
+
+    &::-moz-range-track {
+      height: 100%;
+      background: transparent;
+    }
+
+    &::-moz-range-thumb {
+      width: 0.9375rem;
+      height: 0.9375rem;
+      background: var(--thumb-background-color, #33ccbb);
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+
+  .progress-track {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    // background-color: #33cc33;
+    background-image: linear-gradient(
+      to right,
+      #eea2a2 0%,
+      #bbc1bf 19%,
+      #57c6e1 42%,
+      #b49fda 79%,
+      #7ac5d8 100%
+    );
+    border-radius: 0.3125rem;
+    z-index: 1; /* 进度条背景在下层 */
+
+    .progress-value {
+      position: absolute;
+      // top: -1.875rem;
+      // left: 0;
+      top: -2.1875rem;
+      right: -0.9375rem;
+      width: 1.875rem;
+      height: 1.25rem;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      text-align: center;
+      line-height: 1.25rem;
+      border-radius: 0.3125rem;
+      font-size: 0.75rem;
+      z-index: 4;
+    }
+  }
+}
+
+/* 媒体查询 */
+@media (min-width: 2000px) {
+  html {
+    font-size: 20px; /* 最大字体大小 */
+  }
+}
+/* 当屏幕宽度小于 768px 时 */
+@media (max-width: 1200px) {
+  html {
+    font-size: 14px; /* 基准 1rem = 14px */
+  }
+}
+
+/* 当屏幕宽度小于 480px 时 */
+@media (max-width: 1000px) {
+  html {
+    font-size: 12px; /* 基准 1rem = 12px */
+  }
+}
+
 
 /* 打印 */
 @media print {
@@ -481,7 +668,7 @@ html {
     height: 29.7cm; /* A4 页面高度 */
     // margin: 1cm auto;
     padding: 0 1cm;
-    font-size: 0.9rem;
+    font-size: 16px !important;
   }
 
   body {
@@ -525,168 +712,5 @@ html {
     /* PDF output size */
     margin-left: 0;
     margin-right: 0;
-  }
-}
-
-/* Dropdown styles */
-.dropdown {
-  position: relative;
-  width: 120px;
-  color: #000;
-
-  .dropdown-button {
-    width: 100px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background: #fff;
-    cursor: pointer;
-    position: relative;
-    &::after {
-      content: "▼";
-      position: absolute;
-      right: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-  }
-
-  .dropdown-options {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    max-height: 300px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background: #fff;
-    overflow: auto;
-    opacity: 0;
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    z-index: 1000;
-
-    .roleDropdown-option,
-    .dropdown-option,
-    .langDropdown-option {
-      padding: 10px;
-      cursor: pointer;
-    }
-    .roleDropdown-option:hover,
-    .dropdown-option:hover,
-    .langDropdown-option:hover {
-      background: #f0f0f0;
-    }
-  }
-
-  .dropdown-options.open {
-    opacity: 1;
-    transform: scaleY(1);
-  }
-
-  .dropdown-options.close {
-    opacity: 0;
-    transform: scaleY(0);
-  }
-}
-
-.dropdown.roleDropdown {
-  width: 160px;
-  .dropdown-button {
-    width: 140px;
-    padding: 10px;
-  }
-}
-
-.dropdown.langDropdown {
-  width: 120px;
-  .dropdown-button {
-    width: 100px;
-    padding: 10px;
-  }
-}
-
-/* 进度条样式 */
-.progress-container {
-  position: relative;
-  width: 90%;
-  height: 10px;
-  background: #f5f7fa;
-  margin: 20px auto;
-
-  .progress-bar {
-    width: 100%;
-    height: 100%;
-    appearance: none;
-    background: transparent;
-    border: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2; /* 保证滑动条在上层 */
-
-    &::-webkit-slider-runnable-track {
-      height: 100%;
-      background: transparent;
-    }
-
-    &::-webkit-slider-thumb {
-      appearance: none;
-      width: 15px;
-      height: 30px;
-      transform: translateY(-10px);
-      background: var(--thumb-background-color, #33ccbb);
-      // border-radius: 50%;
-      cursor: pointer;
-    }
-
-    &::-moz-range-track {
-      height: 100%;
-      background: transparent;
-    }
-
-    &::-moz-range-thumb {
-      width: 15px;
-      height: 15px;
-      background: var(--thumb-background-color, #33ccbb);
-      border-radius: 50%;
-      cursor: pointer;
-    }
-  }
-
-  .progress-track {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    // background-color: #33cc33;
-    background-image: linear-gradient(
-      to right,
-      #eea2a2 0%,
-      #bbc1bf 19%,
-      #57c6e1 42%,
-      #b49fda 79%,
-      #7ac5d8 100%
-    );
-    border-radius: 5px;
-    z-index: 1; /* 进度条背景在下层 */
-
-    .progress-value {
-      position: absolute;
-      // top: -30px;
-      // left: 0;
-      top: -35px;
-      right: -15px;
-      width: 30px;
-      height: 20px;
-      background-color: rgba(0, 0, 0, 0.7);
-      color: #fff;
-      text-align: center;
-      line-height: 20px;
-      border-radius: 5px;
-      font-size: 12px;
-      z-index: 4;
-    }
   }
 }

@@ -121,6 +121,7 @@ const enCharacter = {
             <p><strong>Basic Understanding of Live2D and 3D Modeling Technologies:</strong> Understands VTuber-related technologies.</p>
         </div>
     </div>
+    <div class="delete-btn" onclick="removeSection(this)">Delete</div>
 </div>
 
 <div class="section">
@@ -145,6 +146,7 @@ const enCharacter = {
             </ul>
         </div>
     </div>
+    <div class="delete-btn" onclick="removeSection(this)">Delete</div>
 </div>
 
 <div class="section">
@@ -158,6 +160,7 @@ const enCharacter = {
             <p><strong>Versatile and Talented:</strong> Holds dual roles as an illustrator and VTuber, showcasing talent in multiple areas.</p>
         </div>
     </div>
+    <div class="delete-btn" onclick="removeSection(this)">Delete</div>
 </div>
 
 <div class="section">
@@ -175,6 +178,7 @@ const enCharacter = {
             </ul>
         </div>
     </div>
+    <div class="delete-btn" onclick="removeSection(this)">Delete</div>
 </div>
 
 <div class="section">
@@ -184,6 +188,7 @@ const enCharacter = {
             <p>As an illustrator and VTuber, I love creating and am dedicated to bringing wonderful works and enjoyable experiences to my viewers. I will continue to work hard, constantly challenge myself, and bring even more wonderful content to everyone!</p>
         </div>
     </div>
+    <div class="delete-btn" onclick="removeSection(this)">Delete</div>
 </div>`,
 
   GawrGura: `<!-- Header Section -->
@@ -505,6 +510,7 @@ const jaCharacter = {
             <p><strong>Live2Dと3Dモデリング技術にある程度の理解：</strong>VTuber関連の技術を理解しています。</p>
         </div>
     </div>
+    <div class="delete-btn" onclick="removeSection(this)">削除</div>
 </div>
 
 <div class="section">
@@ -529,6 +535,7 @@ const jaCharacter = {
             </ul>
         </div>
     </div>
+    <div class="delete-btn" onclick="removeSection(this)">削除</div>
 </div>
 
 <div class="section">
@@ -542,6 +549,7 @@ const jaCharacter = {
             <p><strong>多才多芸：</strong>イラストレーターとVTuberの二つの顔を持ち、多方面で才能を発揮しています。</p>
         </div>
     </div>
+    <div class="delete-btn" onclick="removeSection(this)">削除</div>
 </div>
 
 <div class="section">
@@ -559,6 +567,7 @@ const jaCharacter = {
             </ul>
         </div>
     </div>
+    <div class="delete-btn" onclick="removeSection(this)">削除</div>
 </div>
 
 <div class="section">
@@ -568,6 +577,7 @@ const jaCharacter = {
             <p>イラストレーターとVTuberとして、私は創作を愛し、視聴者の皆様に素晴らしい作品と楽しい体験をお届けすることに尽力しています。これからも努力を続け、常に挑戦し、皆様にもっと多くの素晴らしいコンテンツをお届けします！</p>
         </div>
     </div>
+    <div class="delete-btn" onclick="removeSection(this)">削除</div>
 </div>`,
 
   GawrGura: `<!-- ヘッダーセクション -->

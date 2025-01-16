@@ -76,7 +76,6 @@
 }
 
 .quill-editor-item {
-  /* margin-bottom: 16px !important; */
   border: none !important;
 }
 
@@ -92,7 +91,7 @@
   }
 
   ul>li:not(.ql-direction-rtl) {
-    padding-left: 10px !important;
+    padding-left: 1rem !important;
   }
 
   ul[data-checked=true]>li {

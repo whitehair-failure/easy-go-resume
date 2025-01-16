@@ -122,14 +122,13 @@ locationStorageButton.addEventListener("click", function () {
 
   // 获取#box内的HTML内容（过滤后的内容）
   const content = resumeBox.innerHTML;
-
   // 将内容存储到浏览器的本地存储
   localStorage.setItem("resume-text", content);
   localStorage.setItem("currentColor", currentColor);
   localStorage.setItem("currentH2StyleText", currentH2StyleText);
-
   // 提示存储成功
-  alert("内容已成功存储到本地存储！");
+  alert("The content has been successfully stored to local storage!");
+  forEachquillEditorItems();
 });
 
 // 监听按钮：清除本地存储
@@ -412,8 +411,6 @@ colorInput.addEventListener("input", () => {
 
 // 添加 section 模板
 function addSection() {
-  console.log(446669);
-
   const title = document.getElementById("section-title").value;
   if (!title) {
     alert("请输入模板标题！");
@@ -433,17 +430,48 @@ function addSection() {
   let newEditorContainerId = oldLastId + 1;
   newEditorContainerId = "editor-container" + newEditorContainerId;
 
+  // 获取当前语言
+  let currentLanguage = localStorage.getItem("language") || "en";
+  let itemContent = "";
+  let deleterContent = "Delete";
+  switch (currentLanguage) {
+    case "en":
+      itemContent = `<ul>
+            <li>Never gonna give you up</li>
+            <li>Never gonna let you down</li>
+            <li>Never gonna run around and desert you</li>
+            <li>Never gonna make you cry</li>
+            <li>Never gonna say goodbye</li>
+            <li>Never gonna tell a lie and hurt you</li>
+          </ul>`;
+      deleterContent = "Delete";
+      break;
+    case "ja":
+      itemContent = `<ul>
+      <li>世界は恋に落ちでいる</li>
+      <li>好きだよと言えずに 初恋は</li>
+      <li>キミにfall in love　恋のSOS ずっと胸が苦しいんです</li>
+      <li>それはきみとゆう名のメランコリンニスト</li>
+      <li>ノンブレス ノンブレス ノンブレス ノンブレス・オブリージュ</li>
+      <li>...そっかそっか好きなのは...最初から 僕だけ</li>
+    </ul>`;
+      deleterContent = "削除";
+      break;
+    case "zh":
+      itemContent = `<ul data-checked="true">
+      <li>苟利国家生死以，岂因祸福避趋之</li>
+    </ul>`;
+      deleterContent = "删除";
+      break;
+  }
+
   const sectionHTML = `
       <div class="section">
         <h2 class="${currentH2Style}" style="color:${color}; border-bottom-color: ${color}; --before-color: ${color}; --after-color: ${color};"">${title}</h2>
         <div id="editor-container${newEditorContainerId}" class="quill-editor-item">
-          <ul>
-            <li>持续探索AI与音乐的结合，致力于虚拟表演技术的发展。</li>
-            <li>喜欢和粉丝互动，通过音乐表达情感和传递正能量。</li>
-            <li>偶尔客串动画角色，为更多文化作品注入生命力。</li>
-          </ul>
+          ${itemContent}
         </div>
-        <div class="delete-btn" onclick="removeSection(this)">删除</div>
+        <div class="delete-btn" onclick="removeSection(this)">${deleterContent}</div>
       </div>
     `;
 

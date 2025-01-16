@@ -1,3 +1,6 @@
+import {
+  forEachquillEditorItems,
+} from "./init.js";
 import { enCharacter, jaCharacter, zhCharacter } from "./kyara.js";
 
 const languages = {
@@ -270,6 +273,7 @@ function updateLanguage(language) {
     }
     // 如果不存在，渲染默认内容到#box
     resumeBox.innerHTML = currentCharacters.miku;
+    forEachquillEditorItems();
   }
 }
 
@@ -292,16 +296,8 @@ langOptions.forEach((option) => {
 
     // Update button text
     langDropdownButton.textContent = e.target.textContent;
-
+    // Update language
     updateLanguage(selectedlang);
-
-    if (selectedlang == "en") {
-      // resumeBox.innerHTML = enCharacter.miku;
-    } else if (selectedlang == "ja") {
-      // resumeBox.innerHTML = jaCharacter.momoka;
-    } else if (selectedlang == "zh") {
-      // resumeBox.innerHTML = zhCharacter.griffith;
-    }
 
     // Close dropdown
     langDropdownOptions.classList.remove("open");
