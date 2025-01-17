@@ -422,18 +422,27 @@ function addSection() {
   const color = colorInput.value;
   // 获取新模块ID
   let quillEditorItems = document.querySelectorAll(".quill-editor-item");
-  let oldLastId = quillEditorItems[quillEditorItems.length - 1].id.replace(
-    "editor-container",
-    ""
+  console.log("quillEditorItems", quillEditorItems);
+  console.log(
+    "quillEditorItems[quillEditorItems.length - 1].id",
+    quillEditorItems[quillEditorItems.length - 1].id
   );
+
+  let oldLastId = quillEditorItems[quillEditorItems.length - 1].id;
+  console.log("oldLastId", oldLastId);
+  oldLastId = oldLastId.replace("editor-container", "");
   oldLastId = parseInt(oldLastId);
-  let newEditorContainerId = oldLastId + 1;
-  newEditorContainerId = "editor-container" + newEditorContainerId;
+  oldLastId += 1;
+  console.log("oldLastId", oldLastId);
+
+  let newEditorContainerIdIndex = oldLastId;
 
   // 获取当前语言
   let currentLanguage = localStorage.getItem("language") || "en";
   let itemContent = "";
-  let deleterContent = "Delete";
+  let moveUpContent = "move up";
+  let moveDownContent = "move down";
+  let deleterContent = "delete";
   switch (currentLanguage) {
     case "en":
       itemContent = `<ul>
@@ -444,6 +453,8 @@ function addSection() {
             <li>Never gonna say goodbye</li>
             <li>Never gonna tell a lie and hurt you</li>
           </ul>`;
+      moveUpContent = "move up";
+      moveDownContent = "move down";
       deleterContent = "Delete";
       break;
     case "ja":
@@ -455,12 +466,16 @@ function addSection() {
       <li>ノンブレス ノンブレス ノンブレス ノンブレス・オブリージュ</li>
       <li>...そっかそっか好きなのは...最初から 僕だけ</li>
     </ul>`;
+      moveUpContent = "上へ移動";
+      moveDownContent = "下へ移動";
       deleterContent = "削除";
       break;
     case "zh":
       itemContent = `<ul data-checked="true">
       <li>苟利国家生死以，岂因祸福避趋之</li>
     </ul>`;
+      moveUpContent = "向上移动";
+      moveDownContent = "向下移动";
       deleterContent = "删除";
       break;
   }
@@ -468,10 +483,14 @@ function addSection() {
   const sectionHTML = `
       <div class="section">
         <h2 class="${currentH2Style}" style="color:${color}; border-bottom-color: ${color}; --before-color: ${color}; --after-color: ${color};"">${title}</h2>
-        <div id="editor-container${newEditorContainerId}" class="quill-editor-item">
+        <div id="editor-container${newEditorContainerIdIndex}" class="quill-editor-item">
           ${itemContent}
         </div>
-        <div class="delete-btn" onclick="removeSection(this)">${deleterContent}</div>
+        <div class="control-btns">
+          <div class="up-btn" onclick="moveSection(this, 'up')">${moveUpContent}</div>
+          <div class="down-btn" onclick="moveSection(this, 'down')">${moveDownContent}</div>
+          <div class="delete-btn" onclick="removeSection(this)">${deleterContent}</div>
+        </div>
       </div>
     `;
 
@@ -483,7 +502,7 @@ function addSection() {
   document.getElementById("section-title").value = "";
 
   // 初始化 Quill 编辑器
-  new Quill(`#editor-container${newEditorContainerId}`, {
+  let newQuill = new Quill(`#editor-container${newEditorContainerIdIndex}`, {
     theme: "snow",
     modules: {
       toolbar: toolbarOptions,
@@ -491,40 +510,42 @@ function addSection() {
     placeholder: "Compose an epic...",
   });
 
-  let qlToolbarItems = document.querySelectorAll(".ql-toolbar");
+  let newQuillEditor = document.querySelector(
+    `#editor-container${newEditorContainerIdIndex}`
+  );
+  let newQlToolbar = newQuillEditor.previousSibling;
+  console.log("newQlToolbar", newQlToolbar);
 
-  console.log("qlToolbarItems", qlToolbarItems);
+  newQlToolbar.addEventListener("mouseover", () => {
+    newQuillEditor.style = "border: 1px solid #33CCBB !important;";
+    newQlToolbar.style.display = "block";
+  });
 
-  for (var i = 0; i < qlToolbarItems.length; i++) {
-    // let quillEditorItem = quillEditorItems[i];
-    let qlToolbarItem = qlToolbarItems[i];
+  newQlToolbar.addEventListener("mouseleave", () => {
+    newQuillEditor.style = "border: none !important;";
+    newQlToolbar.style.display = "none";
+  });
 
-    qlToolbarItem.addEventListener("mouseover", () => {
-      // quillEditorItem.style = "border: 1px solid #33CCBB !important;";
-      qlToolbarItem.style.display = "block";
-    });
+  newQuillEditor.addEventListener("mouseover", () => {
+    newQuillEditor.style = "border: 1px solid #33CCBB !important;";
+    newQlToolbar.style.display = "block";
+  });
 
-    qlToolbarItem.addEventListener("mouseout", () => {
-      // quillEditorItem.style = "border: none !important;";
-      qlToolbarItem.style.display = "none";
-    });
+  newQuillEditor.addEventListener("mouseleave", () => {
+    newQuillEditor.style = "border: none !important;";
+    newQlToolbar.style.display = "none";
+  });
 
-    if (i === qlToolbarItems.length - 1) {
-      let newEditorContainer = document.getElementById(
-        `editor-container${newEditorContainerId}`
-      );
+  // document.addEventListener("click", () => {
 
-      newEditorContainer.addEventListener("mouseover", () => {
-        newEditorContainer.style = "border: 1px solid #33CCBB !important;";
-        qlToolbarItem.style.display = "block";
-      });
-
-      newEditorContainer.addEventListener("mouseout", () => {
-        newEditorContainer.style = "border: none !important;";
-        qlToolbarItem.style.display = "none";
-      });
-    }
-  }
+  //   if (newQuill.hasFocus()) {
+  //     newQuillEditor.style = "border: 1px solid #33CCBB !important;";
+  //     newQlToolbar.style.display = "block";
+  //   } else {
+  //     newQuillEditor.style = "border: none !important;";
+  //     newQlToolbar.style.display = "none";
+  //   }
+  // });
 }
 
 document.getElementById("add-section").addEventListener("click", addSection);

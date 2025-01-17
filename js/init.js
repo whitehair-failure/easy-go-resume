@@ -1,34 +1,33 @@
-
 const toolbarOptions = [
-  ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
-  [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
+  ["bold", "italic", "underline", "strike"], // toggled buttons
+  [{ color: [] }, { background: [] }], // dropdown with defaults from theme
 
-  [{ 'list': 'ordered' }, { 'list': 'bullet' }, { 'list': 'check' }],
+  [{ list: "ordered" }, { list: "bullet" }, { list: "check" }],
 
-  [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-  [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
+  [{ header: [1, 2, 3, 4, 5, 6, false] }],
+  [{ size: ["small", false, "large", "huge"] }], // custom dropdown
 
-  ['link', 'image'],
+  ["link", "image"],
 
-  ['blockquote', 'code-block'],
+  ["blockquote", "code-block"],
 
-  [{ 'indent': '-1' }, { 'indent': '+1' }],          // outdent/indent
-  [{ 'direction': 'rtl' }],                         // text direction
+  [{ indent: "-1" }, { indent: "+1" }], // outdent/indent
+  [{ direction: "rtl" }], // text direction
 
-  [{ 'font': [] }],
-  [{ 'align': [] }],
+  [{ font: [] }],
+  [{ align: [] }],
 
-  //.... 其他工具栏配置项                             
-  [{ 'lineheight': ["1-25", "1-375", "1-5", "1-75", "1-875", "2", "3"] }],//行高
+  //.... 其他工具栏配置项
+  [{ lineheight: ["1-25", "1-375", "1-5", "1-75", "1-875", "2", "3"] }], //行高
 
   // [{ 'line-height': ['1', false, '2'] }], // 这一步是自定义行高选择器
 
-  ['clean']                                         // remove formatting button
+  ["clean"], // remove formatting button
 ];
 
 //在这个位置添加下面代码
 const Parchment = Quill.import("parchment");
-class lineHeightAttributor extends Parchment.Attributor.Class { }
+class lineHeightAttributor extends Parchment.Attributor.Class {}
 const lineHeightStyle = new lineHeightAttributor(
   "lineheight",
   "ql-lineheight",
@@ -39,37 +38,36 @@ const lineHeightStyle = new lineHeightAttributor(
 );
 Quill.register({ "formats/lineHeight": lineHeightStyle }, true);
 
-function forEachquillEditorItems() {
+function forEachquillEditorItems(newQuill) {
+  console.log("forEachquillEditorItems =>114514");
 
-  console.log('forEachquillEditorItems =>114514');
-
-
-  let quillEditorItems = document.querySelectorAll('.quill-editor-item');
+  let quillEditorItems = document.querySelectorAll(".quill-editor-item");
 
   // 使用 map 获取所有元素的 id
-  let ids = Array.from(quillEditorItems).map(item => item.id);
+  let ids = Array.from(quillEditorItems).map((item) => item.id);
 
   console.log(ids); // 输出所有 id
 
-  quillEditorItems.forEach((item, index) => {
+  let QuillArr = [];
 
+  quillEditorItems.forEach((item, index) => {
     // 初始化 Quill 编辑器
-    new Quill(`#${ids[index]}`, {
-      theme: 'snow',
+    let newQuill = new Quill(`#${ids[index]}`, {
+      theme: "snow",
       modules: {
-        toolbar: toolbarOptions
+        toolbar: toolbarOptions,
       },
-      placeholder: 'Compose an epic...',
+      placeholder: "Compose an epic...",
     });
 
-  })
+    QuillArr.push(newQuill);
+  });
 
-  let qlToolbarItems = document.querySelectorAll('.ql-toolbar');
+  let qlToolbarItems = document.querySelectorAll(".ql-toolbar");
 
-  console.log('qlToolbarItems', qlToolbarItems);
+  console.log("qlToolbarItems", qlToolbarItems);
 
-
-
+  
   for (var i = 0; i < quillEditorItems.length; i++) {
 
     let quillEditorItem = quillEditorItems[i];
@@ -77,30 +75,44 @@ function forEachquillEditorItems() {
 
     console.log('qlToolbarItems[' + i + ']', qlToolbarItems[i]);
 
-
-    qlToolbarItem.addEventListener('mouseover', function (delta, oldDelta, source) {
+    qlToolbarItem.addEventListener('mouseover', () => {
       quillEditorItem.style = "border: 1px solid #33CCBB !important;";
       qlToolbarItem.style.display = 'block';
     });
 
-    qlToolbarItem.addEventListener('mouseout', function (delta, oldDelta, source) {
+    qlToolbarItem.addEventListener('mouseleave', () => {
       quillEditorItem.style = "border: none !important;";
       qlToolbarItem.style.display = 'none';
     });
 
-    quillEditorItem.addEventListener('mouseover', function (delta, oldDelta, source) {
+    quillEditorItem.addEventListener('mouseover', () => {
       quillEditorItem.style = "border: 1px solid #33CCBB !important;";
       qlToolbarItem.style.display = 'block';
     });
 
-    quillEditorItem.addEventListener('mouseout', function (delta, oldDelta, source) {
+    quillEditorItem.addEventListener('mouseleave', () => {
       quillEditorItem.style = "border: none !important;";
       qlToolbarItem.style.display = 'none';
     });
 
   }
-}
 
+  /* document.addEventListener("click", () => {
+    for (var i = 0; i < QuillArr.length; i++) {
+      let quillEditorItem = quillEditorItems[i];
+      let qlToolbarItem = qlToolbarItems[i];
+      let currentQuill = QuillArr[i];
+
+      if (currentQuill.hasFocus()) {
+        quillEditorItem.style = "border: 1px solid #33CCBB !important;";
+        qlToolbarItem.style.display = "block";
+      } else {
+        quillEditorItem.style = "border: none !important;";
+        qlToolbarItem.style.display = "none";
+      }
+    }
+  }); */
+}
 
 /* 图片上传 */
 function uploadAvatarInit() {
@@ -151,7 +163,7 @@ function checkHeight() {
 
   const boxHeight = resumeBox.offsetHeight; // 获取盒子的当前高度
   const pnesCount = Math.floor(boxHeight / A4_HEIGHT); // 计算需要多少条横线
-  
+
   // 移除已有的横线
   const existingpnes = rightContainer.querySelectorAll(".pne");
   existingpnes.forEach((pne) => pne.remove());
@@ -165,4 +177,10 @@ function checkHeight() {
   }
 }
 
-export { toolbarOptions, forEachquillEditorItems, uploadAvatarInit, deleteAvatarInit, checkHeight };
+export {
+  toolbarOptions,
+  forEachquillEditorItems,
+  uploadAvatarInit,
+  deleteAvatarInit,
+  checkHeight,
+};

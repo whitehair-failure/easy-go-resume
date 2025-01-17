@@ -93,13 +93,11 @@
 
           <!-- 颜色选择器 -->
           <div class="color-HEX-picker">
-            <input type="text" id="colorHEXInput" value="#cccccc"
-              placeholder="color">
+            <input type="text" id="colorHEXInput" value="#cccccc" placeholder="color">
           </div>
           <!-- 颜色选择器 -->
           <div class="color-picker">
-            <input type="color" id="colorInput" value="#cccccc"
-              placeholder="color">
+            <input type="color" id="colorInput" value="#cccccc" placeholder="color">
           </div>
         </div>
 
@@ -180,6 +178,75 @@
 <script type="module" src="./js/i18n.js"></script>
 <script type="module" src="./js/index.js"></script>
 <script>
+  // 移动 section 模板
+  function moveSection(button, direction) {
+    // 获取当前按钮的父元素（即section）
+    const currentSection = button.closest('.section');
+
+    // 获取所有的section元素
+    const allSections = Array.from(document.querySelectorAll('.section'));
+
+    // 获取当前section的位置
+    const currentIndex = allSections.indexOf(currentSection);
+
+    // 如果方向是向上
+    if (direction === 'up' && currentIndex > 0) {
+      // 获取上一个section
+      const prevSection = allSections[currentIndex - 1];
+
+      // 添加移动动画
+      currentSection.style.transition = 'transform 0.3s ease';
+      prevSection.style.transition = 'transform 0.3s ease';
+
+      let currentSectionHeight = currentSection.clientHeight;
+      let prevSectionHeight = prevSection.clientHeight;
+
+      // 让当前section和上一个section移动
+      currentSection.style.transform = `translateY(-${prevSectionHeight}px)`;
+      prevSection.style.transform = `translateY(${currentSectionHeight}px)`;
+
+      // 使用setTimeout确保动画完成后交换位置
+      setTimeout(() => {
+        currentSection.style.transition = '';
+        prevSection.style.transition = '';
+        currentSection.style.transform = '';
+        prevSection.style.transform = '';
+
+        // 交换位置
+        currentSection.parentNode.insertBefore(currentSection, prevSection);
+      }, 300); // 等待300ms，确保动画完成
+    }
+
+    // 如果方向是向下
+    if (direction === 'down' && currentIndex < allSections.length - 1) {
+      // 获取下一个section
+      const nextSection = allSections[currentIndex + 1];
+
+      // 添加移动动画
+      currentSection.style.transition = 'transform 0.3s ease';
+      nextSection.style.transition = 'transform 0.3s ease';
+
+      let currentSectionHeight = currentSection.clientHeight;
+      let nextSectionHeight = nextSection.clientHeight;
+
+      // 让当前section和下一个section移动
+      currentSection.style.transform = `translateY(${nextSectionHeight}px)`;
+      nextSection.style.transform = `translateY(-${currentSectionHeight}px)`;
+
+      // 使用setTimeout确保动画完成后交换位置
+      setTimeout(() => {
+        currentSection.style.transition = '';
+        nextSection.style.transition = '';
+        currentSection.style.transform = '';
+        nextSection.style.transform = '';
+
+        // 交换位置
+        currentSection.parentNode.insertBefore(nextSection, currentSection);
+      }, 300); // 等待300ms，确保动画完成
+    }
+  }
+
+
   document.getElementById('exportImg').addEventListener('click', function () {
     // 获取要导出的元素
     const element = document.getElementById('resumeBox');

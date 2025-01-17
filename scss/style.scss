@@ -83,6 +83,7 @@ html {
 .section {
   position: relative;
   margin-top: 1rem;
+  // transition: transform 0.3s ease;
 
   h2 {
     position: relative;
@@ -166,27 +167,54 @@ html {
     // margin-top: 3.125rem;
   }
 
-  /* 删除按钮样式 */
-  .delete-btn {
-    width: 3.75rem;
-    height: 1.875rem;
-    line-height: 1.875rem;
-    text-align: center;
-    // border: 0.0625rem solid #000000;
-    border-radius: 0.625rem;
-    background-color: #e9546b;
+  .control-btns {
+    visibility: hidden;
     position: absolute;
     top: 0;
     right: 0;
-    display: none;
-    color: #fdeff2;
-    cursor: pointer;
-    z-index: 999;
-    /* margin-left: 0.625rem; */
-  }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // width: 260px;
+    height: 32px;
+    user-select: none;
 
-  &:hover .delete-btn {
-    display: block;
+    >div {
+      height: 32px;
+      padding: 0px 16px;
+      margin-left: 10px;
+      line-height: 32px;
+      text-align: center;
+      border-radius: 0.625rem;
+      cursor: pointer;
+      z-index: 999;
+      color: #fdeff2;
+    }
+
+    /* 删除按钮样式 */
+    .delete-btn {
+      background-color: #e9546b;
+      background-color: #FF0000;
+      color: #fff;
+      /* margin-left: 0.625rem; */
+    }
+
+    /* 向上按钮的样式 */
+    .up-btn {
+      background-color: #0095d9;
+      color: #fdeff2;
+    }
+
+    /* 向下按钮的样式 */
+    .down-btn {
+      background-color: #f19072;
+      color: #fdeff2;
+    }
+  }
+ 
+  &:hover .control-btns {
+    // display: block;
+    visibility: visible;
   }
 }
 
@@ -659,7 +687,6 @@ html {
     font-size: 12px; /* 基准 1rem = 12px */
   }
 }
-
 
 /* 打印 */
 @media print {
