@@ -111,6 +111,22 @@ printPDFButton.addEventListener("click", function () {
   // 调用浏览器的打印功能
   window.print();
 });
+// 监听按钮：导出为图片
+document.getElementById('exportImg').addEventListener('click', function () {
+  // 获取要导出的元素
+  const element = document.getElementById('resumeBox');
+
+  html2canvas(element).then(function (canvas) {
+    const imgData = canvas.toDataURL('image/png');
+
+    // 创建一个下载链接
+    const link = document.createElement('a');
+    link.href = imgData;
+    link.download = 'resume.png';  // 设置文件名
+    link.click();  // 模拟点击下载
+  })
+
+});
 
 // 监听按钮：存储内容到本地存储
 locationStorageButton.addEventListener("click", function () {
