@@ -180,7 +180,7 @@ html {
     height: 32px;
     user-select: none;
 
-    >div {
+    > div {
       height: 32px;
       padding: 0px 16px;
       margin-left: 10px;
@@ -195,7 +195,7 @@ html {
     /* 删除按钮样式 */
     .delete-btn {
       background-color: #e9546b;
-      background-color: #FF0000;
+      background-color: #ff0000;
       color: #fff;
       /* margin-left: 0.625rem; */
     }
@@ -212,7 +212,7 @@ html {
       color: #fdeff2;
     }
   }
- 
+
   &:hover .control-btns {
     // display: block;
     visibility: visible;
@@ -669,6 +669,55 @@ html {
   }
 }
 
+/* GitHUb */
+
+@keyframes octocat-wave {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  20% {
+    transform: rotate(-25deg);
+  }
+
+  40% {
+    transform: rotate(10deg);
+  }
+
+  60% {
+    transform: rotate(-25deg);
+  }
+
+  80% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.github-corner {
+  border-bottom: 0;
+  position: fixed;
+  right: 0;
+  text-decoration: none;
+  top: 0;
+  z-index: 1;
+
+  &:hover .octo-arm {
+    animation: octocat-wave 0.56s ease-in-out;
+  }
+
+  svg {
+    color: #fff;
+    fill: #000; /* github-corner color*/
+    height: 80px;
+    width: 80px;
+  }
+}
+
+
 /* 媒体查询 */
 // @media (min-width: 2000px) {
 //   html {
@@ -718,8 +767,9 @@ html {
 
   .left-container,
   #operation-panel,
-  .pne {
-    display: none;
+  .pne,
+  .github-corner {
+    display: none !important;
   }
 
   table,
@@ -741,51 +791,4 @@ html {
     margin-left: 0;
     margin-right: 0;
   }
-}
-
-@keyframes octocat-wave {
-  0% {
-      transform: rotate(0deg);
-  }
-
-  20% {
-      transform: rotate(-25deg);
-  }
-
-  40% {
-      transform: rotate(10deg);
-  }
-
-  60% {
-      transform: rotate(-25deg);
-  }
-
-  80% {
-      transform: rotate(10deg);
-  }
-
-  100% {
-      transform: rotate(0deg);
-  }
-}
-
-
-.github-corner {
-  border-bottom: 0;
-  position: fixed;
-  right: 0;
-  text-decoration: none;
-  top: 0;
-  z-index: 1
-}
-
-.github-corner:hover .octo-arm {
-  animation: octocat-wave .56s ease-in-out
-}
-
-.github-corner svg {
-  color: #fff;
-  fill: #000; /* github-corner color*/
-  height: 80px;
-  width: 80px
 }
